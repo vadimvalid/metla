@@ -1,0 +1,76 @@
+{% import "src/html/components/button.html" as buttonItem %} {% import
+"src/html/components/team.html" as teamItem %} {% import
+"src/html/components/contacts.html" as contacts %} {% import
+"src/html/components/input.html" as inputItem %}
+<div class="container">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="" aria-current="page">Contacts</a>
+      </li>
+    </ol>
+  </nav>
+  <div class="wrapper">
+    <section class="section section--contacts">
+      <div class="item">
+        <div class="contacts">
+          <p class="contacts__title">Our contacts</p>
+          <div class="contacts__items">
+            <div class="item">
+              <img src="../../images/icon-email-blue.svg" alt="icon email" />
+              <a href="mailto:example@google.com">example@google.com</a>
+            </div>
+
+            <div class="item">
+              <img src="../../images/icon-phone-blue.svg" alt="icon phone" />
+              <a
+                href="tel:++1 (870)
+        463-8589"
+                >+1 (870) 463-8589</a
+              >
+            </div>
+
+            <div class="item">
+              <img
+                src="../../images/icon-website-blue.svg"
+                alt="icon website"
+              />
+              <a href="https://example.com" target="_blank"
+                >https://example.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <h3>Any other questions?</h3>
+        <form>
+          {{inputItem.input('name', 'Name', '', 'text')}}
+          {{inputItem.input('email', 'E-mail', '', 'email')}}
+          {{inputItem.input('phone', 'Phone number', '', 'number')}}
+          {{buttonItem.button('#', '', 'Send a request')}}
+        </form>
+      </div>
+      <div class="item">
+        <h3>About us</h3>
+        <p>
+          We are a team of specialists in the field of software downloads, our
+          team was founded in 2013 in New Delhi by international experts of the
+          highest level. The experience of our team has allowed us to achieve a
+          high level of reliability in the delivery of software for Android.
+          From time immemorial, downloading has been a prerequisite for running
+          a business for Android and our specialists are good at it. If your
+          application is a specialized betting application, we are ready to
+          offer guaranteed delivery to users using a transcontinental CDN
+          (content delivery system), our company's servers are located all over
+          the world and the speed does not depend on where you are, we can
+          ensure continuous download of applications for millions of users, as
+          if you were with them in the same room.
+        </p>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.like {
+  display: flex;
+  align-items: center;
+  gap: $spaceSm;
+  font-size: $fontSizeSm;
+  color: $greyLightColor;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &.isLiked {
+    color: $redColor;
+  }
+
+  @include sm-breakpoint {
+    font-size: $fontSizeMd;
+  }
+}

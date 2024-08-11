@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-in">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Applications of the best bookmakers for android"
+    />
+    <meta name="keywords" content="bets, android" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../scss/style.scss" rel="stylesheet" />
+    <title>Contacts</title>
+  </head>
+
+  <body class="body" itemscope itemtype="https://schema.org/WebPage">
+    <div class="content">
+      <header class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <meta itemprop="headline" content="Android Bets" />
+        <meta
+          itemprop="description"
+          content="Applications of the best bookmakers for android"
+        />
+        <meta itemprop="keywords" content="bets, android" />
+        {% include "src/html/layouts/header.html" %}
+      </header>
+      <main class="main" role="main">
+        {% include "src/html/layouts/contactsMain.html" %}
+      </main>
+      <footer
+        class="footer"
+        aria-label="Site"
+        itemscope
+        itemtype="https://schema.org/WPFooter"
+      >
+        {% include "src/html/layouts/footer.html" %}
+      </footer>
+    </div>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https:\/\/schema.org",
+        "@type": "MobileApplication",
+        "applicationCategory": "SportsApplication",
+        "name": "Bet365 Mobile App",
+        "description": "Bet365 .apk Mobile App for Android",
+        "operatingSystem": "Android 5.0 or Higher",
+        "softwareVersion": "5.0.41.0",
+        "fileSize": "19.3 Mb",
+        "offers": [{ "@type": "Offer", "price": "0", "priceCurrency": "INR" }],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 5,
+          "reviewCount": 2
+        }
+      }
+    </script>
+  </body>
+</html>

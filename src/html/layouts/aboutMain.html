@@ -1,0 +1,120 @@
+{% import "src/html/components/button.html" as buttonItem %} {% import
+"src/html/components/team.html" as teamItem %}
+<div class="container">
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <ol>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="" aria-current="page">About us </a>
+      </li>
+    </ol>
+  </nav>
+  <div class="wrapper" itemscope itemtype="https://schema.org/LocalBusiness">
+    <h1 class="sr-only">About us</h1>
+    <section class="section">
+      <h3>About</h3>
+      <p itemprop="description">
+        We are a team of specialists in the field of software downloads, our
+        team was founded in 2013 in New Delhi by international experts of the
+        highest level. The experience of our team has allowed us to achieve a
+        high level of reliability in the delivery of software for Android. From
+        time immemorial, downloading has been a prerequisite for running a
+        business for Android and our specialists are good at it. If your
+        application is a specialized betting application, we are ready to offer
+        guaranteed delivery to users using a transcontinental CDN (content
+        delivery system), our company's servers are located all over the world
+        and the speed does not depend on where you are, we can ensure continuous
+        download of applications for millions of users, as if you were with them
+        in the same room.
+      </p>
+    </section>
+    <section class="section section--table">
+      <h3>
+        We are trusted by the world's largest brands to download their
+        applications, among our partners:
+      </h3>
+      <div class="content">
+        <div class="table">
+          <div class="row">
+            <div class="row__item">
+              <img src="@images/bet-1.svg" alt="1xbet" loading="lazy" />
+              <p>1xbet</p>
+            </div>
+            <div class="row__item">
+              <img src="@images/bet-2.svg" alt="mostbet" loading="lazy" />
+              <p>mostbet</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row__item">
+              <img src="@images/bet-3.svg" alt="1win" loading="lazy" />
+              <p>1win</p>
+            </div>
+            <div class="row__item">
+              <img src="@images/bet-4.svg" alt="parimatch" loading="lazy" />
+              <p>parimatch</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row__item">
+              <img src="@images/bet-5.svg" alt="bet365" loading="lazy" />
+              <p>bet365</p>
+            </div>
+            <div class="row__item">
+              <img src="@images/bet-6.svg" alt="melbet" loading="lazy" />
+              <p>melbet</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row__item">
+              <img src="@images/bet-7.svg" alt="betwinner" loading="lazy" />
+              <p>betwinner</p>
+            </div>
+            <div class="row__item">
+              <img src="@images/bet-8.svg" alt="betway" loading="lazy" />
+              <p>betway</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row__item">
+              <img src="@images/bet-9.svg" alt="fairplay" loading="lazy" />
+              <p>fairplay</p>
+            </div>
+            <div class="row__item">
+              <img src="@images/bet-10.svg" alt="dafabet" loading="lazy" />
+              <p>dafabet</p>
+            </div>
+          </div>
+        </div>
+        <div class="text">
+          <p>
+            In his youth, the founder of the site was drinking his coffee at a
+            MacBook and thinking, suddenly his android file disappeared from the
+            Play Market and he drew two servers on a napkin and connected them
+            via a private network, so the first cluster of companies was formed.
+            Since then, Androidbets has been providing corporate services to
+            businesses in the field of alternative downloads on Android.
+          </p>
+          <p>
+            Our app download consultants work 24/7. You can contact an
+            Androidbets representative using the form below, we will try to
+            respond as soon as possible. Entrust the download of your files to
+            Androidbets, the best file sharing service in the field of sports
+            betting and Dota 2 applications.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section section--team">
+      <h3>Our team</h3>
+      <div class="items">
+        {{teamItem.team("team-1", "Kevin", "Director")}}
+        {{teamItem.team("team-2", "Linda", "Sales")}} {{teamItem.team("team-3",
+        "Huang Li", "Business analysis")}} {{teamItem.team("team-4", "Charlie",
+        "CTO")}}
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+{% macro checkbox(name, title, linkUrl ,linkText) %}
+<div class="form-item form-item--checkbox">
+  <input type="checkbox" name="{{ name }}" id="{{ name }}" />
+  <label for="{{ name }}"
+    >{{title}} <a href="{{linkUrl}}">{{linkText}}</a></label
+  >
+</div>
+{% endmacro %}

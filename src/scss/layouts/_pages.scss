@@ -1,0 +1,47 @@
+.home {
+  background-color: #fafafa;
+
+  .header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding-top: $spaceXl4;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    @include sm-breakpoint {
+      top: $spaceXl6;
+      padding-top: 0;
+    }
+  }
+}
+
+.send {
+  > .container {
+    > .wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: $spaceXl8;
+
+      .aside {
+        ol {
+          @include orderedList;
+        }
+
+        > h2 {
+          @include sectionSubTitle;
+
+          margin-bottom: $spaceXl4;
+        }
+      }
+
+      @include sm-breakpoint {
+        flex-direction: row;
+        gap: $spaceXl6;
+      }
+    }
+  }
+}

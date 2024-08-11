@@ -1,0 +1,34 @@
+.breadcrumb {
+  padding: $spaceXl4 0 $spaceXl6;
+  ol {
+    display: flex;
+    align-items: center;
+    font-size: $fontSizeSm;
+    font-weight: 500;
+
+    li {
+      &:not(:first-child) {
+        position: relative;
+        padding-left: $spaceXl5;
+
+        &:before {
+          content: '>';
+          position: absolute;
+          top: 50%;
+          left: 6px;
+          transform: translateY(-50%);
+          width: 8px;
+        }
+      }
+      &:last-child {
+        a {
+          color: $secondaryColor;
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      font-size: $fontSizeMd;
+    }
+  }
+}

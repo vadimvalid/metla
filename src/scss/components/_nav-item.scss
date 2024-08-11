@@ -1,0 +1,61 @@
+.navbar {
+  &__icon {
+    color: $whiteColor;
+    font-size: $fontSize;
+    font-weight: $fontWeightRegular;
+    line-height: 1.375;
+
+    &.has-submenu {
+      position: relative;
+      padding-right: $spaceMd;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(100%, -50%);
+        height: 5px;
+        width: $spaceMd;
+        background-image: url('@images/icon-down.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &:hover {
+        .navbar__submenu {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      .is-separator {
+        cursor: pointer;
+      }
+    }
+
+    > a {
+      display: flex;
+
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @include md-breakpoint {
+    &__icon {
+      padding-left: $spaceXl6;
+      color: $mainColor;
+
+      > a {
+        color: inherit;
+      }
+    }
+  }
+}

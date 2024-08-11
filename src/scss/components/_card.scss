@@ -1,0 +1,110 @@
+.card {
+  &--list {
+    display: flex;
+    flex-direction: column;
+    gap: $spaceXl2;
+    padding: $spaceXl4 0;
+    border-bottom: $border;
+
+    .content {
+      display: flex;
+      gap: $spaceXl2;
+
+      &__item {
+        flex: 0 1 60%;
+        display: flex;
+        flex-direction: column;
+        gap: $spaceXl2;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: $spaceXl2;
+
+          &:first-child {
+            font-weight: $fontWeightBold;
+
+            > span {
+              color: $secondaryColor;
+              font-size: $fontSizeSm;
+              font-weight: $fontWeightMedium;
+            }
+
+            > img {
+              width: $size60;
+              height: $size60;
+            }
+          }
+
+          &:last-child {
+            color: $secondaryColor;
+            font-size: $fontSize;
+            font-weight: $fontWeightBold;
+
+            > span {
+              font-size: $fontSizeMd;
+              font-weight: $fontWeightLight;
+            }
+          }
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          gap: torem(3);
+          font-weight: $fontWeightBold;
+
+          > span {
+            color: $secondaryColor;
+            font-size: $fontSizeSm;
+            font-weight: $fontWeightMedium;
+          }
+        }
+      }
+
+      &__buttons {
+        flex: 0 1 40%;
+        display: flex;
+        flex-direction: column;
+        gap: $spaceMd;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: $spaceXs;
+      font-size: $fontSizeSm;
+    }
+
+    @include sm-breakpoint {
+      padding: 0;
+      border: none;
+
+      .content {
+        gap: $spaceXl4;
+
+        &__item {
+          .item {
+            &:first-child {
+              > span {
+                font-size: $fontSizeMd;
+              }
+            }
+          }
+
+          .text {
+            > span {
+              font-size: $fontSizeMd;
+            }
+          }
+        }
+      }
+
+      ul {
+        gap: torem(7);
+        font-size: $fontSizeMd;
+      }
+    }
+  }
+}

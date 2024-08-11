@@ -1,0 +1,21 @@
+{% import "src/html/components/button.html" as buttonItem %} {% import
+"src/html/components/input.html" as inputItem %} {% import
+"src/html/components/checkbox.html" as checkboxItem %}
+<dialog id="dialog" class="dialog">
+  <div class="dialog__close">
+    <button type="button">
+      <img src="@images/icon-close.svg" alt="close icon" />
+    </button>
+  </div>
+  <div class="dialog__title">
+    <p>Can't download the app?</p>
+    <span
+      >Enter your WhatsApp phone number and we will send you the APK file</span
+    >
+  </div>
+  <form class="dialog__form">
+    {{inputItem.input('phone', 'Enter the phone number', '', 'number')}}
+    {{checkboxItem.checkbox('checkbox', 'I give my consent to the', '#',
+    'processing of personal data')}} {{buttonItem.button('#', '', 'Get 1xBet')}}
+  </form>
+</dialog>

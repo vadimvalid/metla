@@ -1,0 +1,286 @@
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: $spaceXl6;
+
+  .section {
+    &--app {
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $spaceXl4;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+
+        .items {
+          display: flex;
+          flex-direction: column;
+          gap: $spaceXl6;
+
+          .item {
+            display: flex;
+
+            &:first-child {
+              align-items: center;
+              gap: $spaceXl4;
+
+              img {
+                width: $size80;
+                height: $size80;
+              }
+
+              .item__text {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: $spaceMd;
+
+                p {
+                  font-weight: $fontWeightBold;
+                  line-height: 1.375;
+                }
+
+                span {
+                  font-size: $fontSizeSm;
+                  font-weight: $fontWeightMedium;
+                  color: $secondaryColor;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              flex-direction: column;
+              gap: $spaceXl2;
+              font-size: $fontSizeMd;
+              font-weight: $fontWeightLight;
+
+              span {
+                color: $secondaryColor;
+                font-size: $fontSize;
+                font-weight: $fontWeightBold;
+              }
+
+              ul {
+                display: flex;
+                flex-direction: column;
+                gap: $spaceXs;
+                font-size: $fontSizeSm;
+              }
+            }
+
+            &:last-child {
+              display: flex;
+
+              > div {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 $spaceXl;
+                font-size: $fontSizeSm;
+                font-weight: $fontWeightLight;
+
+                p {
+                  font-size: $fontSize;
+                  font-weight: $fontWeightSemiBold;
+                }
+
+                &:not(:last-child) {
+                  border-right: $border;
+                }
+              }
+
+              .item__block {
+                &--image {
+                  p {
+                    display: flex;
+                    align-items: center;
+                    gap: $spaceMd;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > p {
+          font-size: $fontSizeSm;
+          font-weight: $fontWeightLight;
+          text-align: center;
+
+          span {
+            font-weight: $fontWeightSemiBold;
+          }
+        }
+
+        > a:not(.button) {
+          font-size: $fontSizeSm;
+          font-weight: $fontWeightSemiBold;
+          color: $secondaryColor;
+          text-decoration-line: underline;
+          text-align: center;
+        }
+      }
+    }
+
+    &--reviewer {
+      .wrapper {
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    gap: $spaceMd;
+    overflow: auto;
+  }
+
+  @include sm-breakpoint {
+    padding: 0 $spaceXl9;
+    gap: $spaceXl8;
+
+    .section {
+      &--app {
+        .wrapper {
+          flex-direction: column;
+          gap: $spaceXl4;
+
+          .items {
+            flex-direction: row;
+            gap: $spaceXl6;
+            flex-wrap: wrap;
+
+            .item {
+              flex: 0 1 calc(50% - $spaceXl2);
+
+              &:first-child {
+                align-items: center;
+                gap: $spaceXl4;
+                font-size: $spaceXl3;
+
+                img {
+                  width: $size100;
+                  height: $size100;
+                }
+
+                .item__text {
+                  flex-direction: column;
+                  gap: $spaceMd;
+
+                  span {
+                    font-size: $fontSizeMd;
+                  }
+                }
+              }
+
+              &:nth-child(2) {
+                font-size: $fontSize;
+
+                span {
+                  font-size: $spaceXl3;
+                }
+
+                ul {
+                  font-size: $fontSizeMd;
+                }
+              }
+
+              &:last-child {
+                display: flex;
+                flex: 0 1 100%;
+
+                > div {
+                  padding: 0 $spaceXl;
+                  font-size: $fontSizeMd;
+
+                  p {
+                    font-size: $fontSize;
+                    font-weight: $fontWeightSemiBold;
+                  }
+
+                  &:not(:last-child) {
+                    border-right: $border;
+                  }
+                }
+
+                .item__block {
+                  &--image {
+                    p {
+                      display: flex;
+                      align-items: center;
+                      gap: $spaceMd;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          > p {
+            font-size: $fontSizeMd;
+          }
+
+          > a:not(.button) {
+            font-size: $fontSizeMd;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main {
+  > .container {
+    > .content {
+      padding-top: $spaceMd;
+
+      h1 {
+        @include sectionSubTitle;
+
+        margin-bottom: $spaceXl4;
+      }
+
+      h2 {
+        @include sectionParagraph;
+
+        margin-top: $spaceXl6;
+        margin-bottom: $spaceXl2;
+        font-weight: $fontWeightBold;
+      }
+
+      p {
+        @include sectionParagraph;
+
+        margin-bottom: $spaceXl4;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: $spaceMd;
+        padding-left: $spaceXl2;
+        list-style: initial;
+
+        li {
+          @include sectionParagraph;
+
+          &::marker {
+            color: $secondaryColor;
+          }
+        }
+      }
+
+      @include sm-breakpoint {
+        padding: $spaceXl2 $spaceXl9;
+
+        h2 {
+          margin-bottom: $spaceXl4;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{% macro button(url, icon, title, type="button", isSecondary) %} {% if url %}
+<a
+  href="{{ url }}"
+  class="button {% if isSecondary %}button--secondary{% endif %}"
+>
+  {% if icon %}
+  <img src="@images/{{ icon }}" alt="{{title}} icon" loading="lazy" />
+  {% endif %} {{title}}
+</a>
+
+{% elif icon %}
+<button
+  type="{{ type}}"
+  class="button {% if isSecondary %}button--secondary{% endif %}"
+>
+  <img src="@images/{{ icon }}" alt="{{title}} icon" loading="lazy" />
+</button>
+
+{% else %}
+<button
+  type="{{ type }}"
+  class="button {% if isSecondary %}button--secondary{% endif %}"
+  aria-label="{{ title }}"
+>
+  {{title}}
+</button>
+{% endif %} {% endmacro %}

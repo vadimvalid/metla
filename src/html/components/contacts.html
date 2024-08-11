@@ -1,0 +1,23 @@
+{% macro contactsItem(title, email, phone, website) %}
+<div class="contacts">
+  <p class="contacts__title">{{ title }}</p>
+  <div class="contacts__items">
+    {% if email %}
+    <div class="item">
+      <img src="@images/icon-email.svg" alt="icon email" loading="lazy" />
+      <a href="mailto:{{ email }}">{{ email }}</a>
+    </div>
+    {% endif %} {% if phone %}
+    <div class="item">
+      <img src="@images/icon-phone.svg" alt="icon phone" loading="lazy" />
+      <a href="tel:+{{ phone }}">{{phone}}</a>
+    </div>
+    {% endif %} {% if website %}
+    <div class="item">
+      <img src="@images/icon-website.svg" alt="icon website" loading="lazy" />
+      <a href="{{ website }}" target="_blank">{{website}}</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

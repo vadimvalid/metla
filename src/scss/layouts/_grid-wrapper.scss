@@ -1,0 +1,38 @@
+.grid-wrapper {
+  display: grid;
+  grid-template-areas:
+    'head'
+    'right-side'
+    'left-side';
+  gap: $spaceXl6;
+  margin-top: torem(-84);
+
+  .head {
+    grid-area: head;
+  }
+
+  .left-side {
+    grid-area: left-side;
+    display: flex;
+    flex-direction: column;
+    gap: $spaceXl6;
+  }
+
+  .right-side {
+    grid-area: right-side;
+  }
+
+  @include sm-breakpoint {
+    grid-template-areas:
+      'head head head'
+      'left-side left-side right-side';
+    grid-template-columns: auto auto torem(360);
+    margin-top: torem(-200);
+
+    .right-side {
+      position: sticky;
+      top: 0;
+      align-self: start;
+    }
+  }
+}

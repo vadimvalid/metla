@@ -1,0 +1,89 @@
+.form-item {
+  input {
+    width: 100%;
+    padding: $spaceXl2 $spaceXl4;
+    border-radius: $borderRadius;
+    border: $border;
+    background: #f7faff;
+    font-size: $fontSizeSm;
+
+    &::placeholder {
+      font-size: inherit;
+      color: inherit;
+    }
+
+    @include sm-breakpoint {
+      font-size: $fontSizeMd;
+    }
+  }
+
+  &--checkbox {
+    font-size: $fontSizeSm;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $spaceXl5;
+      height: $spaceXl5;
+      margin: 0;
+      visibility: hidden;
+
+      &:checked + label {
+        &:before {
+          border-color: $secondaryColor;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    a {
+      color: $secondaryColor;
+      text-decoration: underline;
+    }
+
+    label {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spaceXs;
+      padding-left: $spaceXl7;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &:before {
+        width: $spaceXl5;
+        height: $spaceXl5;
+        border: $border;
+        border-radius: 5px;
+        background: #f7faff;
+      }
+
+      &:after {
+        left: 7px;
+        width: $spaceXl;
+        height: $spaceXl3;
+        background-image: url('@images/icon-list.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+    }
+
+    @include sm-breakpoint {
+      font-size: $fontSizeMd;
+    }
+  }
+}

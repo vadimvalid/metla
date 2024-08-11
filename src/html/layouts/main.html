@@ -1,0 +1,23 @@
+{% include "src/html/layouts/hero.html" %}
+<div class="container">
+  <div class="grid-wrapper">
+    <div class="head">{% include "src/html/layouts/sectionList.html" %}</div>
+    <div class="left-side">
+      {% include "src/html/layouts/sectionRating.html" %} {% include
+      "src/html/layouts/sectionComparison.html" %} {% include
+      "src/html/layouts/sectionHowTo.html" %} {% include
+      "src/html/layouts/sectionTop.html" %} {% include
+      "src/html/layouts/sectionReview.html" %} {% include
+      "src/html/layouts/sectionReviewer.html" %}{% include
+      "src/html/layouts/sectionFAQ.html" %}
+    </div>
+    <aside
+      class="right-side"
+      aria-label="Sidebar"
+      itemscope
+      itemtype="http://schema.org/WPSideBar"
+    >
+      {% include "src/html/layouts/sectionAside.html" %}
+    </aside>
+  </div>
+</div>

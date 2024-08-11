@@ -1,0 +1,58 @@
+.dialog {
+  position: relative;
+  padding: $spaceXl5 torem(35);
+  border-radius: $borderRadiusMd;
+  background: $whiteColor;
+  border: none;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: $spaceMd;
+    margin-bottom: $spaceXl4;
+    font-size: $fontSizeSm;
+
+    > p {
+      font-size: $fontSize;
+      font-weight: $fontWeightBold;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $spaceXl4;
+
+    button {
+      margin-top: $spaceXs;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: $spaceXl4;
+    right: $spaceXl4;
+    width: $fontSize;
+    height: $fontSize;
+
+    button {
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      border: none;
+      z-index: 5;
+      cursor: pointer;
+    }
+  }
+
+  &::backdrop {
+    background: rgba(21, 47, 89, 0.5);
+  }
+
+  @include sm-breakpoint {
+    padding: $spaceXl6 $spaceXl7;
+    &__title {
+      font-size: $fontSizeMd;
+    }
+  }
+}

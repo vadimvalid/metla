@@ -1,0 +1,8 @@
+{% macro progress(title, value) %}
+<div class="progress">
+  <div class="progress__title">{{title}}</div>
+  <div class="progress__value">
+    <div class="progress__value__inner" style="width: {{value}}"></div>
+  </div>
+</div>
+{% endmacro %}

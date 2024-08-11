@@ -1,0 +1,42 @@
+{% import "src/html/components/nav-item-submenu.html" as submenuItem %} {%
+import "src/html/components/button.html" as buttonItem %} {% macro navItem(url,
+title, isDropdown) %} {% set submenuItems = [ { url: '/', icon:
+'@images/bet-1.svg', title: '1xBet', rating: '5.0' }, { url: '/', icon:
+'@images/bet-2.svg', title: 'Mostbet', rating: '5.0' }, { url: '/', icon:
+'@images/bet-3.svg', title: 'bet365', rating: '' }, { url: '/', icon:
+'@images/bet-4.svg', title: '1win', rating: '5.0' }, { url: '/', icon:
+'@images/bet-5.svg', title: 'Parimatch', rating: '5.0' }, { url: '/', icon:
+'@images/bet-6.svg', title: 'Melbet', rating: '5.0' }, { url: '/', icon:
+'@images/bet-7.svg', title: 'Betwinner', rating: '5.0' }, { url: '/', icon:
+'@images/bet-8.svg', title: 'Betway', rating: '5.0' }, { url: '/', icon:
+'@images/bet-9.svg', title: 'Fairplay', rating: '5.0' }, { url: '/', icon:
+'@images/bet-10.svg', title: 'Dafabet', rating: '5.0' }]%}
+<li
+  itemprop="name"
+  class="navbar__icon {% if isDropdown %}has-submenu{% endif %}"
+>
+  {% if isDropdown %}
+  <a
+    role="link"
+    aria-disabled="true"
+    class="is-separator"
+    aria-haspopup="true"
+    tabindex="0"
+    itemprop="url"
+    >{{title}}</a
+  >
+  <ul
+    class="navbar__submenu"
+    aria-hidden="true"
+    role="menu"
+    aria-label="{{title}}"
+  >
+    {% for items in submenuItems %} {{ submenuItem.navItemSubmenu(items.url,
+    items.icon, items.title, items.rating) }} {% endfor %} {{
+    buttonItem.button('/', '', 'View all apps') }}
+  </ul>
+  {% else %}
+  <a href="{{ url }}" target="_self" itemprop="url">{{title}}</a>
+  {% endif %}
+</li>
+{% endmacro %}

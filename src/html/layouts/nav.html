@@ -1,0 +1,25 @@
+{% import "src/html/components/nav-item.html" as navItem %} {% set navItems = [
+{ url: '/', title: 'Home', isDropdown: false }, { url: '/', title: 'Best app in
+India', isDropdown: false },{ url: '/', title: 'Apps bookmakers', isDropdown:
+true }, { url: '/', title: 'About us', isDropdown: false }, { url: '/', title:
+'Contacts', isDropdown: false }] %} {% import
+"src/html/components/contacts.html" as contacts %}
+<nav
+  class="navbar"
+  aria-label="Main Menu"
+  itemscope
+  itemtype="http://schema.org/SiteNavigationElement"
+>
+  <input id="navbar__toggle" type="checkbox" aria-label="Menu" />
+  <label class="navbar__btn" for="navbar__toggle">
+    <span></span>
+  </label>
+  <ul class="navbar__menu">
+    {% for items in navItems %} {{ navItem.navItem(items.url, items.title,
+    items.isDropdown) }} {% endfor %}
+    <div class="mobile">
+      {{contacts.contactsItem('Our contacts', 'example@google.com', '+1 (870)
+      463-8589', 'https://example.com' )}}
+    </div>
+  </ul>
+</nav>

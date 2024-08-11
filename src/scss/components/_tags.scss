@@ -1,0 +1,15 @@
+.tags {
+  display: flex;
+  gap: $spaceMd;
+
+  li {
+    font-size: $fontSizeSm;
+    color: $secondaryColor;
+  }
+
+  @include sm-breakpoint {
+    li {
+      font-size: $fontSizeMd;
+    }
+  }
+}

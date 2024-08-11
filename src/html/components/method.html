@@ -1,0 +1,6 @@
+{% macro method(image, title) %}
+<div class="method">
+  <img src="@images/{{image}}.svg" alt="{{title}}" loading="lazy" />
+  <p>{{title}}</p>
+</div>
+{% endmacro %}

@@ -1,0 +1,14 @@
+{% import "src/html/components/card.html" as cardItem %}
+<section id="list" class="section section--list">
+  <div class="wrapper">
+    <h2>List of 20+ betting apps in india (2023)</h2>
+    <div class="items">
+      {{cardItem.cardList('bet-1.svg', '1xbet', '#1 in rating') }}
+      {{cardItem.cardList('bet-2.svg', 'Mostbet', '#2 in rating') }}
+      {{cardItem.cardList('bet-3.svg', 'bet365', '#3 in rating') }}
+    </div>
+    <div class="more">
+      <a href="#"> Show more apps </a>
+    </div>
+  </div>
+</section>

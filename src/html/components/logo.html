@@ -1,0 +1,24 @@
+{% macro logo(url, icon, title, description) %}
+<div itemscope itemtype="https://schema.org/Organization">
+  <meta itemprop="name" content="{{ title }}" />
+  <link itemprop="url" href="/" />
+  <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+    <a href="{{ url }}" class="logo" rel="home" itemprop="url image">
+      <meta itemprop="name" content="{{ title }}" />
+      <img
+        src="{{ icon }}"
+        alt="{{title}}"
+        itemprop="url image"
+        loading="lazy"
+      />
+      <meta itemprop="width" content="30" />
+      <meta itemprop="height" content="30" />
+      <div class="logo__text">
+        <p>{{ title }}</p>
+        <span>{{ description }}</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+{% endmacro %}

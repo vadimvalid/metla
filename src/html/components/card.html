@@ -1,0 +1,32 @@
+{% import "src/html/components/button.html" as buttonItem %} {% macro
+cardList(contentIcon, contentTitle, contentDescription) %}
+
+<article class="card card--list">
+  <div class="content">
+    <div class="content__item">
+      <div class="item">
+        <img
+          src="@images/{{contentIcon}}"
+          alt="{{contentTitle}}"
+          loading="lazy"
+        />
+        <div class="text">
+          <p>{{contentTitle}}</p>
+          <span>{{contentDescription}}</span>
+        </div>
+      </div>
+      <div class="item">
+        <p>100% <span>Up To</span> 25,000$</p>
+      </div>
+    </div>
+    <div class="content__buttons">
+      {{ buttonItem.button('./html/pages/download.html', 'icon-android.svg',
+      'Download') }} {{ buttonItem.button('/', '', 'Read more', true) }}
+    </div>
+  </div>
+  <ul class="list--done list--done--blue">
+    <li>Use Bonus Code “BESTAPP” for Exclusive</li>
+    <li>Welcome Offer Boost</li>
+  </ul>
+</article>
+{% endmacro %}

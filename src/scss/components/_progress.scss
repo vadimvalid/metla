@@ -1,0 +1,24 @@
+.progress {
+  display: flex;
+  align-items: center;
+  gap: $spaceMd;
+  font-size: $fontSizeSm;
+  font-weight: $fontWeightLight;
+
+  &__value {
+    position: relative;
+    width: 100%;
+    height: torem(7);
+    border-radius: $borderRadius;
+    background: $greyColor;
+
+    &__inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: $secondaryColor;
+      border-radius: $borderRadius;
+    }
+  }
+}
