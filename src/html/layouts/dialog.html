@@ -1,5 +1,4 @@
-{% import "src/html/components/button.html" as buttonItem %} {% import
-"src/html/components/input.html" as inputItem %} {% import
+{% import "src/html/components/input.html" as inputItem %} {% import
 "src/html/components/checkbox.html" as checkboxItem %}
 <dialog id="dialog" class="dialog">
   <div class="dialog__close">
@@ -14,6 +13,6 @@
   <form class="dialog__form">
     {{inputItem.input('phone', 'Enter the phone number', '', 'number')}}
     {{checkboxItem.checkbox('checkbox', 'I give my consent to the', '#',
-    'processing of personal data')}} {{buttonItem.button('#', '', 'Get 1xBet')}}
+    'processing of personal data')}}
   </form>
 </dialog>

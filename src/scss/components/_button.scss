@@ -1,0 +1,40 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: torem(15) torem(18);
+  border-radius: 14px;
+  background-color: $blue;
+  font-size: $fontSizeLg;
+  font-weight: 500;
+  color: $white;
+  line-height: 1.2;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1);
+  transition: $transition;
+  cursor: pointer;
+
+  &.dark {
+    background-color: $darkPurple;
+  }
+
+  &.white {
+    background-color: $white;
+    color: $darkPurple;
+  }
+
+  &.grey {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $text;
+  }
+
+  &.yellow {
+    background-color: $yellow;
+    color: $darkestPurple;
+  }
+
+  &.border {
+    background-color: transparent;
+    color: $blue;
+    border: 1.5px solid $blue;
+  }
+}

@@ -1,5 +1,4 @@
-{% import "src/html/components/button.html" as buttonItem %} {% import
-"src/html/components/team.html" as teamItem %} {% import
+{% import "src/html/components/team.html" as teamItem %} {% import
 "src/html/components/contacts.html" as contacts %} {% import
 "src/html/components/input.html" as inputItem %}
 <div class="container">
@@ -46,7 +45,6 @@
           {{inputItem.input('name', 'Name', '', 'text')}}
           {{inputItem.input('email', 'E-mail', '', 'email')}}
           {{inputItem.input('phone', 'Phone number', '', 'number')}}
-          {{buttonItem.button('#', '', 'Send a request')}}
         </form>
       </div>
       <div class="item">
