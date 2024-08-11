@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: torem(10);
+  font-size: $fontSizeMd;
+  color: $text;
+  line-height: 1;
+
+  @include sm-breakpoint {
+  }
+}

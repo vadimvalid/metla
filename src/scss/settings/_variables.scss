@@ -3,7 +3,7 @@ $smBreakpoint: 768px;
 $mdBreakpoint: 1024px;
 
 // Colors
-$text: #2a2444cc;
+$text: rgba(42, 36, 68, 0.9);
 $white: #fff;
 $darkPurple: #422a9b;
 $almostWhitePurple: #e1dcf1;
@@ -60,7 +60,7 @@ $shadow: 0 0 30px 0 rgba(21, 47, 89, 0.05);
 $shadowSm: 0 0 50px 0 rgba(21, 47, 89, 0.05);
 
 // Border
-$border: 1px solid $whiteDarkColor;
+$border: 1px solid currentColor;
 
 // Other
 $transition: all 0.3s ease;
