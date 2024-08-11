@@ -3,45 +3,37 @@ $smBreakpoint: 768px;
 $mdBreakpoint: 1024px;
 
 // Colors
-$mainColor: #152f59;
-$secondaryColor: #3981f3;
-$secondaryColorActive: #1f71f2;
-$whiteColor: #fff;
-$whiteDarkColor: #e6efff;
-$greyColor: #f2f7ff;
-$greyDarkColor: #d9d9d9;
-$greyLightColor: #b8bfcc;
-$blueLightColor: #9cc0f9;
-$redColor: #f33939;
-$greenColor: #80f339;
-$greenDarkColor: #017b59;
-$darkColor: #003b77;
+$text: #2a2444cc;
+$white: #fff;
+$darkPurple: #422a9b;
+$almostWhitePurple: #e1dcf1;
+$blue: #0094d2;
+$darkBlue: #005173;
+$yellow: #ffc053;
 
 // Font sizes
-$fontSize: 1rem;
-$fontSizeSm: 0.75rem; // 12px
+$fontSizeXs: 0.625rem; // 10px;
+$fontSizeSm: 0.75rem; // 12px;
 $fontSizeMd: 0.875rem; // 14px;
-$fontSizeLg: 1.125rem; // 18px;
-$fontSizeXl: 1.25rem; // 20px;
-$fontSizeXl2: 1.5rem; // 24px;
-$fontSizeXl3: 2rem; // 32px;
-$fontSizeXl4: 2.25rem; // 36px;
-$fontSizeXl5: 2.875rem; // 46px;
+$fontSizeLg: 1rem; // 16px;
+$fontSizeXl: 1.125rem; // 18px;
+$fontSizeXl2: 1.25rem; // 20px;
+$fontSizeXl3: 1.375rem; // 22px;
+$fontSizeXl4: 1.625rem; // 26px;
+$fontSizeXl5: 2.125rem; // 34px;
+$fontSizeXl6: 2.375rem; // 38px;
 
 // Spaces
-$spaceXs: 0.3125rem; // 5px;
-$spaceSm: 0.5rem; // 8px;
-$spaceMd: 0.625rem; // 10px;
-$spaceLg: 0.75rem; // 12px;
-$spaceXl: 0.875rem; // 14px;
-$spaceXl2: 0.9375rem; // 15px;
-$spaceXl3: 1.125rem; // 18px;
-$spaceXl4: 1.25rem; // 20px;
-$spaceXl5: 1.5625rem; // 25px;
-$spaceXl6: 1.875rem; // 30px;
-$spaceXl7: 2.5rem; // 40px;
-$spaceXl8: 3.125rem; // 50px;
-$spaceXl9: 6.25rem; // 100px;
+$spaceXs: 0.625rem; // 10px;
+$spaceSm: 0.75rem; // 12px;
+$spaceMd: 0.875rem; // 14px;
+$spaceLg: 1rem; // 16px;
+$spaceXl: 1.125rem; // 18px;
+$spaceXl2: 1.25rem; // 20px;
+$spaceXl3: 1.375rem; // 22px;
+$spaceXl4: 1.625rem; // 26px;
+$spaceXl5: 2.125rem; // 34px;
+$spaceXl6: 2.375rem; // 38px;
 
 // Sizes
 $size48: 3rem; //48px;
