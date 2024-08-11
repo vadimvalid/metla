@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
-  color: $mainColor;
+  color: $text;
 
   @include sm-breakpoint {
     line-height: 1.42;
