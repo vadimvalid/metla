@@ -1,6 +1,6 @@
 .hero {
   padding: torem(100) 0 torem(134);
-  background-image: url('@images/main-bg.webp');
+  // background-image: url('@images/main-bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@
           color: $secondaryColor;
           font-size: $fontSizeXl4;
           font-weight: $fontWeightBlack;
-          line-height: 1.333333333;
+          line-height: 1.33;
         }
 
         > p {

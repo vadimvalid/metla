@@ -54,7 +54,7 @@ $max-tab-count: 5;
         width: torem(9);
         height: torem(9);
         transform: translateY(-50%);
-        background-image: url('@images/icon-down-black.svg');
+        // background-image: url('@images/icon-down-black.svg');
         background-repeat: no-repeat;
         background-size: contain;
       }
@@ -137,7 +137,7 @@ $max-tab-count: 5;
         height: torem(4);
         transform: translateY(-50%);
         transform-origin: center;
-        background-image: url('@images/icon-down.svg');
+        // background-image: url('@images/icon-down.svg');
         background-repeat: no-repeat;
         background-size: contain;
       }
