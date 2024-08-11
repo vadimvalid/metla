@@ -30,7 +30,7 @@
         transform: translateY(-50%);
         width: $spaceSm;
         height: $spaceSm;
-        background-image: url('@images/icon-more.svg');
+        // background-image: url('@images/icon-more.svg');
         background-repeat: no-repeat;
         background-size: contain;
       }
@@ -267,7 +267,7 @@
             transform: translateY(-50%);
             width: $spaceSm;
             height: torem(6);
-            background-image: url('@images/icon-list.svg');
+            // background-image: url('@images/icon-list.svg');
             background-repeat: no-repeat;
             background-size: contain;
           }
