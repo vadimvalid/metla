@@ -1,0 +1,120 @@
+.footer {
+  padding: torem(40) torem(12) torem(120);
+  background: radial-gradient(
+    190.16% 64.28% at 50% 100%,
+    #302756 0%,
+    #231b42 100%
+  );
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: torem(40);
+
+    .logo {
+      &__text {
+        display: none;
+      }
+    }
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: torem(23) torem(12);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: torem(12);
+
+      &:first-child {
+        display: none;
+      }
+
+      li {
+        a {
+          font-size: $fontSizeLg;
+          font-weight: 400;
+          line-height: 1.4;
+          color: rgba(255, 255, 255, 0.7);
+          text-decoration: none;
+        }
+
+        &:first-child {
+          margin-bottom: torem(11);
+
+          a {
+            font-size: $fontSizeXl3;
+            font-weight: 500;
+            line-height: 1.1;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      display: flex;
+      gap: torem(20);
+
+      ul {
+        flex: 1;
+
+        &:first-child {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: center;
+    gap: torem(12);
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: torem(12);
+      padding: 0 torem(12);
+      font-size: $fontSizeLg;
+      line-height: normal;
+      font-weight: 500;
+      color: $white;
+    }
+
+    @include sm-breakpoint {
+      gap: torem(40);
+
+      &__item {
+        padding: 0;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: torem(22) torem(25);
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: torem(12);
+      align-items: center;
+      font-size: $fontSizeMd;
+      font-weight: 500;
+      line-height: normal;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    @include sm-breakpoint {
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: torem(40);
+    }
+  }
+}
