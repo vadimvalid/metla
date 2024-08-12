@@ -1,0 +1,70 @@
+.card--service {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: torem(25);
+  padding: torem(12);
+  border-radius: $borderRadiusMd;
+  overflow: hidden;
+  box-shadow: $shadow;
+  background-color: $darkPurple;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: torem(12);
+    z-index: 1;
+
+    h3 {
+      font-size: $fontSizeXl;
+      font-weight: 600;
+      line-height: normal;
+      color: $white;
+    }
+
+    img {
+      width: torem(30);
+      height: torem(30);
+      object-fit: contain;
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: torem(12);
+    z-index: 1;
+
+    .button {
+      flex: 1;
+    }
+  }
+
+  @include sm-breakpoint {
+    flex: 0 0 calc(100% / 3 - torem(14));
+    gap: torem(75);
+    padding: torem(24);
+
+    &__bg {
+      top: torem(40);
+    }
+
+    &__title {
+      font-size: $fontSizeXl4;
+
+      img {
+        width: torem(45);
+        height: torem(45);
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.services {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+
+    @include sm-breakpoint {
+      flex-direction: row;
+      gap: torem(20);
+      overflow-x: auto;
+    }
+  }
+}
