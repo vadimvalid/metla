@@ -1,92 +1,51 @@
 .hero {
-  padding: torem(100) 0 torem(134);
-  // background-image: url('@images/main-bg.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
   .wrapper {
-    .item {
-      p {
-        font-size: $fontSizeSm;
-      }
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: torem(60) 0;
+    border-radius: 18px;
+    overflow: hidden;
 
+    picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h1 {
+      position: relative;
+      width: 75%;
+      font-size: $spaceXl6;
+      font-weight: 700;
+      line-height: 1;
+      color: $white;
+      text-align: center;
+      text-shadow: 0px 0px 60px #231b42;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    @media (min-width: 500px) {
       h1 {
-        font-size: $fontSizeXl2;
-        font-weight: $fontWeightSemiBold;
-        line-height: normal;
-        text-transform: uppercase;
-        margin-bottom: $spaceXl2;
-
-        > span {
-          color: $secondaryColor;
-          font-size: $fontSizeXl4;
-          font-weight: $fontWeightBlack;
-          line-height: 1.33;
-        }
-
-        > p {
-          display: flex;
-          align-items: center;
-          gap: $spaceSm;
-          font-size: $fontSizeXl;
-          font-weight: $fontWeightRegular;
-          line-height: 1.95;
-        }
-
-        > * {
-          display: block;
-        }
-      }
-
-      &:last-child {
-        display: none;
+        width: 50%;
       }
     }
-  }
 
-  @include sm-breakpoint {
-    padding: torem(84) 0 torem(200);
-    text-align: center;
+    @include sm-breakpoint {
+      padding: torem(132) 0;
+      border-radius: 23px;
 
-    .wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: $spaceXl6;
-
-      .item {
-        flex: 0 1 60%;
-
-        p {
-          width: 50%;
-          margin: 0 auto;
-          font-size: $fontSizeMd;
-        }
-
-        h1 {
-          font-size: $fontSizeXl4;
-          margin-bottom: $spaceMd;
-
-          > span {
-            font-size: $fontSizeXl5;
-          }
-
-          > p {
-            gap: 0;
-            flex-direction: column;
-            font-size: $fontSizeXl3;
-
-            img {
-              width: torem(53);
-            }
-          }
-        }
-
-        &:last-child {
-          display: block;
-          flex: 0 1 40%;
-        }
+      h1 {
+        font-size: torem(64);
+        line-height: 1.2;
       }
     }
   }

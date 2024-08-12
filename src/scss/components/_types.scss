@@ -1,0 +1,32 @@
+.types {
+  .wrapper {
+    display: flex;
+    gap: torem(6);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: torem(6);
+    width: torem(80);
+    padding: torem(18.5) 0;
+    border-radius: $borderRadius;
+    background-color: $almostWhitePurple;
+    font-size: $spaceXs;
+    transition: $transition;
+
+    img {
+      width: torem(25);
+      height: torem(25);
+      object-fit: contain;
+    }
+
+    &:hover {
+      background-color: $darkPurple;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}

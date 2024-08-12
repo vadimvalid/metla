@@ -1,109 +1,144 @@
-.card {
-  &--list {
+.card--service {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: torem(25);
+  padding: torem(12);
+  border-radius: $borderRadiusMd;
+  overflow: hidden;
+  box-shadow: $shadow;
+  background-color: $darkPurple;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: torem(12);
+    z-index: 1;
+
+    h3 {
+      font-size: $fontSizeXl;
+      font-weight: 600;
+      line-height: normal;
+      color: $white;
+    }
+
+    img {
+      width: torem(30);
+      height: torem(30);
+      object-fit: contain;
+    }
+  }
+
+  &__buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: torem(12);
+    z-index: 1;
+
+    .button {
+      flex: 1;
+    }
+  }
+
+  @include sm-breakpoint {
+    flex: 0 0 calc(100% / 3 - torem(14));
+    gap: torem(75);
+    padding: torem(24);
+
+    &__bg {
+      top: torem(40);
+    }
+
+    &__title {
+      font-size: $fontSizeXl4;
+
+      img {
+        width: torem(45);
+        height: torem(45);
+      }
+    }
+  }
+}
+
+.card--premium {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: torem(17);
+  padding: torem(12);
+  border-radius: $borderRadiusMd;
+  overflow: hidden;
+  box-shadow: $shadow;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(35, 27, 66, 0.6) -6.24%,
+      rgba(0, 148, 210, 0.6) 164.24%
+    );
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: $spaceXl2;
-    padding: $spaceXl4 0;
-    border-bottom: $border;
+    gap: torem(24);
+    margin-top: auto;
+    line-height: 1.4;
+    z-index: 1;
+    color: $white;
 
-    .content {
-      display: flex;
-      gap: $spaceXl2;
-
-      &__item {
-        flex: 0 1 60%;
-        display: flex;
-        flex-direction: column;
-        gap: $spaceXl2;
-
-        .item {
-          display: flex;
-          align-items: center;
-          gap: $spaceXl2;
-
-          &:first-child {
-            font-weight: $fontWeightBold;
-
-            > span {
-              color: $secondaryColor;
-              font-size: $fontSizeSm;
-              font-weight: $fontWeightMedium;
-            }
-
-            > img {
-              width: $size60;
-              height: $size60;
-            }
-          }
-
-          &:last-child {
-            color: $secondaryColor;
-            font-size: $fontSize;
-            font-weight: $fontWeightBold;
-
-            > span {
-              font-size: $fontSizeMd;
-              font-weight: $fontWeightLight;
-            }
-          }
-        }
-
-        .text {
-          display: flex;
-          flex-direction: column;
-          gap: torem(3);
-          font-weight: $fontWeightBold;
-
-          > span {
-            color: $secondaryColor;
-            font-size: $fontSizeSm;
-            font-weight: $fontWeightMedium;
-          }
-        }
-      }
-
-      &__buttons {
-        flex: 0 1 40%;
-        display: flex;
-        flex-direction: column;
-        gap: $spaceMd;
-      }
+    h3 {
+      font-size: $fontSizeXl3;
+      font-weight: 600;
+      line-height: 1.2;
+      color: $white;
     }
 
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: $spaceXs;
-      font-size: $fontSizeSm;
+    img {
+      width: torem(30);
+      height: torem(30);
+      object-fit: contain;
     }
+  }
 
-    @include sm-breakpoint {
-      padding: 0;
-      border: none;
+  &__button {
+    position: relative;
+    align-self: flex-end;
+    z-index: 1;
+  }
 
-      .content {
-        gap: $spaceXl4;
+  @include sm-breakpoint {
+    flex: 1;
+    padding: torem(24);
 
-        &__item {
-          .item {
-            &:first-child {
-              > span {
-                font-size: $fontSizeMd;
-              }
-            }
-          }
-
-          .text {
-            > span {
-              font-size: $fontSizeMd;
-            }
-          }
-        }
-      }
-
-      ul {
-        gap: torem(7);
-        font-size: $fontSizeMd;
+    &__text {
+      h3 {
+        font-size: $fontSizeXl4;
       }
     }
   }

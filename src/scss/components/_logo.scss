@@ -1,17 +1,12 @@
 .logo {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: $spaceMd;
-  height: $spaceXl6;
-  z-index: 5;
+  gap: torem(10);
+  font-size: $fontSizeMd;
+  color: $text;
+  line-height: 1;
 
-  &__text {
-    font-size: torem(11);
-    font-weight: $fontWeightLight;
-
-    > p {
-      font-size: $fontSizeMd;
-      font-weight: $fontWeightBlack;
-    }
+  @include sm-breakpoint {
   }
 }

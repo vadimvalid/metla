@@ -1,0 +1,19 @@
+{% import "src/html/components/button.html" as buttonItem %} {% macro
+serviceCard(url, title, icon, bg) %}
+<article class="card card--service">
+  <img
+    src="@images/{{bg}}"
+    alt="{{title}}"
+    class="card--service__bg"
+    loading="lazy"
+  />
+  <div class="card--service__title">
+    <img src="@images/{{icon}}" alt="{{title}}" />
+    <h3>{{title}}</h3>
+  </div>
+  <div class="card--service__buttons">
+    {{ buttonItem.button("#", "Подробнее") }} {{ buttonItem.button("#",
+    "Заказать", "yellow") }}
+  </div>
+</article>
+{% endmacro %}

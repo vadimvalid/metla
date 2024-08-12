@@ -1,13 +1,11 @@
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 984px;
   margin: 0 auto;
-  padding: 0 $spaceXl2;
+  padding: 0 torem(12);
 }
 
 .main {
-  padding-bottom: $spaceXl8;
-
   @include sm-breakpoint {
     padding-bottom: torem(70);
   }

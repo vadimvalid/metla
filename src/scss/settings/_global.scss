@@ -4,11 +4,9 @@ html {
 
 body {
   font-family: 'Raleway', sans-serif;
-  color: $mainColor;
-
-  @include sm-breakpoint {
-    line-height: 1.42;
-  }
+  font-weight: 400;
+  line-height: normal;
+  color: $text;
 }
 
 .body {

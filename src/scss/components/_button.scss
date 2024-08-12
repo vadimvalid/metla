@@ -1,34 +1,40 @@
 .button {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: $spaceMd;
-  padding: $spaceLg $spaceXl4;
-  border-radius: $borderRadius;
-  background: $secondaryColor;
-  color: $whiteColor;
-  font-size: $fontSizeSm;
-  font-weight: $fontWeightSemiBold;
+  justify-content: center;
+  padding: torem(15) torem(18);
+  border-radius: 14px;
+  background-color: $blue;
+  font-size: $fontSizeLg;
+  font-weight: 500;
+  color: $white;
+  line-height: 1.2;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1);
+  transition: $transition;
+  cursor: pointer;
 
-  > img {
-    min-width: $spaceXl2;
+  &.dark {
+    background-color: $darkPurple;
   }
 
-  &:hover {
-    background: $secondaryColorActive;
+  &.white {
+    background-color: $white;
+    color: $darkPurple;
   }
 
-  &--secondary {
-    background: $greyColor;
-    color: $secondaryColor;
-
-    &:hover {
-      background: #e8f1ff;
-    }
+  &.grey {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $text;
   }
 
-  @include sm-breakpoint {
-    font-size: $fontSizeMd;
-    line-height: 1.42;
+  &.yellow {
+    background-color: $yellow;
+    color: $darkestPurple;
+  }
+
+  &.border {
+    background-color: transparent;
+    color: $blue;
+    border: 1.5px solid $blue;
   }
 }

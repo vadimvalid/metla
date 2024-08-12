@@ -1,4 +1,4 @@
-{% macro logo(url, icon, title, description) %}
+{% macro logo(url, icon, title) %}
 <div itemscope itemtype="https://schema.org/Organization">
   <meta itemprop="name" content="{{ title }}" />
   <link itemprop="url" href="/" />
@@ -10,12 +10,13 @@
         alt="{{title}}"
         itemprop="url image"
         loading="lazy"
+        width="103px"
+        height="28px"
       />
       <meta itemprop="width" content="30" />
       <meta itemprop="height" content="30" />
       <div class="logo__text">
         <p>{{ title }}</p>
-        <span>{{ description }}</span>
       </div>
     </a>
   </div>

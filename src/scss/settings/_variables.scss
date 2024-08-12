@@ -3,9 +3,10 @@ $smBreakpoint: 768px;
 $mdBreakpoint: 1024px;
 
 // Colors
-$text: #2a2444cc;
+$text: rgba(42, 36, 68, 0.9);
 $white: #fff;
 $darkPurple: #422a9b;
+$darkestPurple: #33236e;
 $almostWhitePurple: #e1dcf1;
 $blue: #0094d2;
 $darkBlue: #005173;
@@ -51,16 +52,16 @@ $fontWeightBold: 700;
 $fontWeightBlack: 800;
 
 // Border radius
-$borderRadius: 10px;
-$borderRadiusMd: 15px;
+$borderRadius: 16px;
+$borderRadiusMd: 18px;
 $borderRadiusLg: 30px;
 
 // Shadows
-$shadow: 0 0 30px 0 rgba(21, 47, 89, 0.05);
+$shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.1);
 $shadowSm: 0 0 50px 0 rgba(21, 47, 89, 0.05);
 
 // Border
-$border: 1px solid $whiteDarkColor;
+$border: 1px solid currentColor;
 
 // Other
 $transition: all 0.3s ease;
