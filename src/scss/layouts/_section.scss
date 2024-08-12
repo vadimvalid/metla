@@ -38,3 +38,41 @@
     }
   }
 }
+
+.info-list {
+  padding: torem(44) 0;
+  background: $white;
+
+  &__item {
+    line-height: 1.4;
+
+    h3 {
+      margin-bottom: torem(16);
+      font-size: $fontSizeXl4;
+      font-weight: 500;
+      line-height: 1.1;
+      color: $darkPurple;
+    }
+
+    p {
+      &:not(:last-of-type) {
+        margin-bottom: torem(16);
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: torem(8);
+      margin-bottom: torem(14);
+      padding-left: torem(24);
+      list-style: disc;
+
+      li {
+        &::marker {
+          color: $text;
+        }
+      }
+    }
+  }
+}
