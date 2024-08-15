@@ -50,7 +50,8 @@
   }
 
   @include sm-breakpoint {
-    flex: 0 0 calc(100% / 3 - torem(14));
+    flex-shrink: 0;
+    width: min-content;
     gap: torem(75);
     padding: torem(24);
 
