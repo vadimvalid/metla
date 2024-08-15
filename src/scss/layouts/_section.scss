@@ -79,3 +79,71 @@
     }
   }
 }
+
+.section--why-we {
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: torem(12);
+    margin-bottom: torem(20);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: torem(12);
+      padding: torem(24) torem(12);
+      border-radius: $borderRadiusMd;
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7);
+      text-align: center;
+      font-size: $fontSizeMd;
+      line-height: 1.3;
+
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: torem(68);
+        height: torem(68);
+        margin-bottom: torem(3);
+        padding: torem(14);
+        border-radius: 8px;
+        background: $lightGrey;
+      }
+
+      h3 {
+        font-size: $fontSizeXl3;
+        font-weight: 600;
+        line-height: 1.2;
+        color: $darkPurple;
+      }
+    }
+  }
+
+  @include sm-breakpoint {
+    &__items {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: torem(20);
+
+      &__item {
+        flex: 0 1 calc(50% - torem(10));
+        padding: torem(44);
+
+        .image {
+          width: torem(80);
+          height: torem(80);
+          margin-bottom: torem(12);
+        }
+      }
+    }
+  }
+}

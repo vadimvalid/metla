@@ -173,6 +173,11 @@
       border: 1px solid #5c41be;
       background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
       cursor: pointer;
+
+      img {
+        width: torem(94);
+        height: torem(48);
+      }
     }
 
     @include sm-breakpoint {
@@ -180,7 +185,7 @@
       margin: 0 auto;
 
       > button {
-        padding: torem(34) torem(30);
+        padding: torem(20) torem(30);
         font-size: $fontSizeXl;
       }
     }
