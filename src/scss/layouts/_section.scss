@@ -147,3 +147,21 @@
     }
   }
 }
+
+.section--clients {
+  .container {
+    h2 {
+      max-width: torem(235);
+      margin: 0 auto;
+      font-size: $fontSizeXl3;
+      font-weight: 600;
+      line-height: normal;
+      color: $texty;
+
+      span {
+        font-size: torem(36);
+        color: $mainPurple;
+      }
+    }
+  }
+}
