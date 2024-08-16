@@ -165,3 +165,19 @@
     }
   }
 }
+
+.section--reviews {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    @include sm-breakpoint {
+      flex-direction: row;
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
+}

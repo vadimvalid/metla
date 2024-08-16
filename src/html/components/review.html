@@ -1,41 +1,19 @@
-{% macro review(avatar, name, date, text) %}
-<div
+{% macro review(name, text) %}
+<article
   class="review"
   itemprop="review"
   itemscope
   itemtype="https://schema.org/Review"
 >
-  <div class="review__head">
-    <div class="image">
-      <!-- <img
-        src="@images/{{avatar}}.png"
-        alt="{{name}}"
-        loading="lazy"
-        itemprop="image"
-      /> -->
-    </div>
-    <div class="content">
-      <div
-        class="content__name"
-        itemprop="author"
-        itemscope
-        itemtype="https://schema.org/Person"
-      >
-        <span itemprop="name">{{name}}</span>
-      </div>
-      <div class="content__stars">
-        <div class="item">{% include 'src/html/components/stars.html' %}</div>
-        <div class="item">
-          <meta itemprop="datePublished" content="{{date}}" />
-          {{date}}
-        </div>
-      </div>
-    </div>
+  <div class="review__head">{% include 'src/html/components/stars.html' %}</div>
+  <div
+    class="review__name"
+    itemprop="author"
+    itemscope
+    itemtype="https://schema.org/Person"
+  >
+    <span itemprop="name">{{name}}</span>
   </div>
   <div class="review__text">{{text}}</div>
-  <div class="review__buttons">
-    {% include 'src/html/components/like.html' %} {% include
-    'src/html/components/reply.html' %}
-  </div>
-</div>
+</article>
 {% endmacro %}

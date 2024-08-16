@@ -1,0 +1,21 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: torem(15);
+  padding: torem(40) torem(20);
+  border-radius: $borderRadiusMd;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: $shadow;
+  backdrop-filter: blur(7);
+  font-size: $fontSizeLg;
+  line-height: 1.4;
+  text-align: center;
+
+  &__name {
+    font-size: $fontSizeXl3;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $darkPurple;
+  }
+}
