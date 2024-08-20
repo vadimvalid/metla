@@ -14,3 +14,10 @@
     @content;
   }
 }
+
+@mixin cardStyles {
+  border-radius: $borderRadiusMd;
+  background: $cardBg;
+  box-shadow: $shadow;
+  backdrop-filter: blur(7px);
+}

@@ -1,0 +1,79 @@
+.cleaner {
+  @include cardStyles;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: torem(12);
+  min-height: torem(430);
+  padding: torem(12);
+  overflow: hidden;
+
+  @include sm-breakpoint {
+    padding: torem(24);
+  }
+
+  > picture,
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name {
+    font-size: $spaceXl3;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $darkPurple;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: torem(15);
+    font-size: $fontSizeXl;
+    font-weight: 500;
+    color: $texty;
+    line-height: 1.2;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    gap: torem(12);
+    margin-top: auto;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: torem(12);
+      gap: torem(6);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(7px);
+      font-size: $fontSizeMd;
+      color: $darkestPurple;
+      line-height: 1;
+
+      > p {
+        &:last-child {
+          font-size: $fontSizeXl4;
+          font-weight: 700;
+          line-height: 1;
+          color: $mainPurple;
+        }
+      }
+    }
+  }
+}

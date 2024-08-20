@@ -218,3 +218,15 @@
     }
   }
 }
+
+.section--cleaners {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    @include sm-breakpoint {
+      flex-direction: row;
+    }
+  }
+}
