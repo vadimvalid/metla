@@ -230,3 +230,49 @@
     }
   }
 }
+
+.section--join-us {
+  position: relative;
+  background: linear-gradient(331deg, #5c41be 32.86%, #8067dc 91.92%);
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    picture,
+    img {
+      height: 100%;
+    }
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: torem(26);
+    text-align: center;
+    padding: torem(90) torem(32);
+    z-index: 1;
+
+    h2 {
+      margin: 0;
+      font-size: torem(28);
+      font-weight: 600;
+      line-height: normal;
+      color: $white;
+    }
+  }
+
+  @include sm-breakpoint {
+    .container {
+      width: 38%;
+      padding: torem(168) 0;
+    }
+  }
+}
