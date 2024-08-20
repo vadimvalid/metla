@@ -180,4 +180,41 @@
       }
     }
   }
+
+  > .button {
+    width: fit-content;
+    margin: torem(22) auto 0;
+  }
+}
+
+.section--how-we-clean {
+  &__items {
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      > picture,
+      img {
+        border-radius: $borderRadiusMd $borderRadiusMd 0 0;
+      }
+
+      &__content {
+        padding: torem(12);
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 0 0 $borderRadiusMd $borderRadiusMd;
+
+        h3 {
+          margin-bottom: torem(24);
+          font-size: $fontSizeXl4;
+          color: $darkPurple;
+          font-weight: 500;
+          line-height: 1.1;
+        }
+
+        @include sm-breakpoint {
+          padding: torem(48);
+        }
+      }
+    }
+  }
 }

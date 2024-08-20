@@ -1,0 +1,49 @@
+.tab-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: torem(24);
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: torem(12);
+
+    .tab {
+      border: none;
+      border-radius: 14px;
+
+      &.active {
+        background-color: $darkPurple;
+      }
+    }
+  }
+
+  .content {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: torem(12);
+      list-style-type: initial;
+      padding-left: torem(20);
+
+      li {
+        color: $texty;
+        font-size: $fontSizeLg;
+
+        &::marker {
+          color: $blue;
+        }
+      }
+    }
+
+    .tab {
+      &__content {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
