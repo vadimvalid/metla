@@ -147,3 +147,132 @@
     }
   }
 }
+
+.section--clients {
+  .container {
+    h2 {
+      max-width: torem(235);
+      margin: 0 auto;
+      font-size: $fontSizeXl3;
+      font-weight: 600;
+      line-height: normal;
+      color: $texty;
+
+      span {
+        font-size: torem(36);
+        color: $mainPurple;
+      }
+    }
+  }
+}
+
+.section--reviews {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    @include sm-breakpoint {
+      flex-direction: row;
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
+
+  > .button {
+    width: fit-content;
+    margin: torem(22) auto 0;
+  }
+}
+
+.section--how-we-clean {
+  &__items {
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      > picture,
+      img {
+        border-radius: $borderRadiusMd $borderRadiusMd 0 0;
+      }
+
+      &__content {
+        padding: torem(12);
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 0 0 $borderRadiusMd $borderRadiusMd;
+
+        h3 {
+          margin-bottom: torem(24);
+          font-size: $fontSizeXl4;
+          color: $darkPurple;
+          font-weight: 500;
+          line-height: 1.1;
+        }
+
+        @include sm-breakpoint {
+          padding: torem(48);
+        }
+      }
+    }
+  }
+}
+
+.section--cleaners {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    @include sm-breakpoint {
+      flex-direction: row;
+    }
+  }
+}
+
+.section--join-us {
+  position: relative;
+  background: linear-gradient(331deg, #5c41be 32.86%, #8067dc 91.92%);
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    picture,
+    img {
+      height: 100%;
+    }
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: torem(26);
+    text-align: center;
+    padding: torem(90) torem(32);
+    z-index: 1;
+
+    h2 {
+      margin: 0;
+      font-size: torem(28);
+      font-weight: 600;
+      line-height: normal;
+      color: $white;
+    }
+  }
+
+  @include sm-breakpoint {
+    .container {
+      width: 38%;
+      padding: torem(168) 0;
+    }
+  }
+}
