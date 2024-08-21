@@ -1,46 +1,49 @@
-const openDialog = () => {
-  const dialog = document.getElementById('dialog');
-  dialog.showModal();
-};
+// form inputs button decrement and increment
+function inputCounter(block) {
+  const parent = document.querySelector(block);
+  const btnDec = parent.querySelector('[data-action="decrement"]');
+  const btnInc = parent.querySelector('[data-action="increment"]');
+  const val = parent.querySelector('[data-counter="value"]');
 
-const closeDialog = () => {
-  const dialog = document.getElementById('dialog');
-  dialog.close();
-};
-
-const getAppPopup = (e) => {
-  const button = document.querySelector('.section--app .open-popup');
-  const buttonClose = document.querySelector('.dialog__close');
-
-  button.addEventListener('click', (e) => {
-    e.preventDefault();
-    openDialog();
+  let counter = 1;
+  btnDec.addEventListener('click', () => {
+    if (counter > 1) {
+      counter--;
+      val.value = counter;
+    }
+    if (val.value < val.attributes.max.value) {
+      btnInc.disabled = false;
+    }
   });
-
-  buttonClose.addEventListener('click', (e) => {
-    e.preventDefault();
-    closeDialog();
+  btnInc.addEventListener('click', () => {
+    if (val.value < val.attributes.max.value) {
+      counter++;
+      val.value = counter;
+    } else {
+      // btn disabled
+      btnInc.disabled = true;
+    }
   });
-};
+}
 
-const selectItem = (items) => {
-  items.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      if (item.classList.contains('active')) return;
-      items.forEach((item) => {
-        item.classList.remove('active');
+inputCounter('.form-item--rooms');
+inputCounter('.form-item--sanuzel');
+
+// form square block
+const selectActiveButton = (block) => {
+  const parent = document.querySelector(block);
+  const button = parent.querySelectorAll('button');
+
+  button.forEach((element) => {
+    element.addEventListener('click', () => {
+      element.classList.add('active');
+      button.forEach((el) => {
+        if (el !== element) {
+          el.classList.remove('active');
+        }
       });
-      e.target.classList.toggle('active');
     });
   });
 };
 
-const checkMethod = () => {
-  const methods = document.querySelectorAll('.method');
-  if (methods.length) {
-    selectItem(methods);
-  }
-};
-
-getAppPopup();
-checkMethod();
+selectActiveButton('.form-item__square');

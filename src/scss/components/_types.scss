@@ -69,6 +69,11 @@
       background: $white;
       box-shadow: $shadow;
       cursor: pointer;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
 
     &__text {
@@ -106,6 +111,11 @@
             font-weight: 700;
             line-height: normal;
           }
+        }
+
+        &.active {
+          color: $white;
+          background-color: $mainPurple;
         }
       }
 
