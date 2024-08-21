@@ -1,0 +1,24 @@
+{% macro blog(title, date) %}
+<article class="blog">
+  <div class="blog__image">
+    <picture>
+      <source
+        srcset="@images/blog-item.webp"
+        type="image/webp"
+        media="(max-width: 768px)"
+      />
+      <source
+        srcset="@images/blog-item-1-5.webp"
+        type="image/webp"
+        media="(min-width: 768px)"
+      />
+      <img src="@images/blog-item.jpg" alt="{{ title }}" loading="lazy" />
+    </picture>
+  </div>
+  <div class="blog__content">
+    <img src="@images/icons/icon-blog.svg" alt="icon blog" />
+    <h3>{{ title }}</h3>
+    <p>{{ date }}</p>
+  </div>
+</article>
+{% endmacro %}

@@ -362,3 +362,26 @@
     color: $white;
   }
 }
+
+.section--blog {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    > .blog {
+      flex: 1;
+    }
+
+    @include sm-breakpoint {
+      flex-direction: row;
+    }
+  }
+
+  .container {
+    > .button {
+      width: fit-content;
+      margin: torem(20) auto 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{% import "src/html/components/blog.html" as blogItem %}
+
+<section class="section section--blog">
+  <div class="container">
+    <h2>Блог</h2>
+    <div class="section--blog__items">
+      {{ blogItem.blog("Какие чистящие средства мы используем при уборке?",
+      "04.12.2023") }} {{ blogItem.blog("Что входит в обычную уборку, а что - в
+      генеральную?", "01.12.2023") }} {{ blogItem.blog("Мне не понравилась
+      уборка. Что делать?", "20.11.2023") }}
+    </div>
+    <a href="#" class="button">Все статьи</a>
+  </div>
+</section>
