@@ -53,3 +53,11 @@ ol {
     display: none;
   }
 }
+
+.section-padding {
+  padding-top: torem(40);
+
+  @include sm-breakpoint {
+    padding-top: torem(90);
+  }
+}

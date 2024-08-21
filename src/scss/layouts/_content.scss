@@ -1,9 +1,0 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: torem(40);
-
-  @include sm-breakpoint {
-    gap: torem(90);
-  }
-}
