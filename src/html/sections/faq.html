@@ -1,0 +1,14 @@
+{% import "src/html/components/accordion.html" as accordionItem %}
+
+<section class="section section--faq">
+  <div class="container">
+    <h2>Вопросы-ответы</h2>
+    <div class="section--faq__items">
+      {{ accordionItem.accordion("Убираете ли вы в коттеджах?") }} {{
+      accordionItem.accordion("Кто ваши сотрудники?") }} {{
+      accordionItem.accordion("Нужно ли предоставлять свои моющие средства?") }}
+      {{ accordionItem.accordion("Вы работаете только в Вильнюсе?") }}
+    </div>
+    <a href="#" class="button">Все ответы</a>
+  </div>
+</section>

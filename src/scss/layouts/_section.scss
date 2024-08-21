@@ -276,3 +276,24 @@
     }
   }
 }
+
+.section--faq {
+  padding: torem(40) 0;
+
+  @include sm-breakpoint {
+    padding: torem(90) 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+  }
+
+  .container {
+    > .button {
+      width: fit-content;
+      margin: torem(20) auto 0;
+    }
+  }
+}
