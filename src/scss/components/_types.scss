@@ -1,4 +1,6 @@
 .types {
+  margin-top: torem(40);
+
   .wrapper {
     display: flex;
     gap: torem(6);
@@ -192,6 +194,6 @@
   }
 
   @include sm-breakpoint {
-    margin-top: torem(-130);
+    margin-top: torem(-45);
   }
 }

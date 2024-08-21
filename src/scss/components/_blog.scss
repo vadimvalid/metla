@@ -1,0 +1,57 @@
+.blog {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: torem(370);
+  padding: torem(40) torem(8);
+  border-radius: 20px;
+  background: linear-gradient(
+    0deg,
+    rgba(35, 27, 66, 0.6) -6.24%,
+    rgba(0, 148, 210, 0.6) 164.24%
+  );
+  aspect-ratio: 9/12;
+  overflow: hidden;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    picture,
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: torem(12);
+    font-size: $fontSizeXl2;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #c1b2f5;
+    text-align: center;
+
+    h3 {
+      font-size: $fontSizeXl4;
+      font-weight: 700;
+      line-height: 1.1;
+      color: $white;
+      text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  @include sm-breakpoint {
+    aspect-ratio: none;
+  }
+}

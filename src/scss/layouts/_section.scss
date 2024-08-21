@@ -149,6 +149,8 @@
 }
 
 .section--clients {
+  padding-bottom: torem(68);
+
   .container {
     h2 {
       max-width: torem(235);
@@ -163,6 +165,10 @@
         color: $mainPurple;
       }
     }
+  }
+
+  @include sm-breakpoint {
+    padding-bottom: torem(90);
   }
 }
 
@@ -195,6 +201,7 @@
 
       > picture,
       img {
+        width: 100%;
         border-radius: $borderRadiusMd $borderRadiusMd 0 0;
       }
 
@@ -220,6 +227,8 @@
 }
 
 .section--cleaners {
+  padding-bottom: torem(40);
+
   &__items {
     display: flex;
     flex-direction: column;
@@ -228,6 +237,10 @@
     @include sm-breakpoint {
       flex-direction: row;
     }
+  }
+
+  @include sm-breakpoint {
+    padding-bottom: torem(90);
   }
 }
 
@@ -273,6 +286,203 @@
     .container {
       width: 38%;
       padding: torem(168) 0;
+    }
+  }
+}
+
+.section--faq {
+  padding: torem(40) 0;
+
+  @include sm-breakpoint {
+    padding: torem(90) 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+  }
+
+  .container {
+    > .button {
+      width: fit-content;
+      margin: torem(20) auto 0;
+    }
+  }
+}
+
+.section {
+  &.section--social-media {
+    h2 {
+      font-size: $fontSizeXl3;
+      font-weight: 600;
+      color: $white;
+
+      @include sm-breakpoint {
+        font-size: $fontSizeXl5;
+      }
+    }
+  }
+}
+
+.section--social-media {
+  position: relative;
+  padding: torem(42) 0;
+  background: linear-gradient(300deg, #5c41be 15.55%, #8067dc 120.24%);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/social-media-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include sm-breakpoint {
+    padding: torem(125) 0;
+
+    &:before {
+      background-size: contain;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: torem(22) torem(35);
+
+    @include sm-breakpoint {
+      flex-wrap: nowrap;
+      gap: torem(64);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: torem(12);
+    text-align: center;
+    font-size: $fontSizeMd;
+    font-weight: 500;
+    line-height: normal;
+    color: $white;
+  }
+}
+
+.section--blog {
+  padding: torem(40) 0;
+
+  @include sm-breakpoint {
+    padding: torem(90) 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    > .blog {
+      flex: 1;
+    }
+
+    @include sm-breakpoint {
+      flex-direction: row;
+    }
+  }
+
+  .container {
+    > .button {
+      width: fit-content;
+      margin: torem(20) auto 0;
+    }
+  }
+
+  &__subscription {
+    display: flex;
+    flex-direction: column;
+    gap: torem(22);
+    margin-top: torem(40);
+
+    h3 {
+      font-size: $fontSizeXl3;
+      font-weight: 600;
+      color: $texty;
+      line-height: normal;
+      text-align: center;
+    }
+
+    form {
+      position: relative;
+
+      button {
+        all: unset;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        aspect-ratio: 1;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      input {
+        width: 100%;
+        height: torem(68);
+        padding: torem(12) torem(70) torem(12) torem(12);
+        border: none;
+        border-radius: 20px;
+        background-color: $white;
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+
+        &::placeholder {
+          font-size: $fontSizeLg;
+          font-weight: 600;
+          line-height: normal;
+          color: rgba(42, 36, 68, 0.45);
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      flex-direction: row;
+
+      h3 {
+        flex: 1;
+        font-size: $fontSizeXl4;
+        background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      form {
+        position: relative;
+        flex: 0 1 35%;
+
+        button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          aspect-ratio: 1;
+          z-index: 1;
+        }
+
+        input {
+          padding: torem(24) torem(70) torem(24) torem(24);
+
+          &::placeholder {
+            font-weight: 500;
+          }
+        }
+      }
     }
   }
 }

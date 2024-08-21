@@ -1,0 +1,69 @@
+.accordion {
+  @include cardStyles;
+
+  padding: torem(12);
+
+  &[open] {
+    > summary {
+      .accordion {
+        &__icons > img:last-child {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    > .accordion {
+      &__content {
+        padding-top: torem(10);
+      }
+    }
+  }
+
+  &__content {
+    font-size: $fontSizeLg;
+  }
+
+  &__icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      &:last-child {
+        position: absolute;
+        transform: rotate(90deg);
+        transition: $transition;
+      }
+    }
+  }
+
+  @include sm-breakpoint {
+    padding: torem(24);
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $spaceXl2;
+  cursor: pointer;
+
+  h3 {
+    font-size: $fontSizeXl;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $darkPurple;
+  }
+
+  @include sm-breakpoint {
+    h3 {
+      font-size: $fontSizeXl3;
+    }
+  }
+}

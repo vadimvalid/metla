@@ -1,0 +1,19 @@
+{% macro accordion(title) %}
+<details class="accordion">
+  <summary>
+    <h3>{{title}}</h3>
+    <div class="accordion__icons">
+      <img src="@images/icons/icon-minus.svg" alt="icon minus" /><img
+        src="@images/icons/icon-minus.svg"
+        alt="icon minus"
+      />
+    </div>
+  </summary>
+  <div class="accordion__content">
+    Да, мы убираем в коттеджах, дачах, таунхаусах и квартирах нестандартной
+    планировки. Заказ можно оформить через сайт: нажмите на иконку дома и
+    укажите количество комнат и сан.узлов, напишите метраж в комментариях. Либо
+    оставьте заявку в соц.сетях/через коллцентр.
+  </div>
+</details>
+{% endmacro %}
