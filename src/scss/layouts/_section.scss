@@ -209,16 +209,6 @@
 .section--cleaners {
   padding-bottom: torem(40);
 
-  &__items {
-    display: flex;
-    flex-direction: column;
-    gap: torem(20);
-
-    @include sm-breakpoint {
-      flex-direction: row;
-    }
-  }
-
   @include sm-breakpoint {
     padding-bottom: torem(90);
   }
@@ -361,20 +351,6 @@
 
   @include sm-breakpoint {
     padding: torem(90) 0;
-  }
-
-  &__items {
-    display: flex;
-    flex-direction: column;
-    gap: torem(20);
-
-    > .blog {
-      flex: 1;
-    }
-
-    @include sm-breakpoint {
-      flex-direction: row;
-    }
   }
 
   .container {

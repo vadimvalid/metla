@@ -1,10 +1,18 @@
 <section class="section section--cleaners section-padding">
   <div class="container">
     <h2>Наши клинеры</h2>
-    <div class="section--cleaners__items">
-      {% include "src/html/components/cleaner.html" %}{% include
-      "src/html/components/cleaner.html" %}{% include
-      "src/html/components/cleaner.html" %}
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {% include "src/html/components/cleaner.html" %}{% include
+        "src/html/components/cleaner.html" %}{% include
+        "src/html/components/cleaner.html" %} {% include
+        "src/html/components/cleaner.html" %}{% include
+        "src/html/components/cleaner.html" %}{% include
+        "src/html/components/cleaner.html" %}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
 </section>
