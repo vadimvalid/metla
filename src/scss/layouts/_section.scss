@@ -28,20 +28,6 @@
   }
 }
 
-.premium {
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: torem(12);
-
-    @include sm-breakpoint {
-      flex-direction: row;
-      gap: torem(20);
-      overflow-x: auto;
-    }
-  }
-}
-
 .info-list {
   padding: torem(44) 0;
   background: $white;
@@ -149,7 +135,7 @@
 }
 
 .section--clients {
-  padding-bottom: torem(68);
+  padding-bottom: torem(58);
 
   .container {
     h2 {
@@ -168,28 +154,22 @@
   }
 
   @include sm-breakpoint {
-    padding-bottom: torem(90);
+    padding-bottom: torem(80);
   }
 }
 
 .section--reviews {
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: torem(20);
-
-    @include sm-breakpoint {
-      flex-direction: row;
-
-      > * {
-        flex: 1;
-      }
-    }
-  }
-
   > .button {
     width: fit-content;
     margin: torem(22) auto 0;
+  }
+
+  .swiper {
+    padding: 0 torem(10) torem(110);
+
+    &-wrapper {
+      padding-top: torem(10);
+    }
   }
 }
 
@@ -228,16 +208,6 @@
 
 .section--cleaners {
   padding-bottom: torem(40);
-
-  &__items {
-    display: flex;
-    flex-direction: column;
-    gap: torem(20);
-
-    @include sm-breakpoint {
-      flex-direction: row;
-    }
-  }
 
   @include sm-breakpoint {
     padding-bottom: torem(90);
@@ -381,20 +351,6 @@
 
   @include sm-breakpoint {
     padding: torem(90) 0;
-  }
-
-  &__items {
-    display: flex;
-    flex-direction: column;
-    gap: torem(20);
-
-    > .blog {
-      flex: 1;
-    }
-
-    @include sm-breakpoint {
-      flex-direction: row;
-    }
   }
 
   .container {

@@ -3,12 +3,22 @@
 <section class="section section--blog">
   <div class="container">
     <h2>Блог</h2>
-    <div class="section--blog__items">
-      {{ blogItem.blog("Какие чистящие средства мы используем при уборке?",
-      "04.12.2023") }} {{ blogItem.blog("Что входит в обычную уборку, а что - в
-      генеральную?", "01.12.2023") }} {{ blogItem.blog("Мне не понравилась
-      уборка. Что делать?", "20.11.2023") }}
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {{ blogItem.blog("Какие чистящие средства мы используем при уборке?",
+        "04.12.2023") }} {{ blogItem.blog("Что входит в обычную уборку, а что -
+        в генеральную?", "01.12.2023") }} {{ blogItem.blog("Мне не понравилась
+        уборка. Что делать?", "20.11.2023") }} {{ blogItem.blog("Какие чистящие
+        средства мы используем при уборке?", "04.12.2023") }} {{
+        blogItem.blog("Что входит в обычную уборку, а что - в генеральную?",
+        "01.12.2023") }} {{ blogItem.blog("Мне не понравилась уборка. Что
+        делать?", "20.11.2023") }}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
+
     <a href="#" class="button">Все статьи</a>
     <div class="section--blog__subscription">
       <h3>Подпишись на нашу рассылку, мы даём только полезную информацию!</h3>

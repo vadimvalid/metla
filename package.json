@@ -42,5 +42,8 @@
     "last 1 version",
     "> 1%",
     "IE 11"
-  ]
+  ],
+  "dependencies": {
+    "swiper": "^11.1.10"
+  }
 }

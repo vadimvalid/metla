@@ -134,7 +134,6 @@
   }
 
   @include sm-breakpoint {
-    flex: 1;
     padding: torem(24);
 
     &__text {
