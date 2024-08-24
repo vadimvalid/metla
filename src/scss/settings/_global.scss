@@ -38,6 +38,12 @@ body {
           gap: torem(90);
         }
       }
+
+      .types {
+        @include sm-breakpoint {
+          margin-top: 0;
+        }
+      }
     }
   }
 }
