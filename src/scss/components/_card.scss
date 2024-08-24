@@ -130,6 +130,8 @@
   &__button {
     position: relative;
     align-self: flex-end;
+    display: flex;
+    gap: torem(12);
     z-index: 1;
   }
 

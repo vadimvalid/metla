@@ -442,3 +442,46 @@
     }
   }
 }
+
+.section--order-hero {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: $fontSizeXl6;
+      font-weight: 500;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $blue;
+
+      span {
+        background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p,
+    a {
+      display: none;
+    }
+
+    @include sm-breakpoint {
+      gap: torem(20);
+
+      h1 {
+        font-size: torem(64);
+        line-height: 1.2;
+      }
+
+      p,
+      a {
+        display: block;
+      }
+    }
+  }
+}

@@ -49,6 +49,19 @@
       flex: none;
       min-width: torem(80);
     }
+
+    &.active {
+      background-color: $darkPurple;
+      color: $white;
+      cursor: pointer;
+
+      svg {
+        path {
+          stroke: $white;
+          fill: $white;
+        }
+      }
+    }
   }
 
   .form-item {
