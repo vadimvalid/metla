@@ -485,3 +485,93 @@
     }
   }
 }
+
+.section--date-time {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: torem(20);
+    text-align: center;
+
+    h2 {
+      margin: 0;
+    }
+
+    form {
+      display: flex;
+      gap: torem(12);
+
+      .form-item {
+        width: 50%;
+      }
+
+      input {
+        width: 100%;
+        padding: torem(15) torem(16);
+        border: none;
+        background-color: $white;
+        border-radius: $borderRadiusMd;
+
+        // &[type='date'] {
+        //   background-image: url('../images/icons/icon-date.svg');
+        //   background-repeat: no-repeat;
+        //   background-size: torem(30);
+        //   background-position: calc(100% - 10px) center;
+
+        //   &::-webkit-inner-spin-button {
+        //     display: none;
+        //   }
+
+        //   ::-webkit-calendar-picker-indicator {
+        //     opacity: 0;
+        //   }
+        // }
+
+        // &[type='time'] {
+        //   background-image: url('../images/icons/icon-time.svg');
+        //   background-repeat: no-repeat;
+        //   background-size: torem(30);
+        //   background-position: calc(100% - 10px) center;
+
+        //   &::-webkit-inner-spin-button {
+        //     display: none;
+        //   }
+
+        //   ::-webkit-calendar-picker-indicator {
+        //     opacity: 0;
+        //   }
+        // }
+      }
+    }
+
+    @include sm-breakpoint {
+      max-width: torem(336);
+      padding: 0;
+    }
+  }
+}
+
+.section--additional-cards {
+  &__items {
+    display: none;
+
+    @include sm-breakpoint {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: torem(20);
+    }
+  }
+
+  .swiper {
+    &-slide {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: torem(12);
+    }
+
+    @include sm-breakpoint {
+      display: none;
+    }
+  }
+}
