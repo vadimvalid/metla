@@ -21,3 +21,10 @@
   box-shadow: $shadow;
   backdrop-filter: blur(7px);
 }
+
+@mixin maxWidthBlock {
+  @include sm-breakpoint {
+    max-width: torem(336);
+    margin: 0 auto;
+  }
+}

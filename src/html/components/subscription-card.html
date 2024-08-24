@@ -1,0 +1,7 @@
+{% macro subscriptionCard(title, price, buttonText) %}
+<article class="subscription-card">
+  <h4>{{ title }}</h4>
+  <button v-if="buttonText">{{ buttonText }}</button>
+  <p><span>{{ price }}</span>BYN</p>
+</article>
+{% endmacro %}

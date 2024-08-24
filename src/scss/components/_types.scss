@@ -277,10 +277,7 @@
       }
     }
 
-    @include sm-breakpoint {
-      max-width: torem(336);
-      margin: 0 auto;
-    }
+    @include maxWidthBlock;
   }
 
   @include sm-breakpoint {

@@ -28,3 +28,26 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+//  swiper dry
+const swiperDry = new Swiper('.swiper--dry', {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
+});
