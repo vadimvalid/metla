@@ -99,6 +99,28 @@ const selectOrderTypesItem = (block) => {
   return false;
 };
 
+const selectPaymentItem = (block) => {
+  const parent = document.querySelector(block);
+
+  if (parent) {
+    const items = parent.querySelectorAll('.payment-item');
+
+    items.forEach((element) => {
+      element.addEventListener('click', () => {
+        element.classList.add('active');
+        items.forEach((el) => {
+          if (el !== element) {
+            el.classList.remove('active');
+          }
+        });
+      });
+    });
+  }
+
+  return false;
+};
+
 selectActiveButton('.form-item__square');
 selectTypesItem('.types .wrapper');
 selectOrderTypesItem('.types__pollution');
+selectPaymentItem('.section--result__methods');

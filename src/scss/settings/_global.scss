@@ -37,6 +37,16 @@ body {
         @include sm-breakpoint {
           gap: torem(90);
         }
+
+        .section {
+          &:last-child {
+            padding-bottom: torem(60);
+
+            @include sm-breakpoint {
+              padding-bottom: torem(90);
+            }
+          }
+        }
       }
 
       .types {

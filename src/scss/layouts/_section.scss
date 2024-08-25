@@ -737,4 +737,111 @@
       }
     }
   }
+
+  @include sm-breakpoint {
+    padding: torem(60) 0;
+  }
+}
+
+.section--result {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(40);
+
+    > h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bill {
+    @include cardStyles;
+
+    display: flex;
+    flex-direction: column;
+    gap: torem(24);
+    padding: torem(20);
+
+    &__services,
+    &__sum,
+    &__time {
+      display: flex;
+      flex-direction: column;
+      gap: torem(12);
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        gap: torem(10);
+      }
+
+      p {
+        span {
+          margin-right: torem(6);
+          font-weight: 700;
+          color: $darkPurple;
+        }
+
+        &.bold {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__border {
+      border: 1px dashed rgba(42, 36, 68, 0.9);
+    }
+
+    &__sum,
+    &__time {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__promocode {
+    .form-item {
+      position: relative;
+
+      button {
+        all: unset;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: $blue;
+        border-radius: 20px;
+        aspect-ratio: 1;
+        z-index: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__methods {
+    display: flex;
+    gap: torem(12);
+
+    > .payment-item {
+      flex: 1;
+    }
+
+    @include sm-breakpoint {
+      @include maxWidthBlock;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: torem(40);
+
+    @include sm-breakpoint {
+      flex-direction: row;
+    }
+  }
 }
