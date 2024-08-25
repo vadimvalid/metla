@@ -56,4 +56,12 @@
       color: $white;
     }
   }
+
+  @include sm-breakpoint {
+    padding: torem(10);
+  }
+
+  @include md-breakpoint {
+    padding: torem(20);
+  }
 }
