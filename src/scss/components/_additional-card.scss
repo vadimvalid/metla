@@ -1,0 +1,59 @@
+.additional-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: torem(16);
+  padding: torem(20);
+  border-radius: $borderRadiusMd;
+  background: $cardBg;
+  box-shadow: $shadow;
+  text-align: center;
+  cursor: pointer;
+  transition: $transition;
+
+  svg {
+    margin-bottom: torem(14);
+    transition: $transition;
+  }
+
+  h4 {
+    margin-top: auto;
+    font-size: $fontSizeLg;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $texty;
+    transition: $transition;
+  }
+
+  button {
+    all: unset;
+    align-self: center;
+    padding: torem(6) torem(16);
+    border-radius: 15px;
+    background: $yellow;
+    font-size: $fontSizeLg;
+    font-weight: 400;
+    line-height: normal;
+    color: #002839;
+
+    span {
+      font-size: $fontSizeXl3;
+      font-weight: 800;
+    }
+  }
+
+  &:hover,
+  &.active {
+    background-color: $darkPurple;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+
+    h4 {
+      color: $white;
+    }
+  }
+}

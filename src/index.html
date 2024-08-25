@@ -13,41 +13,17 @@
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+
     <link href="./scss/style.scss" rel="stylesheet" />
     <title>Metla</title>
   </head>
 
-  <body class="body" itemscope itemtype="https://schema.org/WebPage">
-    <div class="content">
-      <header class="header" itemscope itemtype="https://schema.org/WPHeader">
-        <meta itemprop="headline" content="Android Bets" />
-        <meta
-          itemprop="description"
-          content="Applications of the best bookmakers for android"
-        />
-        <meta itemprop="keywords" content="bets, android" />
-
-        {% include "src/html/layouts/header.html" %}
-      </header>
-      <main class="main" role="main">
-        {% include "src/html/layouts/main.html" %}
-      </main>
-      <footer
-        class="footer"
-        aria-label="Site"
-        itemscope
-        itemtype="https://schema.org/WPFooter"
-      >
-        {% include "src/html/layouts/footer.html" %}
-      </footer>
+  <body>
+    <div class="container">
+      <ol>
+        <li><a href="./html/pages/home.html">Home</a></li>
+        <li><a href="./html/pages/order-clearing.html">Order clearing</a></li>
+      </ol>
     </div>
-
-    <script src="./js/script.js"></script>
-    <script src="./js/tabs.js"></script>
-    <script src="./js/swiper.js"></script>
   </body>
 </html>

@@ -1,0 +1,64 @@
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: torem(40);
+}
+
+.form-item {
+  &--checkbox {
+    label {
+      position: relative;
+      display: block;
+      padding-left: torem(68);
+
+      a {
+        color: $texty;
+        text-decoration: underline;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: torem(40);
+        height: torem(40);
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.08);
+        transform: translateY(-50%);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: torem(8.5);
+        left: torem(8.5);
+        width: torem(23);
+        height: torem(23);
+        border-radius: 5px;
+        background-color: $blue;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+      }
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      &:checked {
+        & + label {
+          &:after {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{% import "src/html/components/subscription-card.html" as subscriptionCardItem
+%}
+
+<section class="section section--subscriptions">
+  <div class="container">
+    <h2>Подписка на уборку</h2>
+    <p>
+      Оформите подписку на уборку, выбрав необходимую периодичность. Стоимость
+      каждой уборки будет снижена в зависимости от частоты.
+    </p>
+    <div class="section--subscriptions__items">
+      {{ subscriptionCardItem.subscriptionCard( "Разовая уборка", "60" )}} {{
+      subscriptionCardItem.subscriptionCard( "Раз в неделю", "48", "-20%" )}} {{
+      subscriptionCardItem.subscriptionCard( "2 раза в неделю", "51", "-15%" )}}
+      {{ subscriptionCardItem.subscriptionCard( "Раз в месяц", "54", "-10%" )}}
+    </div>
+    <p>
+      Следующие уборки по подписке будут созданы автоматически. Вы можете
+      поменять даты в своем кабинете.
+    </p>
+    <div class="section--subscriptions__details">
+      <p>Подробнее о подписке и её условиях</p>
+      <a href="#" class="button">Здесь</a>
+    </div>
+  </div>
+</section>

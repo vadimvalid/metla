@@ -21,6 +21,40 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     height: 100%;
+
+    &.not-home {
+      .header {
+        @include sm-breakpoint {
+          margin-bottom: torem(62);
+        }
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: torem(60);
+
+        @include sm-breakpoint {
+          gap: torem(90);
+        }
+
+        .section {
+          &:last-child {
+            padding-bottom: torem(60);
+
+            @include sm-breakpoint {
+              padding-bottom: torem(90);
+            }
+          }
+        }
+      }
+
+      .types {
+        @include sm-breakpoint {
+          margin-top: 0;
+        }
+      }
+    }
   }
 }
 

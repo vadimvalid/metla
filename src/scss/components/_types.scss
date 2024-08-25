@@ -49,6 +49,19 @@
       flex: none;
       min-width: torem(80);
     }
+
+    &.active {
+      background-color: $darkPurple;
+      color: $white;
+      cursor: pointer;
+
+      svg {
+        path {
+          stroke: $white;
+          fill: $white;
+        }
+      }
+    }
   }
 
   .form-item {
@@ -201,6 +214,70 @@
         font-size: $fontSizeXl;
       }
     }
+  }
+
+  &__pollution {
+    display: flex;
+    flex-direction: column;
+    gap: torem(22);
+    font-size: $texty;
+    line-height: 1.4;
+    font-weight: 400;
+    text-align: center;
+
+    &__items {
+      display: flex;
+      gap: torem(12);
+    }
+
+    &__item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: torem(20);
+      padding: torem(20) torem(16);
+      background-color: $white;
+      border-radius: $borderRadiusMd;
+      box-shadow: $shadow;
+      font-size: $fontSizeLg;
+      line-height: 1.2;
+      transition: $transition;
+
+      svg {
+        path {
+          transition: $transition;
+        }
+      }
+
+      &:hover {
+        background-color: $darkPurple;
+        color: $white;
+        cursor: pointer;
+
+        svg {
+          path {
+            stroke: $white;
+            fill: $white;
+          }
+        }
+      }
+
+      &.active {
+        background-color: $darkPurple;
+        color: $white;
+        cursor: pointer;
+
+        svg {
+          path {
+            stroke: $white;
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    @include maxWidthBlock;
   }
 
   @include sm-breakpoint {

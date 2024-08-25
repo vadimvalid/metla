@@ -1,0 +1,19 @@
+.form-item {
+  input,
+  textarea {
+    width: 100%;
+    padding: torem(22) torem(20);
+    border-radius: $borderRadiusMd;
+    background: $white;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+    font-size: $spaceXl2;
+
+    &::placeholder {
+      font-size: $spaceXl2;
+      font-weight: 400;
+      line-height: 1;
+      color: $grey;
+    }
+  }
+}

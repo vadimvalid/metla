@@ -1,0 +1,64 @@
+.subscription-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: torem(6);
+  padding: torem(20);
+  text-align: center;
+  border-radius: $borderRadiusMd;
+  background: $cardBg;
+  box-shadow: $shadow;
+  text-align: center;
+  cursor: pointer;
+  transition: $transition;
+
+  h4 {
+    font-size: $fontSizeLg;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $text;
+  }
+
+  button {
+    all: unset;
+    align-self: center;
+    padding: torem(6) torem(16);
+    border-radius: 15px;
+    background: $yellow;
+    font-size: $fontSizeXl3;
+    font-weight: 800;
+    line-height: normal;
+    color: #002839;
+  }
+
+  p {
+    line-height: 1.4;
+    color: $darkPurple;
+
+    span {
+      margin-top: torem(6);
+      font-size: torem(24);
+      font-weight: 700;
+    }
+  }
+
+  &:hover,
+  &.active {
+    background-color: $darkPurple;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+
+    h4 {
+      color: $white;
+    }
+
+    p {
+      color: $white;
+    }
+  }
+}

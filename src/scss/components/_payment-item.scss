@@ -1,0 +1,32 @@
+.payment-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: torem(20);
+  padding: torem(20) torem(16);
+  min-height: torem(160);
+  border-radius: $borderRadiusMd;
+  background: $cardBg;
+  box-shadow: $shadow;
+  text-align: center;
+  transition: $transition;
+  cursor: pointer;
+
+  svg {
+    width: torem(40);
+    height: torem(40);
+  }
+
+  &:hover,
+  &.active {
+    background: $darkPurple;
+    color: $white;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+  }
+}
