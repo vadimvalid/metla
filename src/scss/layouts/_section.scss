@@ -630,7 +630,8 @@
     gap: torem(12);
 
     @include sm-breakpoint {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(100px, 184px));
+      justify-content: center;
       gap: torem(20);
     }
   }

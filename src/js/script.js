@@ -7,7 +7,7 @@ const inputCounter = (block) => {
     const btnInc = parent.querySelector('[data-action="increment"]');
     const val = parent.querySelector('[data-counter="value"]');
 
-    let counter = 1;
+    let counter = val.attributes.min.value;
     btnDec.addEventListener('click', () => {
       if (counter > 1) {
         counter--;
@@ -18,7 +18,7 @@ const inputCounter = (block) => {
       }
     });
     btnInc.addEventListener('click', () => {
-      if (val.value < val.attributes.max.value) {
+      if (Number(val.value) < Number(val.attributes.max.value)) {
         counter++;
         val.value = counter;
       } else {
@@ -33,6 +33,7 @@ const inputCounter = (block) => {
 
 inputCounter('.form-item--rooms');
 inputCounter('.form-item--sanuzel');
+inputCounter('.form-item--meter');
 
 // form square block
 const selectActiveButton = (block) => {
@@ -122,8 +123,6 @@ const selectPaymentItem = (block) => {
 
 const selectCards = (cards) => {
   const elements = document.querySelectorAll(cards);
-
-  console.log(elements);
 
   elements.forEach((element) => {
     element.addEventListener('click', () => {

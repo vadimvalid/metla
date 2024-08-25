@@ -280,6 +280,55 @@
     @include maxWidthBlock;
   }
 
+  &__price {
+    align-self: center;
+
+    p {
+      padding: torem(6) torem(16);
+      border-radius: 15px;
+      background: $yellow;
+      font-size: $fontSizeLg;
+      font-weight: 400;
+      line-height: normal;
+      color: #002839;
+
+      span {
+        font-size: $fontSizeXl3;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &--office {
+    .container {
+      gap: torem(20);
+
+      @include sm-breakpoint {
+        flex-direction: column;
+      }
+    }
+
+    .types {
+      &__price {
+        margin-top: torem(40);
+
+        @include sm-breakpoint {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .form-item {
+      @include maxWidthBlock;
+
+      width: 100%;
+
+      input {
+        max-width: torem(50);
+      }
+    }
+  }
+
   @include sm-breakpoint {
     margin-top: torem(-45);
   }
