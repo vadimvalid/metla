@@ -120,7 +120,25 @@ const selectPaymentItem = (block) => {
   return false;
 };
 
+const selectCards = (cards) => {
+  const elements = document.querySelectorAll(cards);
+
+  console.log(elements);
+
+  elements.forEach((element) => {
+    element.addEventListener('click', () => {
+      element.classList.add('active');
+      elements.forEach((el) => {
+        if (el !== element) {
+          el.classList.remove('active');
+        }
+      });
+    });
+  });
+};
+
 selectActiveButton('.form-item__square');
 selectTypesItem('.types .wrapper');
 selectOrderTypesItem('.types__pollution');
 selectPaymentItem('.section--result__methods');
+selectCards('.card--premium');

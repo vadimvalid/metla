@@ -133,6 +133,12 @@
     display: flex;
     gap: torem(12);
     z-index: 1;
+
+    .button--icon {
+      &:last-of-type {
+        display: none;
+      }
+    }
   }
 
   @include sm-breakpoint {
@@ -141,6 +147,26 @@
     &__text {
       h3 {
         font-size: $fontSizeXl4;
+      }
+    }
+  }
+
+  &.active {
+    background-color: $darkPurple;
+
+    .card--premium__bg {
+      display: none;
+    }
+
+    .card--premium__button {
+      .button--icon {
+        &:first-of-type {
+          display: none;
+        }
+
+        &:last-of-type {
+          display: block;
+        }
       }
     }
   }

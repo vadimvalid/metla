@@ -506,6 +506,8 @@
 
     form {
       display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: torem(12);
 
       .form-item {
@@ -548,6 +550,10 @@
         //     opacity: 0;
         //   }
         // }
+      }
+
+      @include sm-breakpoint {
+        flex-wrap: nowrap;
       }
     }
 
