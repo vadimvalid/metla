@@ -8,6 +8,12 @@
       color: $darkPurple;
       text-align: center;
     }
+
+    &:has(.swiper) {
+      > h2 {
+        margin-bottom: torem(30);
+      }
+    }
   }
 }
 
@@ -576,11 +582,19 @@
       }
     }
 
+    &--dry {
+      display: none;
+    }
+
     @include sm-breakpoint {
       display: none;
 
       &--dry {
-        display: block;
+        display: grid;
+
+        .swiper-slide {
+          width: calc(100% / 5 - torem(16)) !important;
+        }
       }
     }
   }
@@ -626,5 +640,101 @@
     font-weight: 600;
     line-height: normal;
     color: $texty;
+  }
+}
+
+.section--address {
+  padding: torem(40) 0;
+  background: radial-gradient(
+    389.93% 150.26% at 50% 101.22%,
+    #0094d2 0%,
+    #5c41be 67.11%
+  );
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(40);
+
+    > h2 {
+      margin: 0;
+      font-size: $fontSizeXl5;
+      font-weight: 500;
+      line-height: 1;
+      color: $white;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: torem(12);
+      color: $white;
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: torem(12);
+
+        &__text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: torem(15) torem(25);
+          text-align: center;
+          border-radius: 14px;
+          background: $darkPurple;
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    @include sm-breakpoint {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      > .form-item {
+        width: calc(50% / 3 - torem(15));
+
+        &:first-child {
+          width: calc(50% - torem(15));
+        }
+
+        &:last-child {
+          width: 30%;
+        }
+      }
+
+      &--contacts {
+        > .form-item {
+          width: calc(100% / 3 - torem(15));
+
+          &:first-child {
+            width: calc(100% / 3 - torem(15));
+          }
+
+          &:last-child {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
