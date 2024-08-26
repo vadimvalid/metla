@@ -38,7 +38,7 @@ body {
           gap: torem(90);
         }
 
-        .section {
+        > .section {
           &:last-child {
             padding-bottom: torem(60);
 
