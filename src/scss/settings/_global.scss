@@ -54,6 +54,14 @@ body {
           margin-top: 0;
         }
       }
+
+      .section--faq {
+        padding: 0;
+
+        @include sm-breakpoint {
+          padding: 0;
+        }
+      }
     }
   }
 }

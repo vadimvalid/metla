@@ -883,3 +883,29 @@
     }
   }
 }
+
+.section--features {
+  h3 {
+    margin: torem(16) 0;
+    font-size: $fontSizeXl4;
+    font-weight: 500;
+    line-height: 1.1;
+    color: $darkPurple;
+  }
+
+  p {
+    margin-bottom: torem(16);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: torem(10);
+    padding-left: torem(20);
+    list-style-type: disc;
+
+    + p {
+      margin-top: torem(16);
+    }
+  }
+}
