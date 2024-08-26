@@ -34,6 +34,7 @@ const inputCounter = (block) => {
 inputCounter('.form-item--rooms');
 inputCounter('.form-item--sanuzel');
 inputCounter('.form-item--meter');
+inputCounter('.form-item--window');
 
 // form square block
 const selectActiveButton = (block) => {

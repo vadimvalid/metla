@@ -852,3 +852,34 @@
     }
   }
 }
+
+.section--wrapper {
+  > .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(60);
+
+    > .section {
+      margin: 0;
+      padding: 0;
+
+      &.section--date-time {
+        .container {
+          max-width: none;
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      flex-direction: row;
+
+      > .section {
+        flex: 1;
+
+        &.types--renovation {
+          padding: torem(45);
+        }
+      }
+    }
+  }
+}
