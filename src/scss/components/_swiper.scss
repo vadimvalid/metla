@@ -9,7 +9,7 @@
 
   &-slide {
     height: auto;
-    width: calc(100% - torem(16)) !important;
+    width: 100% !important;
 
     @include sm-breakpoint {
       width: calc(100% / 3 - torem(16)) !important;

@@ -172,11 +172,6 @@
 
   .swiper {
     padding: 0 0 torem(110);
-
-    &-wrapper {
-      // padding-top: torem(10);
-      padding: torem(10);
-    }
   }
 }
 
@@ -907,6 +902,20 @@
 
     + p {
       margin-top: torem(16);
+    }
+  }
+}
+
+.section--instagram {
+  h2 {
+    @include maxWidthBlock;
+  }
+
+  .swiper {
+    &-slide {
+      img {
+        width: 100%;
+      }
     }
   }
 }

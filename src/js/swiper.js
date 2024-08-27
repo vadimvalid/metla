@@ -16,7 +16,12 @@ const swiper = new Swiper('.swiper', {
     clickable: true,
   },
   slidesPerView: 'auto',
-  spaceBetween: 20,
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      spaceBetween: 20,
+    },
+  },
 });
 
 const swiperReviews = new Swiper('.swiper-reviews', {
@@ -32,6 +37,10 @@ const swiperReviews = new Swiper('.swiper-reviews', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  slidesPerView: 'auto',
-  spaceBetween: 20,
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      spaceBetween: 20,
+    },
+  },
 });
