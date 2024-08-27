@@ -123,6 +123,27 @@ body {
         }
       }
     }
+
+    &.all-service {
+      .section--order-hero {
+        .container {
+          h1 {
+            @include sm-breakpoint {
+              font-size: torem(54);
+            }
+          }
+        }
+
+        .button {
+          display: none;
+        }
+      }
+
+      .services,
+      .premium {
+        padding: 0;
+      }
+    }
   }
 }
 
