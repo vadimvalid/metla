@@ -171,10 +171,11 @@
   }
 
   .swiper {
-    padding: 0 torem(10) torem(110);
+    padding: 0 0 torem(110);
 
     &-wrapper {
-      padding-top: torem(10);
+      // padding-top: torem(10);
+      padding: torem(10);
     }
   }
 }
@@ -599,7 +600,7 @@
         display: grid;
 
         .swiper-slide {
-          width: calc(100% / 5 - torem(16)) !important;
+          width: calc(100% / 5 - torem(20)) !important;
         }
       }
     }

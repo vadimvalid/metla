@@ -9,7 +9,7 @@
 
   &-slide {
     height: auto;
-    width: 100% !important;
+    width: calc(100% - torem(16)) !important;
 
     @include sm-breakpoint {
       width: calc(100% / 3 - torem(16)) !important;
@@ -75,4 +75,19 @@
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: calc(0% + torem(75));
+}
+
+.swiper-reviews {
+  .swiper-wrapper {
+    > .swiper-slide {
+      display: flex;
+      flex-wrap: wrap;
+      gap: torem(20);
+      width: 100% !important;
+
+      .review {
+        width: calc(100% / 3 - torem(20)) !important;
+      }
+    }
+  }
 }

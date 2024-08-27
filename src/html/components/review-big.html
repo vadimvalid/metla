@@ -1,0 +1,19 @@
+{% macro reviewBig(name, text) %}
+<article
+  class="review"
+  itemprop="review"
+  itemscope
+  itemtype="https://schema.org/Review"
+>
+  <div class="review__head">{% include 'src/html/components/stars.html' %}</div>
+  <div
+    class="review__name"
+    itemprop="author"
+    itemscope
+    itemtype="https://schema.org/Person"
+  >
+    <span itemprop="name">{{name}}</span>
+  </div>
+  <div class="review__text">{{text}}</div>
+</article>
+{% endmacro %}

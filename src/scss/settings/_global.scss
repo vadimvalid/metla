@@ -63,6 +63,66 @@ body {
         }
       }
     }
+
+    &.service {
+      .header {
+        margin-bottom: torem(12);
+
+        @include sm-breakpoint {
+          margin-bottom: torem(32);
+        }
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: torem(40);
+
+        @include sm-breakpoint {
+          gap: torem(60);
+        }
+
+        > .section {
+          &:last-child {
+            padding-bottom: torem(40);
+
+            @include sm-breakpoint {
+              padding-bottom: torem(60);
+            }
+          }
+
+          &.section--how-we-clean {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    &.reviews {
+      .section--order-hero {
+        .button {
+          display: none;
+        }
+      }
+
+      .section--reviews {
+        > .container {
+          > .section--reviews {
+            @include sm-breakpoint {
+              display: none;
+            }
+          }
+
+          > .swiper-reviews {
+            display: none;
+
+            @include sm-breakpoint {
+              display: grid;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
