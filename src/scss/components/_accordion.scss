@@ -1,7 +1,7 @@
 .accordion {
   @include cardStyles;
 
-  padding: torem(12);
+  padding: torem(14) torem(12);
 
   &[open] {
     background: $white;

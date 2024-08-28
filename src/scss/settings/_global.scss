@@ -144,6 +144,67 @@ body {
         padding: 0;
       }
     }
+
+    &.faq {
+      .main {
+        gap: 0;
+      }
+
+      .section--order-hero {
+        padding-bottom: torem(40);
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
+        }
+
+        h1 {
+          @include maxWidthBlock;
+
+          background: var(
+            --main-gradient,
+            linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          @include sm-breakpoint {
+            font-size: torem(54);
+          }
+        }
+
+        .button {
+          display: none;
+        }
+      }
+
+      .section--faq {
+        padding-bottom: torem(106);
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
+        }
+
+        .container {
+          > h2,
+          > .button {
+            display: none;
+          }
+        }
+      }
+
+      .section--address {
+        &__form {
+          .form-item {
+            width: 100%;
+          }
+
+          .button {
+            margin: torem(20) auto 0;
+          }
+        }
+      }
+    }
   }
 }
 
