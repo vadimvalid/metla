@@ -205,6 +205,42 @@ body {
         }
       }
     }
+
+    &.blog-page {
+      .section--order-hero {
+        h1 {
+          background: var(
+            --main-gradient,
+            linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%)
+          );
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          @include sm-breakpoint {
+            font-size: torem(54);
+          }
+        }
+
+        .button {
+          display: none;
+        }
+      }
+
+      .section--blog {
+        padding: 0;
+
+        .container {
+          > .button {
+            margin-top: torem(40);
+
+            @include sm-breakpoint {
+              margin-top: torem(20);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

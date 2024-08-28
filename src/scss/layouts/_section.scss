@@ -443,6 +443,21 @@
       }
     }
   }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: torem(12);
+
+    .blog {
+      width: 100% !important;
+    }
+
+    @include sm-breakpoint {
+      grid-template-columns: repeat(3, 1fr);
+      gap: torem(20);
+    }
+  }
 }
 
 .section--order-hero {
