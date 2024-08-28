@@ -934,3 +934,74 @@
     }
   }
 }
+
+.section--article {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: torem(30);
+    line-height: 1.4;
+    color: $texty;
+
+    h2 {
+      margin-bottom: torem(24);
+      font-size: $fontSizeXl4;
+      font-weight: 500;
+      line-height: 1.1;
+      color: $darkPurple;
+
+      @include sm-breakpoint {
+        font-size: $fontSizeXl5;
+      }
+    }
+
+    @include sm-breakpoint {
+      grid-template-columns: 1fr torem(336);
+      grid-template-rows: repeat(4, auto);
+      gap: torem(24) torem(60);
+    }
+  }
+
+  &__image {
+    border-radius: $borderRadiusMd;
+
+    img {
+      width: 100%;
+      border-radius: $borderRadiusMd;
+    }
+
+    @include sm-breakpoint {
+      grid-column: 2 / -1;
+      grid-row: 1 / 3;
+    }
+  }
+
+  &__text {
+    @include sm-breakpoint {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__list {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: torem(8);
+      margin: torem(14) 0;
+      padding-left: torem(24);
+      list-style: disc;
+
+      li {
+        &::marker {
+          color: $texty;
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      grid-column: 1 / 2;
+      grid-row: 2 / -1;
+    }
+  }
+}

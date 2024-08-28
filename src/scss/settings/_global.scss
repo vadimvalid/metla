@@ -241,6 +241,22 @@ body {
         }
       }
     }
+
+    &.article {
+      .hero--services {
+        .wrapper {
+          picture {
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      .section--blog {
+        padding: 0;
+      }
+    }
   }
 }
 
