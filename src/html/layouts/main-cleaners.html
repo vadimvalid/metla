@@ -1,0 +1,65 @@
+{% import "src/html/sections/order-hero.html" as orderHeroItem %} {{
+orderHeroItem.orderHero("Стать клинером", "в компании “Метла”") }}
+<section class="section section--list">
+  <div class="container">
+    <ul>
+      <li><span>Гибкий график:</span> вы сами выставляете свои рабочие дни</li>
+      <li>Весь необходимый для уборки <span>инвентарь</span></li>
+      <li>Удобный рабочий <span>кабинет в смартфоне</span></li>
+      <li><span>Еженедельный</span> рассчет</li>
+      <li>Минимальная оплата выезда <span>- 29 BYN</span> (2-3 часа работы)</li>
+      <li><span>Уютный офис</span> на станции метро Пролетарская</li>
+      <li><span>Тёплая атмосфера</span> заботы друг о друге</li>
+    </ul>
+    <picture>
+      <source
+        media="(min-width: 768px)"
+        srcset="@images/service/cleaners-bg.webp"
+        type="image/webp"
+      />
+      <source
+        media="(max-width: 767px)"
+        srcset="@images/service/cleaners-bg-mobile.webp"
+        type="image/webp"
+      />
+      <img src="@images/service/cleaners-bg.png" alt="Клинеры" loading="lazy" />
+    </picture>
+  </div>
+</section>
+<section class="section section--address">
+  <div class="container">
+    <h2>Оставьте запрос</h2>
+    <p>Мы свяжемся с вами, как только обработаем ваш запрос.</p>
+    <div class="form section--address__form section--address__form--contacts">
+      <div class="form-item">
+        <label for="name">
+          <input type="text" name="name" id="name" placeholder="ФИО" />
+        </label>
+      </div>
+      <div class="form-item">
+        <label for="phone">
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Номер телефона"
+          />
+        </label>
+      </div>
+      <div class="form-item">
+        <label for="question">
+          <textarea
+            name="question"
+            id="question"
+            placeholder="Дополнительная информация"
+            rows="6"
+          ></textarea>
+        </label>
+      </div>
+      <button type="submit" class="button button--green">Отправить</button>
+    </div>
+  </div>
+</section>
+{% include "src/html/sections/faq.html" %} {% include
+"src/html/sections/cleaners.html" %} {% include
+"src/html/sections/social-media.html" %}

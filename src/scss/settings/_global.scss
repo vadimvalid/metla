@@ -257,6 +257,68 @@ body {
         padding: 0;
       }
     }
+
+    &.cleaners {
+      .main {
+        gap: 0;
+      }
+
+      .header {
+        padding-bottom: torem(30);
+      }
+
+      .section--order-hero {
+        padding-bottom: torem(40);
+
+        .container {
+          h1 {
+            @include sm-breakpoint {
+              font-size: torem(54);
+            }
+          }
+        }
+
+        .button {
+          display: none;
+        }
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
+        }
+      }
+
+      .section--address {
+        &__form {
+          .form-item {
+            width: 100%;
+          }
+
+          .button {
+            margin: torem(20) auto 0;
+          }
+        }
+
+        @include sm-breakpoint {
+          padding: torem(40) 0;
+        }
+      }
+
+      .section--cleaners {
+        padding: torem(10) 0 torem(24);
+
+        @include sm-breakpoint {
+          padding: 0 0 torem(90);
+        }
+      }
+
+      .section--faq {
+        padding: torem(60) 0;
+
+        @include sm-breakpoint {
+          padding: torem(90) 0;
+        }
+      }
+    }
   }
 }
 
