@@ -1,0 +1,32 @@
+{% import "src/html/sections/order-hero.html" as orderHeroItem %} {{
+orderHeroItem.orderHero("Вопросы и ответы") }}{% include
+"src/html/sections/faq.html" %}
+<section class="section section--address">
+  <div class="container">
+    <h2>Задать вопрос</h2>
+    <div class="form section--address__form section--address__form--contacts">
+      <div class="form-item">
+        <label for="name">
+          <input type="text" name="name" id="name" placeholder="Ваше имя" />
+        </label>
+      </div>
+      <div class="form-item">
+        <label for="email">
+          <input type="email" name="email" id="email" placeholder="Ваш Email" />
+        </label>
+      </div>
+      <div class="form-item">
+        <label for="question">
+          <textarea
+            name="question"
+            id="question"
+            placeholder="Ваш вопрос"
+            rows="6"
+          ></textarea>
+        </label>
+      </div>
+      <button type="submit" class="button button--green">Отправить</button>
+    </div>
+  </div>
+</section>
+{% include "src/html/sections/social-media.html" %}

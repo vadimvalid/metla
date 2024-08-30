@@ -1,0 +1,16 @@
+{% macro instagram(image, isSlider) %}
+<article
+  class="instagram {% if isSlider %}swiper-slide{% endif %}"
+>
+  <picture>
+    <source
+      srcset="@images/{{ image }}.webp"
+      type="image/webp"
+    />
+    <img
+      src="@images/{{ image }}.png"
+      alt="Instagram"
+      loading="lazy"
+    />
+</article>
+{% endmacro %}

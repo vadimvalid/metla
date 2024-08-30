@@ -50,4 +50,133 @@
       }
     }
   }
+
+  &__breadcrumbs {
+    position: relative;
+    z-index: 1;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        font-size: $fontSizeXl;
+        line-height: 1.2;
+        color: $white;
+
+        a {
+          font-size: $fontSizeXl;
+          line-height: 1.2;
+          color: $white;
+          text-decoration: underline;
+        }
+
+        &:not(:last-child) {
+          position: relative;
+          margin-right: torem(16);
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            top: 50%;
+            right: -8px;
+            transform: translate(100%, -50%);
+            width: 6px;
+            height: 1px;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &--services {
+    .wrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: torem(35);
+      padding: torem(12);
+      background: $darkestPurple;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(35, 27, 66, 0.6) -6.24%,
+          rgba(0, 148, 210, 0.6) 164.24%
+        );
+      }
+
+      h1 {
+        font-size: torem(28);
+        font-weight: 500;
+        line-height: 1.3;
+        letter-spacing: -1.12px;
+        text-shadow: none;
+        text-align: left;
+      }
+
+      picture {
+        left: auto;
+        right: 0;
+        width: 50%;
+        top: auto;
+        bottom: 0;
+        height: auto;
+      }
+
+      @include sm-breakpoint {
+        align-items: center;
+        gap: torem(72);
+        padding: torem(24);
+        text-align: center;
+
+        h1 {
+          width: 100%;
+          font-size: torem(64);
+          text-align: center;
+          letter-spacing: -2.56px;
+        }
+      }
+    }
+  }
+
+  &__text,
+  .button {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    color: $white;
+
+    @include sm-breakpoint {
+      max-width: torem(655);
+      margin: 0 auto;
+    }
+  }
+
+  .button {
+    @include sm-breakpoint {
+      min-width: torem(300);
+    }
+  }
+
+  &__date {
+    position: relative;
+    z-index: 1;
+    font-size: $fontSizeXl2;
+    font-weight: 500;
+    line-height: 1.2;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    color: $lightPurple;
+  }
 }

@@ -37,21 +37,292 @@ body {
         @include sm-breakpoint {
           gap: torem(90);
         }
-
-        > .section {
-          &:last-child {
-            padding-bottom: torem(60);
-
-            @include sm-breakpoint {
-              padding-bottom: torem(90);
-            }
-          }
-        }
       }
 
       .types {
         @include sm-breakpoint {
           margin-top: 0;
+        }
+      }
+
+      .section--faq {
+        padding: 0;
+
+        @include sm-breakpoint {
+          padding: 0;
+        }
+      }
+    }
+
+    &.service {
+      .header {
+        margin-bottom: torem(12);
+
+        @include sm-breakpoint {
+          margin-bottom: torem(32);
+        }
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        gap: torem(40);
+
+        @include sm-breakpoint {
+          gap: torem(60);
+        }
+
+        > .section {
+          &:last-child {
+            padding-bottom: torem(40);
+
+            @include sm-breakpoint {
+              padding-bottom: torem(60);
+            }
+          }
+
+          &.section--how-we-clean {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    &.reviews {
+      .section--order-hero {
+        .button {
+          display: none;
+        }
+      }
+
+      .section--reviews {
+        > .container {
+          > .section--reviews {
+            @include sm-breakpoint {
+              display: none;
+            }
+          }
+
+          > .swiper-reviews {
+            display: none;
+
+            @include sm-breakpoint {
+              display: grid;
+            }
+          }
+        }
+      }
+    }
+
+    &.all-service {
+      .section--order-hero {
+        .container {
+          h1 {
+            @include sm-breakpoint {
+              font-size: torem(54);
+            }
+          }
+        }
+
+        .button {
+          display: none;
+        }
+      }
+
+      .services,
+      .premium {
+        padding: 0;
+      }
+    }
+
+    &.faq {
+      .main {
+        gap: 0;
+      }
+
+      .section--order-hero {
+        padding-bottom: torem(40);
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
+        }
+
+        h1 {
+          @include maxWidthBlock;
+          @include titleColor;
+
+          @include sm-breakpoint {
+            font-size: torem(54);
+          }
+        }
+
+        .button {
+          display: none;
+        }
+      }
+
+      .section--faq {
+        padding-bottom: torem(106);
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
+        }
+
+        .container {
+          > h2,
+          > .button {
+            display: none;
+          }
+        }
+      }
+
+      .section--address {
+        &__form {
+          .form-item {
+            width: 100%;
+          }
+
+          .button {
+            margin: torem(20) auto 0;
+          }
+        }
+      }
+    }
+
+    &.blog-page {
+      .section--order-hero {
+        h1 {
+          @include titleColor;
+
+          @include sm-breakpoint {
+            font-size: torem(54);
+          }
+        }
+
+        .button {
+          display: none;
+        }
+      }
+
+      .section--blog {
+        padding: 0;
+
+        .container {
+          > .button {
+            margin-top: torem(40);
+
+            @include sm-breakpoint {
+              margin-top: torem(20);
+            }
+          }
+        }
+      }
+    }
+
+    &.article {
+      .hero--services {
+        .wrapper {
+          picture {
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      .section--blog {
+        padding: 0;
+      }
+    }
+
+    &.cleaners {
+      .main {
+        gap: 0;
+      }
+
+      .header {
+        padding-bottom: torem(30);
+      }
+
+      .section--order-hero {
+        padding-bottom: torem(40);
+
+        .container {
+          h1 {
+            @include sm-breakpoint {
+              font-size: torem(54);
+            }
+          }
+        }
+
+        .button {
+          display: none;
+        }
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
+        }
+      }
+
+      .section--address {
+        &__form {
+          .form-item {
+            width: 100%;
+          }
+
+          .button {
+            margin: torem(20) auto 0;
+          }
+        }
+
+        @include sm-breakpoint {
+          padding: torem(40) 0;
+        }
+      }
+
+      .section--cleaners {
+        padding: torem(10) 0 torem(24);
+
+        @include sm-breakpoint {
+          padding: 0 0 torem(90);
+        }
+      }
+
+      .section--faq {
+        padding: torem(60) 0;
+
+        @include sm-breakpoint {
+          padding: torem(90) 0;
+        }
+      }
+    }
+
+    &.about {
+      .section--order-hero {
+        h1 {
+          @include maxWidthBlock;
+          @include titleColor;
+
+          @include sm-breakpoint {
+            font-size: torem(54);
+          }
+        }
+
+        .button {
+          display: none;
+        }
+      }
+
+      .section--cleaners {
+        padding: 0;
+      }
+
+      .types {
+        margin: 0;
+        padding-bottom: torem(60);
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
         }
       }
     }

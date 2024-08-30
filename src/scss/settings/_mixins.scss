@@ -28,3 +28,10 @@
     margin: 0 auto;
   }
 }
+
+@mixin titleColor {
+  background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

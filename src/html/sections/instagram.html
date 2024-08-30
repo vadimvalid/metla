@@ -1,0 +1,19 @@
+{% import "src/html/components/instagram.html" as instagramItem %}
+
+<section class="section section--instagram">
+  <div class="container">
+    <h2>О нас пишут в Instagram</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {{ instagramItem.instagram("instagram", isSlider=true) }} {{
+        instagramItem.instagram("instagram", isSlider=true)}} {{
+        instagramItem.instagram("instagram", isSlider=true) }} {{
+        instagramItem.instagram("instagram", isSlider=true) }} {{
+        instagramItem.instagram("instagram",isSlider=true) }}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
