@@ -352,6 +352,15 @@
     }
   }
 
+  > h2 {
+    margin-bottom: torem(40);
+    font-size: $fontSizeXl5;
+    font-weight: 500;
+    line-height: 1;
+    color: $darkPurple;
+    text-align: center;
+  }
+
   @include sm-breakpoint {
     margin-top: torem(-45);
   }

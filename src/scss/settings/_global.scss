@@ -37,16 +37,6 @@ body {
         @include sm-breakpoint {
           gap: torem(90);
         }
-
-        > .section {
-          &:last-child {
-            padding-bottom: torem(60);
-
-            @include sm-breakpoint {
-              padding-bottom: torem(90);
-            }
-          }
-        }
       }
 
       .types {
@@ -159,14 +149,7 @@ body {
 
         h1 {
           @include maxWidthBlock;
-
-          background: var(
-            --main-gradient,
-            linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%)
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          @include titleColor;
 
           @include sm-breakpoint {
             font-size: torem(54);
@@ -209,13 +192,7 @@ body {
     &.blog-page {
       .section--order-hero {
         h1 {
-          background: var(
-            --main-gradient,
-            linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%)
-          );
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          @include titleColor;
 
           @include sm-breakpoint {
             font-size: torem(54);
@@ -316,6 +293,36 @@ body {
 
         @include sm-breakpoint {
           padding: torem(90) 0;
+        }
+      }
+    }
+
+    &.about {
+      .section--order-hero {
+        h1 {
+          @include maxWidthBlock;
+          @include titleColor;
+
+          @include sm-breakpoint {
+            font-size: torem(54);
+          }
+        }
+
+        .button {
+          display: none;
+        }
+      }
+
+      .section--cleaners {
+        padding: 0;
+      }
+
+      .types {
+        margin: 0;
+        padding-bottom: torem(60);
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
         }
       }
     }
