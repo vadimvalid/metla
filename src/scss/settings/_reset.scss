@@ -60,9 +60,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -71,4 +71,51 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none;
+  outline: #000 dotted 2px;
+  outline-offset: 0.05em;
+}
+
+img {
+  display: block;
+  position: relative;
+
+  &:before {
+    content: 'Упс, изображение ниже поломалось :(';
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &:after {
+    content: '(url: ' attr(src) ')';
+    display: block;
+    font-size: 12px;
+  }
+}
+
+video[autoplay]:not([muted]) {
+  display: none;
+}
+
+input[type='text'],
+input[type='number'],
+select,
+textarea {
+  font-size: 16px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+br + br {
+  display: none;
 }
