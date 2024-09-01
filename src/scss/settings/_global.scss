@@ -326,6 +326,14 @@ body {
         }
       }
     }
+
+    &.login {
+      background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
+
+      .logo__text {
+        color: $white;
+      }
+    }
   }
 }
 

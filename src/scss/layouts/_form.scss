@@ -16,4 +16,18 @@
       color: $grey;
     }
   }
+
+  &__prefix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: torem(21.5) torem(12.5);
+    background-color: $darkPurple;
+    border-radius: $borderRadiusMd 0 0 $borderRadiusMd;
+    font-size: $fontSizeXl2;
+    font-weight: 400;
+    line-height: 1;
+    color: $white;
+  }
 }
