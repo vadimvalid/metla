@@ -1,0 +1,252 @@
+{% import "src/html/components/user-card.html" as userCardItem %} {% import
+"src/html/components/serviceCard.html" as serviceCardItem %}
+
+<section class="section section--user-title">
+  <div class="container">
+    <h1>Химчистка мебели №4568</h1>
+  </div>
+</section>
+<section class="section section--user-info">
+  <div class="container">
+    <div class="status">
+      <div class="status__square"></div>
+      <p class="status__text">Ожидается</p>
+    </div>
+    <div class="section--user-info__items">
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-calendar-blue.svg"
+          alt="icon calendar"
+          width="30"
+          height="30"
+        />
+        <p>Дата уборки</p>
+        <p>18.12.2023</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-clock-blue.svg"
+          alt="icon time"
+          width="30"
+          height="30"
+        />
+        <p>Время уборки</p>
+        <p>18.00</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-type-blue.svg"
+          alt="icon type"
+          width="30"
+          height="30"
+        />
+        <p>Тип уборки</p>
+        <p>Поддерживающая</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-home-blue.svg"
+          alt="icon home"
+          width="30"
+          height="30"
+        />
+        <p>Объект</p>
+        <p>Квартира</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-sanuzel-blue.svg"
+          alt="icon sanuzel"
+          width="30"
+          height="30"
+        />
+        <p>Санузлы</p>
+        <p>1</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-room-blue.svg"
+          alt="icon rooms"
+          width="30"
+          height="30"
+        />
+        <p>Комнаты</p>
+        <p>1</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-square-blue.svg"
+          alt=""
+          width="30"
+          height="30"
+        />
+        <p>Площадь</p>
+        <p>23</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-dirty-blue.svg"
+          alt="icon square"
+          width="30"
+          height="30"
+        />
+        <p>Загрязнение</p>
+        <p>Всё просто</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-location-blue.svg"
+          alt="icon address"
+          width="30"
+          height="30"
+        />
+        <p>Адрес</p>
+        <p>г. Минск, ул. Дзержинского, 35-42</p>
+      </div>
+    </div>
+  </div>
+  <div class="container container--cleaners">
+    <h2>Клинеры</h2>
+    {% include "src/html/components/card-cleaner.html" %}
+  </div>
+  <div class="section section--result">
+    <div class="container">
+      <h2>Расчёт услуг</h2>
+      <div class="section--result__bill">
+        <div class="section--result__bill__services">
+          <div class="item">
+            <p>Поддерживающая уборка</p>
+            <p><span>60</span>BYN</p>
+          </div>
+          <div class="item">
+            <p>Уборка балкона</p>
+            <p class="bold">x2</p>
+            <p><span>40</span>BYN</p>
+          </div>
+        </div>
+        <div class="section--result__bill__border"></div>
+        <div class="section--result__bill__sum">
+          <p>Всего</p>
+          <p><span>100</span>BYN</p>
+        </div>
+        <div class="section--result__bill__time">
+          <p>Ориентировочное время уборки</p>
+          <p><span>4</span>ч.</p>
+        </div>
+      </div>
+
+      <h2>Способ оплаты</h2>
+      <div class="section--result__methods">
+        <div class="payment-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="41"
+            height="41"
+            fill="none"
+          >
+            <g>
+              <path
+                fill="url(#a)"
+                d="M38.9 30.674h-6.4a4.8 4.8 0 0 1 0-9.6h6.4a1.6 1.6 0 0 1 1.6 1.6v6.4a1.6 1.6 0 0 1-1.6 1.6Zm-6.4-6.4a1.6 1.6 0 0 0 0 3.2h4.8v-3.2h-4.8ZM29.3 6.674h-5.073l4.113 3.2h.96a1.6 1.6 0 0 1 1.6 1.6v1.6h3.2v-1.6a4.8 4.8 0 0 0-4.8-4.8ZM11.796 5.074l-4.576 6.4h20.576L15.876 2.21a1.6 1.6 0 0 0-1.2-.32 1.6 1.6 0 0 0-1.072.656l-1.808 2.528Z"
+              />
+              <path
+                fill="url(#b)"
+                d="M32.5 19.474h6.4v-1.6a4.8 4.8 0 0 0-4.8-4.8H5.62a1.792 1.792 0 0 1-1.92-1.6 1.776 1.776 0 0 1 1.728-1.6h.976l2.272-3.2H5.172a4.896 4.896 0 0 0-4.672 4.8v22.4a4.8 4.8 0 0 0 4.8 4.8h28.8a4.8 4.8 0 0 0 4.8-4.8v-1.6h-6.4a6.4 6.4 0 1 1 0-12.8Z"
+              />
+            </g>
+            <defs>
+              <linearGradient
+                id="a"
+                x1="26.485"
+                x2="-4.628"
+                y1="44.416"
+                y2="26.383"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#5C41BE" />
+                <stop offset="1" stop-color="#8067DC" />
+              </linearGradient>
+              <linearGradient
+                id="b"
+                x1="25.612"
+                x2="14.137"
+                y1="12.527"
+                y2="-1.328"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#5C41BE" />
+                <stop offset="1" stop-color="#8067DC" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <p>Оплата наличными</p>
+        </div>
+        <div class="payment-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="41"
+            height="41"
+            fill="none"
+          >
+            <g fill-rule="evenodd" clip-rule="evenodd">
+              <path
+                fill="url(#a)"
+                d="M40.166 21.468H.833V35.83A3.667 3.667 0 0 0 4.5 39.497h32a3.667 3.667 0 0 0 3.666-3.667V21.469Zm-11.494 12.16a3.622 3.622 0 0 0 2.633 1.133 3.635 3.635 0 0 0 0-7.269c-1.036 0-1.97.435-2.633 1.133a3.622 3.622 0 0 0-2.634-1.133 3.635 3.635 0 0 0 0 7.268c1.036 0 1.971-.434 2.634-1.131Zm-22.596.46h9.081a1 1 0 0 0 0-2H6.076a1 1 0 0 0 0 2Zm19.962-4.596a1.635 1.635 0 1 1-.002 3.27 1.635 1.635 0 0 1 .002-3.27Zm5.267 0a1.635 1.635 0 1 1-.002 3.27 1.635 1.635 0 0 1 .002-3.27Zm-25.23.69h4.069a1 1 0 0 0 0-2H6.076a1 1 0 0 0 0 2ZM.834 19.469h39.333v-3.545a3.67 3.67 0 0 0-1.073-2.593 3.673 3.673 0 0 0-2.593-1.073h-32c-.972 0-1.906.387-2.594 1.073a3.67 3.67 0 0 0-1.073 2.594v3.543Z"
+              />
+              <path
+                fill="url(#b)"
+                d="M34.895 10.924h-9.448l8.286-3.52 1.162 3.52Zm-26.689 0h12.127L33.103 5.5l-.308-.93a3.667 3.667 0 0 0-4.946-2.211L8.206 10.924Z"
+              />
+            </g>
+            <defs>
+              <linearGradient
+                id="a"
+                x1="26.485"
+                x2="-4.628"
+                y1="44.416"
+                y2="26.383"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#5C41BE" />
+                <stop offset="1" stop-color="#8067DC" />
+              </linearGradient>
+              <linearGradient
+                id="b"
+                x1="25.612"
+                x2="14.137"
+                y1="12.527"
+                y2="-1.328"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#5C41BE" />
+                <stop offset="1" stop-color="#8067DC" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <p>Оплата картой</p>
+        </div>
+      </div>
+      <div class="section--result__footer">
+        <div class="buttons">
+          <button type="submit" class="button button--green">
+            Подтвердить
+          </button>
+          <a href="#" class="button">Позвонить клинеру</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section--result__description">
+  <div class="container">
+    <button>Отменить заказ</button>
+    <p>
+      При отмене заказа менее, чем за 12 часов, с вас будет списан штраф в
+      размере 15 рублей. Если вы вносили предоплату за заказ, средства буду
+      возвращены вам за вычетом штрафа. Подробнее - в
+      <a href="#">Публичной оферте компании METLA.</a>
+    </p>
+  </div>
+</section>
