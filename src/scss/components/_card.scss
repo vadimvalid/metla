@@ -284,4 +284,12 @@
     line-height: 1.2;
     color: $texty;
   }
+
+  &--loading {
+    text-align: center;
+
+    p {
+      width: 100%;
+    }
+  }
 }

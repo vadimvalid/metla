@@ -792,6 +792,7 @@
       display: flex;
       flex-direction: column;
       gap: torem(12);
+      color: $texty;
 
       .item {
         display: flex;
@@ -807,6 +808,14 @@
         }
 
         &.bold {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__sum {
+      p {
+        &:first-child {
           font-weight: 700;
         }
       }
@@ -870,7 +879,12 @@
       gap: torem(38);
 
       .button {
-        padding: torem(28) torem(30);
+        @include maxWidthBlock;
+
+        padding: torem(34.5) torem(30);
+        border-radius: $borderRadiusLg;
+        font-size: $fontSizeXl;
+        line-height: normal;
       }
     }
 
@@ -879,7 +893,7 @@
 
       .buttons {
         width: 100%;
-        flex-direction: row-reverse;
+        flex-direction: row;
         gap: torem(24);
 
         > * {
@@ -889,6 +903,25 @@
         .button--green {
           min-width: auto;
         }
+      }
+    }
+  }
+
+  &__description {
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: torem(40);
+      text-align: center;
+
+      button {
+        all: unset;
+        font-size: $fontSizeXl3;
+        font-weight: 400;
+        text-decoration: underline;
+        color: $red;
+        text-align: center;
+        cursor: pointer;
       }
     }
   }
@@ -1423,6 +1456,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: torem(12);
+
+    .button {
+      width: 100%;
+      border-radius: 20px;
+    }
   }
 
   &__item {
@@ -1482,6 +1520,12 @@
 
     &__footer {
       justify-content: center;
+
+      @include sm-breakpoint {
+        .button--repeat {
+          display: none;
+        }
+      }
     }
   }
 }

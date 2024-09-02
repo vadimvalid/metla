@@ -1,0 +1,42 @@
+.user-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: torem(24);
+  width: 100%;
+  padding: torem(24);
+  background: $darkPurple;
+  border-radius: $borderRadiusMd;
+
+  textarea {
+    width: 100%;
+    font-size: $fontSizeLg;
+    line-height: 1.4;
+    color: $white;
+    padding: torem(12);
+    border: none;
+    background: $darkestPurple;
+    border-radius: $borderRadiusMd;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    @include sm-breakpoint {
+      min-height: torem(160);
+    }
+  }
+
+  &--empty {
+    gap: torem(12);
+    color: $white;
+
+    .button {
+      width: 100%;
+    }
+
+    @include sm-breakpoint {
+      gap: torem(24);
+    }
+  }
+}

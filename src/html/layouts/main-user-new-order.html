@@ -3,14 +3,14 @@
 
 <section class="section section--user-title">
   <div class="container">
-    <h1>Уборка №4569</h1>
+    <h1>Уборка №4571</h1>
   </div>
 </section>
 <section class="section section--user-info">
   <div class="container">
-    <div class="status status--in-process">
+    <div class="status status--no-cliner">
       <div class="status__square"></div>
-      <p class="status__text">Выполняется</p>
+      <p class="status__text">Нет клинера</p>
     </div>
     <div class="section--user-info__items">
       <div class="section--user-info__item">
@@ -107,7 +107,9 @@
   </div>
   <div class="container container--cleaners">
     <h2>Клинеры</h2>
-    {% include "src/html/components/card-cleaner.html" %}
+    <div class="card__cleaner card__cleaner--loading">
+      <p>Подбираем клинера...</p>
+    </div>
   </div>
   <div class="section section--result">
     <div class="container">
@@ -234,9 +236,6 @@
       </div>
       <div class="section--result__footer">
         <div class="buttons">
-          <button type="submit" class="button button--green">
-            Подтвердить
-          </button>
           <a href="#" class="button">Позвонить клинеру</a>
         </div>
       </div>
