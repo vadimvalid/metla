@@ -1227,6 +1227,8 @@
   color: $white;
 
   .container {
+    position: relative;
+
     > h2 {
       margin: 0;
       color: $white;
@@ -1236,6 +1238,13 @@
       letter-spacing: -1.28px;
       text-transform: uppercase;
       text-align: left;
+    }
+
+    > h2,
+    p,
+    .form-item:first-of-type {
+      position: relative;
+      z-index: 1;
     }
 
     @include sm-breakpoint {
@@ -1286,8 +1295,10 @@
   }
 
   &__bottom {
+    position: relative;
     display: flex;
     flex-direction: column;
+    z-index: 1;
 
     .button {
       width: 100%;
@@ -1303,6 +1314,17 @@
       .button--green {
         min-width: auto;
       }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(66px);
+
+    @include sm-breakpoint {
+      transform: translateY(40px);
     }
   }
 }
