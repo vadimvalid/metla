@@ -1328,3 +1328,34 @@
     }
   }
 }
+
+.section--user-title {
+  h1 {
+    @include titleColor;
+
+    margin-bottom: 0;
+    font-size: $spaceXl6;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include sm-breakpoint {
+      font-size: orem(54);
+    }
+  }
+}
+
+.section--user-cards {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+
+    @include sm-breakpoint {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: torem(24) torem(20);
+    }
+  }
+}

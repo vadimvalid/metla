@@ -1,0 +1,35 @@
+{% import "src/html/components/user-card.html" as userCardItem %} {% import
+"src/html/components/serviceCard.html" as serviceCardItem %}
+
+<section class="section section--user-title">
+  <div class="container">
+    <h1>Мои заказы</h1>
+  </div>
+</section>
+<section class="section section--user-cards">
+  <div class="container">
+    {{ userCardItem.userCard("Уборка №4567", "no-cliner") }} {{
+    userCardItem.userCard("Химчистка мебели №4568", "", true) }} {{
+    userCardItem.userCard("Уборка №4569", "in-process", true) }} {{
+    userCardItem.userCard("Уборка №4570", "no-rating", true) }} {{
+    userCardItem.userCard("Уборка №4571", "done", true) }} {{
+    userCardItem.userCard("Уборка №4567", "review") }}
+  </div>
+</section>
+<section class="section services">
+  <div class="container">
+    <h2>Создать новый заказ</h2>
+  </div>
+  <div class="wrapper">
+    {{ serviceCardItem.serviceCard("#", "Уборка
+    квартиры","/icons/icon-service-1.svg", "/service/flat.webp") }} {{
+    serviceCardItem.serviceCard("#", "Уборка после ремонта",
+    "/icons/icon-service-2.svg", "/service/renovation.webp") }} {{
+    serviceCardItem.serviceCard("#", "Химчистка мебели",
+    "/icons/icon-service-3.svg","/service/dry.webp") }} {{
+    serviceCardItem.serviceCard("#", "Уборка санузла до
+    блеска","/icons/icon-service-4.svg", "/service/bathroom.webp") }} {{
+    serviceCardItem.serviceCard("#", "Уборка кухни с пристрастием",
+    "/icons/icon-service-5.svg", "/service/kitchen.webp") }}
+  </div>
+</section>

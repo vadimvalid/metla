@@ -349,6 +349,16 @@ body {
         color: $white;
       }
     }
+
+    &.user {
+      .main {
+        padding-bottom: torem(60);
+
+        @include sm-breakpoint {
+          padding-bottom: torem(90);
+        }
+      }
+    }
   }
 }
 

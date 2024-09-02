@@ -1,0 +1,58 @@
+{% macro userCard(title, status, isCliner) %}
+<article class="card-user">
+  <h3 class="card-user__title">{{ title }}</h3>
+  {% if status === "in-process" %}
+  <div class="status status--in-process">
+    <div class="status__square"></div>
+    <p class="status__text">Выполняется</p>
+  </div>
+  {% elif status === "done" %}
+  <div class="status status--done">
+    <div class="status__square"></div>
+    <p class="status__text">Выполнен</p>
+  </div>
+  {% elif status === "no-rating" %}
+  <div class="status status--no-rating">
+    <div class="status__square"></div>
+    <p class="status__text">Нет оценки</p>
+  </div>
+  {% elif status === "no-cliner" %}
+  <div class="status status--no-cliner">
+    <div class="status__square"></div>
+    <p class="status__text">Нет клинера</p>
+  </div>
+  {% elif status === "review" %}
+  <div class="status status--review">
+    <div class="status__square"></div>
+    <p class="status__text">На проверке</p>
+  </div>
+  {% else %}
+  <div class="status">
+    <div class="status__square"></div>
+    <p class="status__text">Ожидается</p>
+  </div>
+  {% endif %}
+
+  <div class="card-user__date">
+    <img src="@images/icons/icon-date.svg" alt="icon date" />
+    <div class="card-user__date__text">
+      <p>11.01.2024</p>
+      <p>10:00</p>
+    </div>
+  </div>
+  <div class="card-user__location">
+    <img src="@images/icons/icon-location.svg" alt="icon date" />
+    <div class="card-user__date__text">
+      <p>Центральный, ул. Красная</p>
+    </div>
+  </div>
+  <div class="card-user__bottom">
+    {% if isCliner %} {% include "src/html/components/card-cleaner.html" %} {%
+    endif %}
+    <button>
+      <p>60 <span>BYN</span></p>
+      <p>Подробнее</p>
+    </button>
+  </div>
+</article>
+{% endmacro %}
