@@ -352,9 +352,11 @@ body {
 
     &.user {
       .main {
+        gap: torem(38);
         padding-bottom: torem(60);
 
         @include sm-breakpoint {
+          gap: torem(90);
           padding-bottom: torem(90);
         }
       }

@@ -864,8 +864,32 @@
     flex-direction: column;
     gap: torem(40);
 
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: torem(38);
+
+      .button {
+        padding: torem(28) torem(30);
+      }
+    }
+
     @include sm-breakpoint {
       flex-direction: row;
+
+      .buttons {
+        width: 100%;
+        flex-direction: row-reverse;
+        gap: torem(24);
+
+        > * {
+          flex: 1;
+        }
+
+        .button--green {
+          min-width: auto;
+        }
+      }
     }
   }
 }
@@ -1356,6 +1380,108 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: torem(24) torem(20);
+    }
+  }
+}
+
+.section--user-info {
+  display: flex;
+  flex-direction: column;
+  gap: torem(40);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: torem(38);
+
+    > h2 {
+      margin: 0;
+    }
+
+    &--cleaners {
+      align-items: stretch;
+    }
+
+    @include sm-breakpoint {
+      gap: torem(40);
+      max-width: torem(700);
+
+      &--cleaners {
+        gap: torem(24);
+      }
+    }
+  }
+
+  > .container {
+    @include sm-breakpoint {
+      max-width: torem(656);
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: torem(12);
+  }
+
+  &__item {
+    @include cardStyles;
+
+    flex: 0 1 calc(50% - torem(6));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: torem(12);
+    padding: torem(12);
+    font-size: $fontSizeLg;
+    line-height: 1.4;
+    color: $darkPurple;
+
+    > p {
+      &:first-of-type {
+        font-size: $fontSizeMd;
+        line-height: 1;
+        color: $text;
+      }
+    }
+
+    &:last-child {
+      flex: 0 1 100%;
+    }
+  }
+
+  .section--result {
+    .container {
+      align-items: stretch;
+
+      @include sm-breakpoint {
+        gap: 0;
+
+        h2,
+        .section--result__bill,
+        .section--result__methods {
+          width: calc(100% - torem(36));
+          margin: 0 auto;
+        }
+
+        > h2 {
+          margin-bottom: torem(40);
+
+          &:first-of-type {
+            margin-bottom: torem(24);
+          }
+        }
+
+        .section--result__bill,
+        .section--result__methods {
+          margin-bottom: torem(90);
+        }
+      }
+    }
+
+    &__footer {
+      justify-content: center;
     }
   }
 }
