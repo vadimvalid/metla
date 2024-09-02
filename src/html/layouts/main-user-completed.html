@@ -1,0 +1,154 @@
+{% import "src/html/components/user-card.html" as userCardItem %} {% import
+"src/html/components/serviceCard.html" as serviceCardItem %}
+
+<section class="section section--user-title">
+  <div class="container">
+    <h1>Уборка №4571</h1>
+  </div>
+</section>
+<section class="section section--user-info">
+  <div class="container">
+    <div class="status status--done">
+      <div class="status__square"></div>
+      <p class="status__text">Выполнен</p>
+    </div>
+    <div class="user-review">
+      {% include 'src/html/components/stars.html' %}
+      <textarea name="user-review" id="user-review"></textarea>
+    </div>
+    <div class="section--user-info__items">
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-calendar-blue.svg"
+          alt="icon calendar"
+          width="30"
+          height="30"
+        />
+        <p>Дата уборки</p>
+        <p>18.12.2023</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-clock-blue.svg"
+          alt="icon time"
+          width="30"
+          height="30"
+        />
+        <p>Время уборки</p>
+        <p>18.00</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-type-blue.svg"
+          alt="icon type"
+          width="30"
+          height="30"
+        />
+        <p>Тип уборки</p>
+        <p>Поддерживающая</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-home-blue.svg"
+          alt="icon home"
+          width="30"
+          height="30"
+        />
+        <p>Объект</p>
+        <p>Квартира</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-sanuzel-blue.svg"
+          alt="icon sanuzel"
+          width="30"
+          height="30"
+        />
+        <p>Санузлы</p>
+        <p>1</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-room-blue.svg"
+          alt="icon rooms"
+          width="30"
+          height="30"
+        />
+        <p>Комнаты</p>
+        <p>1</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-square-blue.svg"
+          alt=""
+          width="30"
+          height="30"
+        />
+        <p>Площадь</p>
+        <p>23</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-dirty-blue.svg"
+          alt="icon square"
+          width="30"
+          height="30"
+        />
+        <p>Загрязнение</p>
+        <p>Всё просто</p>
+      </div>
+      <div class="section--user-info__item">
+        <img
+          src="@images/icons/icon-location-blue.svg"
+          alt="icon address"
+          width="30"
+          height="30"
+        />
+        <p>Адрес</p>
+        <p>г. Минск, ул. Дзержинского, 35-42</p>
+      </div>
+    </div>
+  </div>
+  <div class="container container--cleaners">
+    <h2>Клинеры</h2>
+    {% include "src/html/components/card-cleaner.html" %}
+  </div>
+  <div class="section section--result">
+    <div class="container">
+      <h2>Расчёт услуг</h2>
+      <div class="section--result__bill">
+        <div class="section--result__bill__services">
+          <div class="item">
+            <p>Поддерживающая уборка</p>
+            <p><span>60</span>BYN</p>
+          </div>
+          <div class="item">
+            <p>Уборка балкона</p>
+            <p class="bold">x2</p>
+            <p><span>40</span>BYN</p>
+          </div>
+        </div>
+        <div class="section--result__bill__border"></div>
+        <div class="section--result__bill__sum">
+          <p>Всего</p>
+          <p><span>100</span>BYN</p>
+        </div>
+        <div class="section--result__bill__time">
+          <p>Ориентировочное время уборки</p>
+          <p><span>4</span>ч.</p>
+        </div>
+      </div>
+
+      <div class="section--result__footer">
+        <div class="buttons">
+          <a href="#" class="button">Позвонить менеджеру</a>
+          <a href="#" class="button">Скачать счёт-фактуру</a>
+          <button class="button--repeat">
+            <p>Создать заказ</p>
+            <img src="@images/icons/button-arrow.svg" alt="arrow" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

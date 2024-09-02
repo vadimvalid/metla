@@ -870,7 +870,12 @@
       gap: torem(38);
 
       .button {
-        padding: torem(28) torem(30);
+        @include maxWidthBlock;
+
+        padding: torem(34.5) torem(30);
+        border-radius: $borderRadiusLg;
+        font-size: $fontSizeXl;
+        line-height: normal;
       }
     }
 
@@ -1501,6 +1506,12 @@
 
     &__footer {
       justify-content: center;
+
+      @include sm-breakpoint {
+        .button--repeat {
+          display: none;
+        }
+      }
     }
   }
 }

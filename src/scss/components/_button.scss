@@ -70,4 +70,30 @@
       min-width: torem(336);
     }
   }
+
+  &--repeat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: troem(6);
+    padding: torem(20) torem(30);
+    font-size: $fontSizeXl;
+    font-weight: 500;
+    line-height: normal;
+    color: $white;
+    border-radius: 23px;
+    border: 1px solid #5c41be;
+    background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
+    cursor: pointer;
+
+    img {
+      width: torem(94);
+      height: torem(48);
+    }
+
+    @include sm-breakpoint {
+      padding: torem(20) torem(30);
+      font-size: $fontSizeXl;
+    }
+  }
 }
