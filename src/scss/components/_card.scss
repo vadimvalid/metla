@@ -171,3 +171,117 @@
     }
   }
 }
+
+.card-user {
+  @include cardStyles;
+
+  display: flex;
+  flex-direction: column;
+  gap: torem(12);
+  padding: torem(12);
+
+  &__title {
+    font-size: $fontSizeXl3;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $darkestPurple;
+  }
+
+  &__date,
+  &__location {
+    img {
+      width: torem(30);
+      height: torem(30);
+      object-fit: contain;
+    }
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    gap: torem(18);
+    font-size: $fontSizeLg;
+    font-weight: 500;
+    line-height: 1.4;
+
+    &__text {
+      font-weight: 500;
+      line-height: 1;
+      text-align: center;
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: torem(10);
+    font-size: $fontSizeMd;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+    margin-top: auto;
+  }
+
+  button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: torem(24);
+    padding: torem(15) torem(18);
+    border-radius: 14px;
+    background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    font-size: $fontSizeLg;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $white;
+    text-align: center;
+    cursor: pointer;
+
+    span {
+      font-size: $fontSizeSm;
+    }
+
+    > p {
+      &:first-child {
+        font-weight: 700;
+
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.card__cleaner {
+  display: flex;
+  align-items: center;
+  gap: torem(6);
+  padding: torem(12);
+  border-radius: 14px;
+  background: $white;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+
+  h4 {
+    font-size: $fontSizeLg;
+    font-weight: 500;
+    line-height: 1.4;
+    color: $blue;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: torem(6);
+    margin-left: auto;
+    font-size: $fontSizeXl;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $texty;
+  }
+}
