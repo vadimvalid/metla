@@ -18,8 +18,25 @@
     background: $darkestPurple;
     border-radius: $borderRadiusMd;
 
+    &::placeholder {
+      color: $white;
+    }
+
     @include sm-breakpoint {
       min-height: torem(160);
+    }
+  }
+
+  &--empty {
+    gap: torem(12);
+    color: $white;
+
+    .button {
+      width: 100%;
+    }
+
+    @include sm-breakpoint {
+      gap: torem(24);
     }
   }
 }
