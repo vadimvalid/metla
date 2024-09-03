@@ -3,3 +3,94 @@
     <h1>Мои карты</h1>
   </div>
 </section>
+<section class="section section--user--cards">
+  <div class="container">
+    <div class="section--user--cards__item">
+      <div class="item__header">
+        <p>МИР</p>
+        <button>
+          <img
+            src="@images/icons/icon-delete.svg"
+            alt="icon delete"
+            width="40"
+            height="40"
+          />
+        </button>
+      </div>
+      <div class="item__content">
+        <img
+          src="@images/icons/icon-user-card.svg"
+          alt="icon user card"
+          width="30"
+          height="30"
+        />
+        <p>**** **** **** 4432</p>
+      </div>
+    </div>
+    <div class="section--user--cards__item">
+      <div class="item__header">
+        <p>Альфа Банк</p>
+        <button>
+          <img
+            src="@images/icons/icon-delete.svg"
+            alt="icon delete"
+            width="40"
+            height="40"
+          />
+        </button>
+      </div>
+      <div class="item__content">
+        <img
+          src="@images/icons/icon-user-card.svg"
+          alt="icon user card"
+          width="30"
+          height="30"
+        />
+        <p>**** **** **** 5674</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--address">
+  <div class="container">
+    <h2>Добавить карту</h2>
+
+    <form class="section--address__form">
+      <p>Заголовок для карты</p>
+      <div class="form-item">
+        <label for="number">
+          <input
+            type="text"
+            name="number"
+            id="number"
+            placeholder="Номер карты"
+          />
+        </label>
+      </div>
+      <div class="form-item">
+        <label for="expiry">
+          <input
+            type="text"
+            name="expiry"
+            id="expiry"
+            placeholder="Срок действия"
+          />
+        </label>
+      </div>
+      <div class="form-item">
+        <label for="cvc">
+          <input type="text" name="cvc" id="cvc" placeholder="CVC" />
+        </label>
+      </div>
+      <div class="form-item">
+        <label for="host">
+          <input type="text" name="host" id="host" placeholder="Владелец" />
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button class="button button--green">Сохранить</button>
+      </div>
+    </form>
+  </div>
+</section>
