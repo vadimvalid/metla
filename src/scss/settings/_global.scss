@@ -361,6 +361,154 @@ body {
         }
       }
     }
+
+    &.user-account {
+      .main {
+        gap: torem(40);
+        padding-bottom: torem(60);
+
+        @include sm-breakpoint {
+          gap: torem(90);
+          padding-bottom: torem(90);
+        }
+      }
+
+      .section--form {
+        padding: 0;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: torem(34);
+
+          .form-item {
+            margin: 0;
+            padding: 0;
+
+            label {
+              display: block;
+              margin-bottom: torem(5);
+              font-size: $fontSizeXl2;
+              font-weight: 400;
+              line-height: 1;
+              color: $text;
+            }
+
+            input {
+              padding: torem(20.5) torem(12);
+              font-size: $fontSizeXl2;
+              font-weight: 400;
+              line-height: 1;
+              color: $darkestPurple;
+
+              &:placeholder-shown {
+                color: $grey;
+              }
+            }
+
+            &__prefix {
+              top: auto;
+              bottom: 0;
+              height: 65px;
+
+              + label + input {
+                padding-left: torem(87);
+              }
+            }
+          }
+
+          @include sm-breakpoint {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .form-item {
+              max-width: none;
+            }
+
+            .button--green {
+              padding: torem(28) torem(30);
+            }
+          }
+        }
+      }
+
+      &--deleted {
+        .main {
+          gap: torem(38);
+
+          @include sm-breakpoint {
+            gap: torem(50);
+          }
+        }
+      }
+
+      &--locations {
+        .main {
+          gap: torem(40);
+          padding-bottom: 0;
+        }
+
+        .section--address__form {
+          > p {
+            width: 100%;
+            padding: torem(23) torem(20);
+            border-radius: $borderRadiusMd;
+            background: rgba(255, 255, 255, 0.22);
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+            font-size: $fontSizeXl2;
+            line-height: 1;
+            color: $white;
+          }
+
+          .form-actions {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            .button {
+              width: 100%;
+              min-width: torem(336);
+
+              @include sm-breakpoint {
+                width: auto;
+              }
+            }
+          }
+
+          @include sm-breakpoint {
+            gap: torem(40) torem(20);
+
+            > .form-item {
+              flex: 0 1 calc(50% / 3 - torem(20));
+
+              &:first-of-type {
+                flex: 0 1 50%;
+              }
+
+              &:nth-child(8) {
+                min-width: torem(225);
+              }
+            }
+          }
+        }
+      }
+
+      &--cards {
+        .section--address__form {
+          @include sm-breakpoint {
+            gap: torem(20);
+
+            > .form-item {
+              flex: 0 1 100%;
+
+              &:first-of-type {
+                flex: 0 1 100%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
