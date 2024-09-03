@@ -361,6 +361,77 @@ body {
         }
       }
     }
+
+    &.user-account {
+      .main {
+        gap: torem(40);
+        padding-bottom: torem(60);
+
+        @include sm-breakpoint {
+          gap: torem(90);
+          padding-bottom: torem(90);
+        }
+      }
+
+      .section--form {
+        padding: 0;
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: torem(34);
+
+          .form-item {
+            margin: 0;
+            padding: 0;
+
+            label {
+              display: block;
+              margin-bottom: torem(5);
+              font-size: $fontSizeXl2;
+              font-weight: 400;
+              line-height: 1;
+              color: $text;
+            }
+
+            input {
+              padding: torem(20.5) torem(12);
+              font-size: $fontSizeXl2;
+              font-weight: 400;
+              line-height: 1;
+              color: $darkestPurple;
+
+              &:placeholder-shown {
+                color: $grey;
+              }
+            }
+
+            &__prefix {
+              top: auto;
+              bottom: 0;
+              height: 65px;
+
+              + label + input {
+                padding-left: torem(87);
+              }
+            }
+          }
+
+          @include sm-breakpoint {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .form-item {
+              max-width: none;
+            }
+
+            .button--green {
+              padding: torem(28) torem(30);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
