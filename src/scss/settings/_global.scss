@@ -431,6 +431,16 @@ body {
           }
         }
       }
+
+      &--deleted {
+        .main {
+          gap: torem(38);
+
+          @include sm-breakpoint {
+            gap: torem(50);
+          }
+        }
+      }
     }
   }
 }

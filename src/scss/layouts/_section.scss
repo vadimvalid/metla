@@ -1560,3 +1560,9 @@
     @include maxWidthBlock;
   }
 }
+
+.section--user-account-deleted {
+  p {
+    text-align: center;
+  }
+}
