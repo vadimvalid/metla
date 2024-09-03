@@ -918,7 +918,10 @@
         all: unset;
         font-size: $fontSizeXl3;
         font-weight: 400;
-        text-decoration: underline;
+        border-bottom: 1px solid $red;
+        display: inline;
+        width: fit-content;
+        margin: 0 auto;
         color: $red;
         text-align: center;
         cursor: pointer;
@@ -1527,5 +1530,33 @@
         }
       }
     }
+  }
+}
+
+.section--user-account-delete {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(38);
+
+    > p {
+      text-align: center;
+    }
+
+    @include sm-breakpoint {
+      gap: torem(40);
+      max-width: torem(656);
+
+      .form-item {
+        width: torem(336);
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.section--button {
+  .container {
+    @include maxWidthBlock;
   }
 }
