@@ -12,7 +12,7 @@ body {
   );
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.4;
   color: $text;
 
   &:after {
@@ -510,6 +510,80 @@ body {
       }
     }
   }
+
+  &--cleaner {
+    background: linear-gradient(
+      180deg,
+      #f8f5ff -24.58%,
+      #e4dcf5 16.53%,
+      #f2ebff 57.64%,
+      #e4d6ff 100%
+    );
+
+    &:after {
+      display: none;
+    }
+
+    > .content.not-home {
+      @include sm-breakpoint {
+        .header {
+          margin-bottom: torem(32);
+        }
+
+        .main {
+          gap: torem(60);
+        }
+      }
+    }
+
+    .cleaner-order {
+      padding-bottom: torem(235);
+
+      @include sm-breakpoint {
+        padding-bottom: torem(240);
+      }
+    }
+
+    .cleaner-new-order {
+      .card__cleaner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: torem(12);
+      }
+
+      .section--user-info {
+        .section--result__footer {
+          .button--repeat {
+            @include maxWidthBlock;
+
+            @include sm-breakpoint {
+              display: flex;
+            }
+          }
+        }
+      }
+
+      .section--result {
+        padding: 0;
+      }
+
+      .section--result__footer {
+        @include sm-breakpoint {
+          .container {
+            max-width: torem(700);
+          }
+        }
+      }
+
+      .section--user-info
+        .section--result
+        .container
+        .section--result__methods {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 a {
@@ -547,5 +621,15 @@ ol {
 
   @include sm-breakpoint {
     padding-top: torem(90);
+  }
+}
+
+.cleaner-padding {
+  .main {
+    padding-bottom: torem(135);
+
+    @include sm-breakpoint {
+      padding-bottom: torem(60);
+    }
   }
 }

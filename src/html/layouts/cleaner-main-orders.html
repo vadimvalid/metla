@@ -1,0 +1,33 @@
+{% import "src/html/components/user-card.html" as userCardItem %}
+<section class="section section--cleaner-title">
+  <div class="container">
+    <h1>Заказы</h1>
+  </div>
+</section>
+<section class="section section--cleaner-orders">
+  <div class="container">
+    <h3>Привет! Рады снова тебя видеть.</h3>
+    <div class="section--cleaner-orders__items">
+      <div class="section--cleaner-orders__item">
+        <p>Всего заказов выполнено</p>
+        <p>56</p>
+      </div>
+      <div class="section--cleaner-orders__item">
+        <p>Средняя оценка за всё время</p>
+        <p>4.2</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--cleaner-items">
+  <div class="container">
+    <h2>Мои заказы на 11.01.2024</h2>
+    <div class="section--cleaner-items__wrapper">
+      {{ userCardItem.userCard("Уборка №4567", "no-cliner") }} {{
+      userCardItem.userCard("Химчистка мебели №4568", "", true) }} {{
+      userCardItem.userCard("Уборка №4569", "in-process", true) }} {{
+      userCardItem.userCard("Уборка №4570", "no-rating", true) }} {{
+      userCardItem.userCard("Уборка №4571", "done", true) }}
+    </div>
+  </div>
+</section>
