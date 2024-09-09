@@ -535,6 +535,14 @@ body {
         }
       }
     }
+
+    .cleaner-order {
+      padding-bottom: torem(235);
+
+      @include sm-breakpoint {
+        padding-bottom: torem(240);
+      }
+    }
   }
 }
 
