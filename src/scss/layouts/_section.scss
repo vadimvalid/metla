@@ -1401,7 +1401,7 @@
     text-transform: uppercase;
 
     @include sm-breakpoint {
-      font-size: orem(54);
+      font-size: torem(54);
     }
   }
 }
@@ -1619,6 +1619,132 @@
         > p {
           flex: 1;
         }
+      }
+    }
+  }
+}
+
+.section--cleaner-title {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(16);
+    text-align: center;
+
+    h1 {
+      @include titleColor;
+
+      margin-bottom: 0;
+      font-size: $spaceXl6;
+      font-weight: 500;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include sm-breakpoint {
+        font-size: torem(54);
+      }
+    }
+  }
+}
+
+.section--blocks {
+  display: flex;
+  flex-direction: column;
+  gap: torem(24);
+  padding-bottom: torem(15);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: torem(24);
+
+    h2 {
+      font-size: $spaceXl5;
+      font-weight: 500;
+      line-height: 1;
+      color: $darkPurple;
+      text-align: center;
+    }
+
+    .form-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: torem(18);
+      font-size: $fontSizeXl2;
+      line-height: 1;
+
+      input {
+        padding: torem(20.5) torem(20);
+        color: $darkestPurple;
+      }
+
+      &__prefix {
+        top: auto;
+        bottom: 0;
+        height: 65px;
+
+        + label + input {
+          padding-left: torem(87);
+        }
+      }
+    }
+  }
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(24);
+
+    &:last-child {
+      > p {
+        text-align: center;
+      }
+    }
+
+    .checkboxes {
+      gap: torem(30);
+    }
+
+    .form-item--checkbox {
+      label {
+        &:after {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  @include sm-breakpoint {
+    gap: torem(40);
+    padding-bottom: torem(150);
+
+    &__item {
+      flex: 0 1 calc(50% - torem(12));
+      gap: torem(24);
+
+      h2 {
+        text-align: left;
+      }
+    }
+
+    > .container {
+      gap: torem(40);
+
+      &:first-child {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: torem(40) torem(24);
+      }
+
+      .checkboxes {
+        gap: torem(44);
+      }
+
+      .button {
+        @include maxWidthBlock;
       }
     }
   }

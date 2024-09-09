@@ -1,0 +1,46 @@
+select {
+  appearance: none;
+  display: grid;
+  grid-template-areas: 'select';
+  align-items: center;
+  padding: torem(16) 0;
+  border: none;
+  background: transparent;
+  margin: 0;
+  width: 100%;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+  outline: none;
+}
+
+.form-item {
+  &--select {
+    display: grid;
+    grid-template-areas: 'select';
+    align-items: center;
+    position: relative;
+    border-radius: 14px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    padding: 0 torem(12);
+    background-color: $white;
+
+    select,
+    &::after {
+      grid-area: select;
+    }
+
+    &:after {
+      content: '';
+      grid-area: select;
+      width: torem(24);
+      height: torem(24);
+      background-image: url('../images/icons/icon-chevron.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      pointer-events: none;
+      justify-self: end;
+    }
+  }
+}

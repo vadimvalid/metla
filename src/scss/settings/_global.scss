@@ -12,7 +12,7 @@ body {
   );
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.4;
   color: $text;
 
   &:after {
@@ -506,6 +506,32 @@ body {
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  &--cleaner {
+    background: linear-gradient(
+      180deg,
+      #f8f5ff -24.58%,
+      #e4dcf5 16.53%,
+      #f2ebff 57.64%,
+      #e4d6ff 100%
+    );
+
+    &:after {
+      display: none;
+    }
+
+    > .content.not-home {
+      @include sm-breakpoint {
+        .header {
+          margin-bottom: torem(32);
+        }
+
+        .main {
+          gap: torem(60);
         }
       }
     }

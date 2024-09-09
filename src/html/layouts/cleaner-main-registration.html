@@ -1,0 +1,148 @@
+<section class="section section--cleaner-title">
+  <div class="container">
+    <h1>Регистрация клинера</h1>
+    <p>
+      Нам уже нетерпится поработать с тобой! Заполняй анкету, прикладывай
+      необходимые документы. Мы всё рассмотрим и утвердим в течении 2 суток.
+    </p>
+  </div>
+</section>
+<form class="section section--blocks">
+  <div class="container">
+    <div class="section--blocks__item">
+      <h2>Основные данные</h2>
+      <div class="form-item">
+        <label for="surname">Фамилия</label>
+        <input type="text" name="surname" id="surname" />
+      </div>
+      <div class="form-item">
+        <label for="name">Имя</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div class="form-item">
+        <label for="parentname">Отчество</label>
+        <input type="text" name="parentname" id="parentname" />
+      </div>
+      <div class="form-item">
+        <label for="date">Дата рождения</label>
+        <input type="text" name="date" id="date" />
+      </div>
+      <div class="form-item">
+        <label for="address">Адрес проживания</label>
+        <textarea name="address" id="address" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="section--blocks__item">
+      <h2>Паспортные данные</h2>
+      <div class="form-item">
+        <label for="passport">Номер паспорта</label>
+        <input type="text" name="passport" id="passport" />
+      </div>
+      <div class="form-item">
+        <label for="number">Личный номер</label>
+        <input type="text" name="number" id="number" />
+      </div>
+      <div class="form-item">
+        <label for="date-2">Дата выдачи</label>
+        <input type="text" name="date-2" id="date-2" />
+      </div>
+
+      <div class="form-item">
+        <label for="address-2">Адрес прописки</label>
+        <textarea name="address-2" id="address-2" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="section--blocks__item">
+      <h2>Контакты и вход</h2>
+      <div class="form-item">
+        <div class="form-item__prefix">+375</div>
+        <label for="phone">Номер телефона</label>
+        <input type="tel" name="phone" id="phone" placeholder="29 999-99-99" />
+      </div>
+
+      <div class="form-item">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div class="form-item">
+        <label for="email-2">Повторите Email</label>
+        <input type="email" name="email-2" id="email-2" />
+      </div>
+      <div class="form-item">
+        <label for="password">Пароль</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div class="form-item">
+        <label for="password-2">Повторите пароль</label>
+        <input type="password" name="password-2" id="password-2" />
+      </div>
+    </div>
+    <div class="section--blocks__item">
+      <h2>Банковские данные</h2>
+      <div class="form-item">
+        <label for="iban">Номер счета в формате IBAN</label>
+        <input type="text" name="iban" id="iban" />
+      </div>
+      <div class="form-item">
+        <label for="bic">BIC код банка</label>
+        <input type="text" name="bic" id="bic" />
+      </div>
+      <div class="form-item">
+        <label for="bank">Название банка</label>
+        <input type="text" name="bank" id="bank" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <p>
+      Вам необходимо загрузить копию или фото последних 2 разворотов паспорта и
+      страницы с пропиской, трудовой книжки, а также подписанного договора с
+      платформой.
+    </p>
+    <div class="form-item form-item__file">
+      <div class="form-item__file__title">Заголовок для документа</div>
+      <div class="form-item__file__input">
+        <img
+          src="@images/icons/icon-file.svg"
+          alt="icon file"
+          width="30"
+          height="30"
+        />
+        <p>Добавить файлы</p>
+        <input type="file" id="avatar" name="avatar" accept="document/*" />
+      </div>
+    </div>
+    <div class="form-item form-item--select">
+      <select name="size" id="size">
+        <option value="">Размер майки</option>
+        <option value="s">S</option>
+        <option value="m">M</option>
+        <option value="l">L</option>
+      </select>
+    </div>
+    <div class="checkboxes">
+      <div class="form-item form-item--checkbox">
+        <input type="checkbox" name="dogovor" id="dogovor" />
+
+        <label for="dogovor"
+          >Регистрируясь, я согласен с условиями
+          <a href="#">Договора с компанией</a></label
+        >
+      </div>
+      <div class="form-item form-item--checkbox">
+        <input type="checkbox" name="reglament" id="reglament" />
+        <label for="reglament"
+          >Регистрируясь, я согласен с <a href="#">Регламентом</a></label
+        >
+      </div>
+      <div class="form-item form-item--checkbox">
+        <input type="checkbox" name="policy" id="policy" />
+        <label for="policy"
+          >Оформляя заказ, я согласен с
+          <a href="#">политикой конфиденциальности</a></label
+        >
+      </div>
+    </div>
+    <button class="button button--green">Отправить</button>
+  </div>
+</form>
