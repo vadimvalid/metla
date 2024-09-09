@@ -292,4 +292,13 @@
       width: 100%;
     }
   }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: $fontSizeLg;
+    font-weight: 500;
+    color: $mainPurple;
+  }
 }

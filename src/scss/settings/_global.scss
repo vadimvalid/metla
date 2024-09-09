@@ -543,6 +543,46 @@ body {
         padding-bottom: torem(240);
       }
     }
+
+    .cleaner-new-order {
+      .card__cleaner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: torem(12);
+      }
+
+      .section--user-info {
+        .section--result__footer {
+          .button--repeat {
+            @include maxWidthBlock;
+
+            @include sm-breakpoint {
+              display: flex;
+            }
+          }
+        }
+      }
+
+      .section--result {
+        padding: 0;
+      }
+
+      .section--result__footer {
+        @include sm-breakpoint {
+          .container {
+            max-width: torem(700);
+          }
+        }
+      }
+
+      .section--user-info
+        .section--result
+        .container
+        .section--result__methods {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -581,5 +621,15 @@ ol {
 
   @include sm-breakpoint {
     padding-top: torem(90);
+  }
+}
+
+.cleaner-padding {
+  .main {
+    padding-bottom: torem(135);
+
+    @include sm-breakpoint {
+      padding-bottom: torem(60);
+    }
   }
 }
