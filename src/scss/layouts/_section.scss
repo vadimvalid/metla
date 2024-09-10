@@ -1962,3 +1962,25 @@
     }
   }
 }
+
+.section-cleaner-menu {
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: torem(12);
+
+    @include sm-breakpoint {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: torem(20);
+    padding: torem(20);
+    border-radius: 20px;
+    background: $white;
+    box-shadow: $shadow;
+  }
+}
