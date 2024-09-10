@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Metla" />
+    <meta name="keywords" content="metla" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="../../../fonts/Raleway.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link href="../../../scss/style.scss" rel="stylesheet" />
+    <title>Cleaner dayoffs | Metla</title>
+  </head>
+
+  <body
+    class="body body--cleaner"
+    itemscope
+    itemtype="https://schema.org/WebPage"
+  >
+    <div class="content not-home cleaner-new-order cleaner-padding">
+      <header class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <meta itemprop="headline" content="Metla" />
+        <meta itemprop="description" content="" />
+        <meta itemprop="keywords" content="Metla" />
+
+        {% include "src/html/layouts/header.html" %}
+      </header>
+      <main class="main" role="main">
+        {% include "src/html/layouts/cleaner-main-dayoffs.html" %}
+      </main>
+    </div>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>
