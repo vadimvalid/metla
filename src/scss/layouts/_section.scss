@@ -1983,6 +1983,18 @@
     background: $white;
     box-shadow: $shadow;
   }
+
+  &--aggreement {
+    .section-cleaner-menu {
+      &__items {
+        @include sm-breakpoint {
+          grid-template-columns: 1fr;
+          max-width: torem(632);
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }
 
 .section--cleaner-search {
