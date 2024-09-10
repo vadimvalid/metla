@@ -1,0 +1,55 @@
+{% macro cleanerCard(title, price, status, isCliner) %}
+<article class="card-user">
+  <div class="card-user__title--big">
+    <h3>{{ title }}</h3>
+    <p><span>{{ price }} BYN</span></p>
+  </div>
+  <div class="card-user__period">08.01.2024-14.01.2024</div>
+  {% if status === "in-process" %}
+  <div class="status status--in-process">
+    <div class="status__square"></div>
+    <p class="status__text">Выполняется</p>
+  </div>
+  {% elif status === "done" %}
+  <div class="status status--done">
+    <div class="status__square"></div>
+    <p class="status__text">Выплачено</p>
+  </div>
+  {% elif status === "no-rating" %}
+  <div class="status status--no-rating">
+    <div class="status__square"></div>
+    <p class="status__text">Нет оценки</p>
+  </div>
+  {% elif status === "no-cliner" %}
+  <div class="status status--no-cliner">
+    <div class="status__square"></div>
+    <p class="status__text">Нет клинера</p>
+  </div>
+  {% elif status === "review" %}
+  <div class="status status--review">
+    <div class="status__square"></div>
+    <p class="status__text">На проверке</p>
+  </div>
+  {% else %}
+  <div class="status">
+    <div class="status__square"></div>
+    <p class="status__text">Ожидается</p>
+  </div>
+  {% endif %}
+  <div class="card-user__bottom">
+    <div class="card__cleaner--name">
+      <img
+        src="@images/icons/icon-user-dark-blue.svg"
+        alt="icon user"
+        width="20"
+        height="20"
+      />
+      <p>Анна Чистовая</p>
+    </div>
+    <div class="buttons">
+      <button class="button">Подробнее</button>
+      <a href="#" class="button">PDF</a>
+    </div>
+  </div>
+</article>
+{% endmacro %}

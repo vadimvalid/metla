@@ -1,0 +1,65 @@
+{% import "src/html/components/cleaner-card.html" as cleanerCardItem %}
+
+<section class="section section--cleaner-title">
+  <div class="container">
+    <h1>Выплаты</h1>
+  </div>
+</section>
+<section class="section section--cleaner-orders">
+  <div class="container">
+    <h3>Так держать!</h3>
+    <div class="section--cleaner-orders__items">
+      <div class="section--cleaner-orders__item">
+        <p>Всего заказов выполнено</p>
+        <p>56</p>
+      </div>
+      <div class="section--cleaner-orders__item">
+        <p>Всего заработано</p>
+        <p>2436</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <p>Текущая неделя</p>
+    <div class="section--cleaner-orders__info">
+      <div class="section--cleaner-orders__info-item">
+        <p>Заказов</p>
+        <p><span>14</span></p>
+      </div>
+      <div class="section--cleaner-orders__info-item">
+        <p>Ваш недельный оборот</p>
+        <p><span>840</span> BYN</p>
+      </div>
+      <div class="section--cleaner-orders__info-item">
+        <p>Ваша доля (50%)</p>
+        <p><span>420</span> BYN</p>
+      </div>
+      <div class="section--cleaner-orders__info-item">
+        <p>Получено системой по карте</p>
+        <p><span>120</span> BYN</p>
+      </div>
+      <div class="section--cleaner-orders__info-item">
+        <p>Выплачено наличными клинеру</p>
+        <p><span>720</span> BYN</p>
+      </div>
+    </div>
+  </div>
+</section>
+<sectrion class="section section--dayoff">
+  <div class="container">
+    <div class="wrapper">
+      <p>Текущий баланс с платформой</p>
+      <p><span>-300</span> BYN</p>
+    </div>
+  </div>
+</sectrion>
+<section class="section section--cleaner-history">
+  <div class="container">
+    <h2>История выплат</h2>
+    <div class="section--cleaner-history__items">
+      {{ cleanerCardItem.cleanerCard("№01-012024", "420", "done", true) }} {{
+      cleanerCardItem.cleanerCard("№02-012024", "370", "", true) }} {{
+      cleanerCardItem.cleanerCard("№02-012024", "370", "", true) }}
+    </div>
+  </div>
+</section>
