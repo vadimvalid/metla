@@ -185,6 +185,32 @@
     font-weight: 600;
     line-height: 1.2;
     color: $darkestPurple;
+
+    &--big {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: torem(12);
+      color: $darkestPurple;
+
+      h3 {
+        font-size: $fontSizeXl3;
+        font-weight: 600;
+        color: $mainPurple;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: $fontSizeMd;
+        line-height: 1.2;
+
+        span {
+          font-size: $fontSizeXl3;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+      }
+    }
   }
 
   &__date,
@@ -256,6 +282,24 @@
       }
     }
   }
+
+  &__period {
+    font-size: $fontSizeXl;
+    font-weight: 500;
+  }
+
+  .buttons {
+    display: flex;
+    gap: torem(12);
+
+    button {
+      background: $blue;
+    }
+
+    .button {
+      flex: 1;
+    }
+  }
 }
 
 .card__cleaner {
@@ -266,6 +310,13 @@
   border-radius: 14px;
   background: $white;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+
+  &--name {
+    display: flex;
+    align-items: center;
+    gap: torem(12);
+    font-weight: 500;
+  }
 
   h4 {
     font-size: $fontSizeLg;

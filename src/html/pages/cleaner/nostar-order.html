@@ -1,3 +1,6 @@
+{% import "src/html/components/user-card.html" as userCardItem %} {% import
+"src/html/components/serviceCard.html" as serviceCardItem %}
+
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -22,7 +25,7 @@
     itemscope
     itemtype="https://schema.org/WebPage"
   >
-    <div class="content not-home user">
+    <div class="content not-home cleaner-new-order cleaner-padding">
       <header class="header" itemscope itemtype="https://schema.org/WPHeader">
         <meta itemprop="headline" content="Metla" />
         <meta itemprop="description" content="" />
@@ -31,7 +34,235 @@
         {% include "src/html/layouts/header.html" %}
       </header>
       <main class="main" role="main">
-        {% include "src/html/layouts/main-user-no-review.html" %}
+        <section class="section section--user-title">
+          <div class="container">
+            <h1>Уборка №4571</h1>
+          </div>
+        </section>
+        <section class="section section--user-info">
+          <div class="container">
+            <div class="status status--no-rating">
+              <div class="status__square"></div>
+              <p class="status__text">Нет оценки</p>
+            </div>
+            <form class="user-review user-review--empty">
+              <p>Нам очень важно ваше мнение! Поставьте оценку этой уборке.</p>
+              <div class="stars">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="25"
+                  viewBox="0 0 26 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12.5244 22.0664L14.8275 23.2773C19.3517 25.6558 22.3183 23.4966 21.4548 18.4622L21.015 15.8976L22.8783 14.0814C26.5384 10.5136 25.4017 7.02501 20.3469 6.2905L17.7718 5.91633L16.6203 3.58297C14.3582 -1.00055 10.689 -0.997473 8.42846 3.58297L7.27688 5.91633L4.70187 6.2905C-0.356345 7.0255 -1.48724 10.516 2.17046 14.0814L4.03376 15.8976L3.5939 18.4622C2.72985 23.5 5.70003 25.6542 10.2212 23.2773L12.5244 22.0664Z"
+                    fill="white"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="25"
+                  viewBox="0 0 26 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12.5244 22.0664L14.8275 23.2773C19.3517 25.6558 22.3183 23.4966 21.4548 18.4622L21.015 15.8976L22.8783 14.0814C26.5384 10.5136 25.4017 7.02501 20.3469 6.2905L17.7718 5.91633L16.6203 3.58297C14.3582 -1.00055 10.689 -0.997473 8.42846 3.58297L7.27688 5.91633L4.70187 6.2905C-0.356345 7.0255 -1.48724 10.516 2.17046 14.0814L4.03376 15.8976L3.5939 18.4622C2.72985 23.5 5.70003 25.6542 10.2212 23.2773L12.5244 22.0664Z"
+                    fill="white"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="25"
+                  viewBox="0 0 26 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12.5244 22.0664L14.8275 23.2773C19.3517 25.6558 22.3183 23.4966 21.4548 18.4622L21.015 15.8976L22.8783 14.0814C26.5384 10.5136 25.4017 7.02501 20.3469 6.2905L17.7718 5.91633L16.6203 3.58297C14.3582 -1.00055 10.689 -0.997473 8.42846 3.58297L7.27688 5.91633L4.70187 6.2905C-0.356345 7.0255 -1.48724 10.516 2.17046 14.0814L4.03376 15.8976L3.5939 18.4622C2.72985 23.5 5.70003 25.6542 10.2212 23.2773L12.5244 22.0664Z"
+                    fill="white"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="25"
+                  viewBox="0 0 26 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12.5244 22.0664L14.8275 23.2773C19.3517 25.6558 22.3183 23.4966 21.4548 18.4622L21.015 15.8976L22.8783 14.0814C26.5384 10.5136 25.4017 7.02501 20.3469 6.2905L17.7718 5.91633L16.6203 3.58297C14.3582 -1.00055 10.689 -0.997473 8.42846 3.58297L7.27688 5.91633L4.70187 6.2905C-0.356345 7.0255 -1.48724 10.516 2.17046 14.0814L4.03376 15.8976L3.5939 18.4622C2.72985 23.5 5.70003 25.6542 10.2212 23.2773L12.5244 22.0664Z"
+                    fill="white"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="25"
+                  viewBox="0 0 26 25"
+                  fill="none"
+                >
+                  <path
+                    d="M12.5244 22.0664L14.8275 23.2773C19.3517 25.6558 22.3183 23.4966 21.4548 18.4622L21.015 15.8976L22.8783 14.0814C26.5384 10.5136 25.4017 7.02501 20.3469 6.2905L17.7718 5.91633L16.6203 3.58297C14.3582 -1.00055 10.689 -0.997473 8.42846 3.58297L7.27688 5.91633L4.70187 6.2905C-0.356345 7.0255 -1.48724 10.516 2.17046 14.0814L4.03376 15.8976L3.5939 18.4622C2.72985 23.5 5.70003 25.6542 10.2212 23.2773L12.5244 22.0664Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <textarea
+                name="user-review"
+                id="user-review"
+                placeholder="Оставьте отзыв"
+              ></textarea>
+              <button class="button" type="submit">Сохранить</button>
+            </form>
+            <div class="section--user-info__items">
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-calendar-blue.svg"
+                  alt="icon calendar"
+                  width="30"
+                  height="30"
+                />
+                <p>Дата уборки</p>
+                <p>18.12.2023</p>
+              </div>
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-clock-blue.svg"
+                  alt="icon time"
+                  width="30"
+                  height="30"
+                />
+                <p>Время уборки</p>
+                <p>18.00</p>
+              </div>
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-type-blue.svg"
+                  alt="icon type"
+                  width="30"
+                  height="30"
+                />
+                <p>Тип уборки</p>
+                <p>Поддерживающая</p>
+              </div>
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-home-blue.svg"
+                  alt="icon home"
+                  width="30"
+                  height="30"
+                />
+                <p>Объект</p>
+                <p>Квартира</p>
+              </div>
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-sanuzel-blue.svg"
+                  alt="icon sanuzel"
+                  width="30"
+                  height="30"
+                />
+                <p>Санузлы</p>
+                <p>1</p>
+              </div>
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-room-blue.svg"
+                  alt="icon rooms"
+                  width="30"
+                  height="30"
+                />
+                <p>Комнаты</p>
+                <p>1</p>
+              </div>
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-square-blue.svg"
+                  alt=""
+                  width="30"
+                  height="30"
+                />
+                <p>Площадь</p>
+                <p>23</p>
+              </div>
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-dirty-blue.svg"
+                  alt="icon square"
+                  width="30"
+                  height="30"
+                />
+                <p>Загрязнение</p>
+                <p>Всё просто</p>
+              </div>
+              <div class="section--user-info__item">
+                <img
+                  src="@images/icons/icon-location-blue.svg"
+                  alt="icon address"
+                  width="30"
+                  height="30"
+                />
+                <p>Адрес</p>
+                <p>г. Минск, ул. Дзержинского, 35-42</p>
+              </div>
+            </div>
+          </div>
+          <div class="container container--cleaners">
+            <h2>Клиент</h2>
+            <div class="card__cleaner">
+              <p>Виталий Недовольный</p>
+              <div class="card__cleaner__count">
+                <img
+                  src="@images/icons/icon-doc.svg"
+                  alt="icon doc"
+                  width="24"
+                  height="24"
+                />
+                <p>3</p>
+              </div>
+            </div>
+          </div>
+          <div class="section section--result">
+            <div class="container">
+              <h2>Расчёт услуг</h2>
+              <div class="section--result__bill">
+                <div class="section--result__bill__services">
+                  <div class="item">
+                    <p>Поддерживающая уборка</p>
+                    <p><span>60</span>BYN</p>
+                  </div>
+                  <div class="item">
+                    <p>Уборка балкона</p>
+                    <p class="bold">x2</p>
+                    <p><span>40</span>BYN</p>
+                  </div>
+                </div>
+                <div class="section--result__bill__border"></div>
+                <div class="section--result__bill__sum">
+                  <p>Всего</p>
+                  <p><span>100</span>BYN</p>
+                </div>
+                <div class="section--result__bill__sum">
+                  <p>Доход клинера</p>
+                  <p><span>60</span>BYN</p>
+                </div>
+                <div class="section--result__bill__time">
+                  <p>Ориентировочное время уборки</p>
+                  <p><span>4</span>ч.</p>
+                </div>
+              </div>
+
+              <div class="section--result__footer">
+                <div class="buttons">
+                  <a href="#" class="button">Позвонить менеджеру</a>
+                  <a href="#" class="button">Скачать счёт-фактуру</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer
         class="footer"

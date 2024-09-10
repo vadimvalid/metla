@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Metla" />
+    <meta name="keywords" content="metla" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="../../../fonts/Raleway.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link href="../../../scss/style.scss" rel="stylesheet" />
+    <title>Cleaner account menu | Metla</title>
+  </head>
+
+  <body
+    class="body body--cleaner"
+    itemscope
+    itemtype="https://schema.org/WebPage"
+  >
+    <div class="content not-home cleaner-new-order cleaner-padding">
+      <header class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <meta itemprop="headline" content="Metla" />
+        <meta itemprop="description" content="" />
+        <meta itemprop="keywords" content="Metla" />
+
+        {% include "src/html/layouts/header.html" %}
+      </header>
+      <main class="main" role="main">
+        <section class="section section--cleaner-title">
+          <div class="container">
+            <h1>Меню АккаунтА</h1>
+          </div>
+        </section>
+        <section class="section section-cleaner-menu">
+          <div class="container">
+            <div class="section-cleaner-menu__items">
+              <a href="#" class="section-cleaner-menu__item">
+                <img
+                  src="@images/icons/icon-menu-1.svg"
+                  alt="Мои оценки и отзывы"
+                  width="40"
+                  height="40"
+                />
+                <p>Мои оценки и отзывы</p>
+              </a>
+              <a href="#" class="section-cleaner-menu__item">
+                <img
+                  src="@images/icons/icon-menu-2.svg"
+                  alt="Сохранённые карты"
+                  width="40"
+                  height="40"
+                />
+                <p>Сохранённые карты</p>
+              </a>
+              <a href="#" class="section-cleaner-menu__item">
+                <img
+                  src="@images/icons/icon-menu-3.svg"
+                  alt="Фото и файлы"
+                  width="40"
+                  height="40"
+                />
+                <p>Фото и файлы</p>
+              </a>
+              <a href="#" class="section-cleaner-menu__item">
+                <img
+                  src="@images/icons/icon-menu-4.svg"
+                  alt="База знаний"
+                  width="40"
+                  height="40"
+                />
+                <p>База знаний</p>
+              </a>
+              <a href="#" class="section-cleaner-menu__item">
+                <img
+                  src="@images/icons/icon-menu-5.svg"
+                  alt="Договор и Регламент"
+                  width="40"
+                  height="40"
+                />
+                <p>Договор и Регламент</p>
+              </a>
+              <a href="#" class="section-cleaner-menu__item">
+                <img
+                  src="@images/icons/icon-menu-6.svg"
+                  alt="Выход"
+                  width="40"
+                  height="40"
+                />
+                <p>Выход</p>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>
