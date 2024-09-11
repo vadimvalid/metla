@@ -353,3 +353,28 @@
     color: $mainPurple;
   }
 }
+
+.card--cleaner-review {
+  @include cardStyles;
+
+  display: flex;
+  flex-direction: column;
+  gap: torem(12);
+  padding: torem(12);
+  background: $white;
+  font-weight: 500;
+
+  h3 {
+    font-size: $fontSizeXl3;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $darkestPurple;
+  }
+
+  &__date {
+    font-size: $fontSizeLg;
+    font-weight: 500;
+    line-height: 1.4;
+    color: $darkestPurple;
+  }
+}

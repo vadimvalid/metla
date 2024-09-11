@@ -2064,3 +2064,62 @@
     margin: torem(46) auto 0;
   }
 }
+
+.section--cleaner-reviews {
+  &__head {
+    display: flex;
+    width: calc(100vw - torem(24));
+    margin: 0 auto;
+    overflow-x: auto;
+    gap: torem(6);
+
+    &-item {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: torem(5);
+      padding: torem(17) torem(12);
+      background: $blue;
+      border-radius: 14px;
+      border: none;
+      font-size: $fontSizeLg;
+      font-weight: 500;
+      line-height: 1.2;
+      color: $white;
+      cursor: pointer;
+    }
+
+    @include sm-breakpoint {
+      justify-content: center;
+      width: 100%;
+
+      &-item {
+        flex-shrink: none;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: torem(12);
+
+    .stars {
+      justify-content: flex-start;
+    }
+
+    @include sm-breakpoint {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    @include sm-breakpoint {
+      gap: torem(40);
+    }
+  }
+}
