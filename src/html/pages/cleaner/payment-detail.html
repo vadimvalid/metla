@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Metla" />
+    <meta name="keywords" content="metla" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="../../../fonts/Raleway.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link href="../../../scss/style.scss" rel="stylesheet" />
+    <title>Cleaner payment details | Metla</title>
+  </head>
+
+  <body
+    class="body body--cleaner body--cleaner--payment"
+    itemscope
+    itemtype="https://schema.org/WebPage"
+  >
+    <div class="content not-home cleaner-new-order cleaner-padding">
+      <header class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <meta itemprop="headline" content="Metla" />
+        <meta itemprop="description" content="" />
+        <meta itemprop="keywords" content="Metla" />
+
+        {% include "src/html/layouts/header.html" %}
+      </header>
+      <main class="main" role="main">
+        <section class="section section--cleaner-title">
+          <div class="container">
+            <h1>Выплата №01-012024 за неделю 08.01.-14.01.</h1>
+          </div>
+        </section>
+        <div class="container">
+          <section class="section status status--no-cliner">
+            <div class="status__square"></div>
+            <p class="status__text">Ожидается</p>
+          </section>
+          <section class="section--cleaner-orders__info">
+            <div class="section--cleaner-orders__info-item">
+              <p>Уборка квартиры №4588 08.01.2024</p>
+              <p><span>40</span> BYN</p>
+            </div>
+            <div class="section--cleaner-orders__info-item">
+              <p>Уборка квартиры №4589 08.01.2024</p>
+              <p><span>40</span> BYN</p>
+            </div>
+            <div class="section--cleaner-orders__info-item">
+              <p>Уборка квартиры №4590 09.01.2024</p>
+              <p><span>40</span> BYN</p>
+            </div>
+            <div class="section--cleaner-orders__info-item">
+              <p>химчистка мебели №4302 09.01.2024</p>
+              <p><span>20</span> BYN</p>
+            </div>
+            <div
+              class="section--cleaner-orders__info-item section--cleaner-orders__info-item__bottom"
+            >
+              <p>Всего</p>
+              <p><span>140</span> BYN</p>
+            </div>
+          </section>
+          <section class="section section--download">
+            <a href="#" class="button">Скачать PDF</a>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>

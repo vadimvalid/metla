@@ -583,6 +583,47 @@ body {
         margin-bottom: 0;
       }
     }
+
+    &--payment {
+      > .content.not-home {
+        @include sm-breakpoint {
+          .header {
+            margin-bottom: torem(12);
+          }
+
+          .main {
+            gap: torem(40);
+          }
+        }
+      }
+
+      .main {
+        > .container {
+          display: flex;
+          flex-direction: column;
+          gap: torem(40);
+
+          .status {
+            align-self: center;
+          }
+
+          .section--download {
+            .button {
+              @include maxWidthBlock;
+
+              padding: torem(35);
+              border-radius: $borderRadiusLg;
+            }
+          }
+
+          .section--cleaner-orders__info-item {
+            &:nth-last-child(2) {
+              margin-bottom: torem(12);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

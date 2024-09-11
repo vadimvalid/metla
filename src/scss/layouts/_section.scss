@@ -1828,7 +1828,7 @@
     border-radius: $borderRadiusMd;
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(4);
+    backdrop-filter: blur(4px);
 
     &-item {
       display: flex;
@@ -1848,6 +1848,21 @@
         font-size: $fontSizeXl;
         font-weight: 700;
       }
+
+      &__bottom {
+        padding-top: torem(24);
+        border-top: 1px dashed rgba(42, 36, 68, 0.9);
+
+        p {
+          &:first-child {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      padding: torem(20);
     }
   }
 }
@@ -2120,6 +2135,115 @@
 
     @include sm-breakpoint {
       gap: torem(40);
+    }
+  }
+}
+
+.section--files {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(20);
+
+    @include sm-breakpoint {
+      gap: torem(40);
+    }
+  }
+
+  &__uploaded {
+    display: flex;
+    align-items: center;
+    gap: torem(12);
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: torem(12);
+      width: 50%;
+      font-weight: 500;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $borderRadiusMd;
+      }
+
+      &__input {
+        position: relative;
+
+        > input {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+
+      &:last-child {
+        padding: 0 torem(24);
+      }
+    }
+
+    @include sm-breakpoint {
+      max-width: torem(480);
+      margin: 0 auto;
+
+      &__item {
+        width: auto;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+    padding: torem(12);
+    border-radius: 20px;
+    background: $white;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+
+    &__head {
+      display: flex;
+      gap: torem(12);
+    }
+
+    h3 {
+      flex: 1;
+      font-size: $fontSizeXl3;
+      font-weight: 500;
+      line-height: 1.1;
+      color: $darkestPurple;
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      gap: torem(18);
+    }
+
+    @include sm-breakpoint {
+      padding: torem(24);
+    }
+  }
+
+  .form-item__file__title {
+    display: block;
+  }
+
+  .form-item__file__input {
+    @include sm-breakpoint {
+      padding: torem(28) torem(30);
     }
   }
 }

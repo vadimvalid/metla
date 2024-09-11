@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Metla" />
+    <meta name="keywords" content="metla" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      href="../../../fonts/Raleway.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link href="../../../scss/style.scss" rel="stylesheet" />
+    <title>Cleaner files | Metla</title>
+  </head>
+
+  <body
+    class="body body--cleaner body--cleaner--payment"
+    itemscope
+    itemtype="https://schema.org/WebPage"
+  >
+    <div class="content not-home cleaner-new-order cleaner-padding">
+      <header class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <meta itemprop="headline" content="Metla" />
+        <meta itemprop="description" content="" />
+        <meta itemprop="keywords" content="Metla" />
+
+        {% include "src/html/layouts/header.html" %}
+      </header>
+      <main class="main" role="main">
+        <section class="section section--cleaner-title">
+          <div class="container">
+            <h1>фото и Файлы</h1>
+          </div>
+        </section>
+        <section class="section section--files">
+          <div class="container">
+            <div class="section--files__uploaded">
+              <div class="section--files__uploaded__item">
+                <img src="@images/cleaner-file.jpg" alt="cleaner file" />
+              </div>
+              <div class="section--files__uploaded__item">
+                <div class="section--files__uploaded__item__title">1.jpg</div>
+                <div class="section--files__uploaded__item__input">
+                  <button class="button">Загрузить</button>
+                  <input
+                    type="file"
+                    id="file-upload"
+                    name="file-upload"
+                    accept="image/png, image/jpeg, image/gif, image/webp, image/apng"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="section--files__items">
+              <div class="section--files__item">
+                <div class="section--files__item__head">
+                  <h3>Копия паспорта</h3>
+                  <a href="#" class="button">Скачать</a>
+                </div>
+                <div class="section--files__item__bottom">
+                  <img
+                    src="@images/icons/icon-file-uploaded.svg"
+                    alt="icon file"
+                    width="30"
+                    height="30"
+                  />
+                  <p>1.pdf</p>
+                </div>
+              </div>
+              <div class="section--files__item">
+                <div class="section--files__item__head">
+                  <h3>Копия трудовой книжки</h3>
+                  <a href="#" class="button">Скачать</a>
+                </div>
+                <div class="section--files__item__bottom">
+                  <img
+                    src="@images/icons/icon-file-uploaded.svg"
+                    alt="icon file"
+                    width="30"
+                    height="30"
+                  />
+                  <p>1.pdf</p>
+                </div>
+              </div>
+              <div class="section--files__item">
+                <div class="section--files__item__head">
+                  <h3>Договор с платформой</h3>
+                  <a href="#" class="button">Скачать</a>
+                </div>
+                <div class="section--files__item__bottom">
+                  <img
+                    src="@images/icons/icon-file-uploaded.svg"
+                    alt="icon file"
+                    width="30"
+                    height="30"
+                  />
+                  <p>1.pdf</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-item form-item__file">
+              <div class="form-item__file__title">Заголовок для документа</div>
+              <div class="form-item__file__input">
+                <img
+                  src="@images/icons/icon-file.svg"
+                  alt="icon file"
+                  width="30"
+                  height="30"
+                />
+                <p>Добавить файлы</p>
+                <input
+                  type="file"
+                  id="avatar"
+                  name="avatar"
+                  accept="document/*"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../../../js/script.js"></script>
+  </body>
+</html>
