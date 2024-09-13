@@ -154,63 +154,30 @@ const backBtn = () => {
 };
 backBtn();
 
-// Go to home
-const goHome = () => {
-  const home = document.querySelector('.menu__item__home');
-  if (home) {
-    home.addEventListener('click', () => {
-      window.location.replace('/');
-    });
-  }
-};
-goHome();
+// Go to page
+const goPage = (button, page) => {
+  const btn = document.querySelector(button);
 
-// Go to pages
-const goProfile = () => {
-  const profile = document.querySelector('.menu__item__profile');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/login.html');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      window.location.replace(page);
     });
   }
 };
-const goAccount = () => {
-  const profile = document.querySelector('.menu__item__account');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/user-account.html');
-    });
-  }
-};
-const goOrders = () => {
-  const profile = document.querySelector('.menu__item__orders');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/user-orders.html');
-    });
-  }
-};
-const goCards = () => {
-  const profile = document.querySelector('.menu__item__cards');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/user-cards.html');
-    });
-  }
-};
-const goAddresses = () => {
-  const profile = document.querySelector('.menu__item__addresses');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/user-locations.html');
-    });
-  }
-};
-goProfile();
-goAccount();
-goOrders();
-goCards();
-goAddresses();
+
+goPage('.menu__item__home', '/');
+goPage('.menu__item__profile', '/html/pages/login.html');
+goPage('.menu__item__account', '/html/pages/user-account.html');
+goPage('.menu__item__orders', '/html/pages/user-orders.html');
+goPage('.menu__item__cards', '/html/pages/user-cards.html');
+goPage('.menu__item__addresses', '/html/pages/user-locations.html');
+goPage('.menu__item__payments', '/html/pages/cleaner/payouts.html');
+goPage('.menu__cleaner__orders', '/html/pages/cleaner/my-orders.html');
+goPage('.menu__item__dayoffs', '/html/pages/cleaner/dayoffs.html');
+goPage(
+  '.menu__item__cleaner__profile',
+  '/html/pages/cleaner/account-menu.html'
+);
 
 // Open menu contact block
 const menuContact = () => {
@@ -245,46 +212,6 @@ const menu = () => {
   }
 };
 menu();
-
-const goPayments = () => {
-  const profile = document.querySelector('.menu__item__payments');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/cleaner/payouts.html');
-    });
-  }
-};
-
-const goCleanerOrders = () => {
-  const profile = document.querySelector('.menu__cleaner__orders');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/cleaner/my-orders.html');
-    });
-  }
-};
-
-const goDayoffs = () => {
-  const profile = document.querySelector('.menu__item__dayoffs');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/cleaner/dayoffs.html');
-    });
-  }
-};
-
-const goCleanerProfile = () => {
-  const profile = document.querySelector('.menu__item__cleaner__profile');
-  if (profile) {
-    profile.addEventListener('click', () => {
-      window.location.replace('/html/pages/cleaner/account-menu.html');
-    });
-  }
-};
-goPayments();
-goCleanerOrders();
-goDayoffs();
-goCleanerProfile();
 
 // Mobile menu
 const mobileMenu = () => {
