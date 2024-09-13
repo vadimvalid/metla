@@ -245,3 +245,61 @@ const menu = () => {
   }
 };
 menu();
+
+const goPayments = () => {
+  const profile = document.querySelector('.menu__item__payments');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/cleaner/payouts.html');
+    });
+  }
+};
+
+const goCleanerOrders = () => {
+  const profile = document.querySelector('.menu__cleaner__orders');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/cleaner/my-orders.html');
+    });
+  }
+};
+
+const goDayoffs = () => {
+  const profile = document.querySelector('.menu__item__dayoffs');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/cleaner/dayoffs.html');
+    });
+  }
+};
+
+const goCleanerProfile = () => {
+  const profile = document.querySelector('.menu__item__cleaner__profile');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/cleaner/account-menu.html');
+    });
+  }
+};
+goPayments();
+goCleanerOrders();
+goDayoffs();
+goCleanerProfile();
+
+// Mobile menu
+const mobileMenu = () => {
+  const menuBtn = document.querySelector('.menu--mobile__button');
+  const closeBtn = document.querySelector('.menu--mobile--open > button');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      document.querySelector('.menu--mobile').classList.toggle('hidden');
+      document.querySelector('.menu--mobile--open').classList.toggle('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      document.querySelector('.menu--mobile').classList.toggle('hidden');
+      document.querySelector('.menu--mobile--open').classList.toggle('hidden');
+    });
+  }
+};
+mobileMenu();

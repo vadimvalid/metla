@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 0;
   left: 50%;
-  display: flex;
+  display: none;
   gap: torem(30);
   width: torem(470);
   padding: torem(7) torem(12);
@@ -40,6 +40,18 @@
     svg {
       width: torem(65);
       height: torem(65);
+
+      rect {
+        transition: $transition;
+      }
+    }
+
+    &:hover {
+      svg {
+        rect {
+          fill: $blue;
+        }
+      }
     }
   }
 
@@ -90,7 +102,7 @@
 
     &__items {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       gap: torem(35);
     }
 
@@ -141,6 +153,187 @@
 
   &.hidden {
     display: none;
+  }
+
+  @include sm-breakpoint {
+    display: flex;
+  }
+
+  &--mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    border-radius: 15px 15px 0px 0px;
+    background: radial-gradient(
+      40.46% 69.91% at 50% 100%,
+      #35afe3 0%,
+      #0094d2 100%
+    );
+    box-shadow: $shadow;
+    z-index: 100;
+    overflow: hidden;
+
+    &__logo {
+      padding: torem(14) torem(25);
+      background: rgba(42, 36, 68, 0.15);
+    }
+
+    &__button {
+      all: unset;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: torem(12);
+      padding: torem(15);
+      font-size: $fontSizeMd;
+      font-weight: 500;
+      line-height: 1;
+      color: $white;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    &--open {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: torem(18);
+      padding: 0 torem(6);
+      background: radial-gradient(
+        62.29% 62.29% at 50% 37.71%,
+        #ebe8f3 0%,
+        #eee8fa 42%,
+        #f0ebf8 100%
+      );
+      box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.15);
+      z-index: 100;
+      overflow: auto;
+
+      &:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        z-index: -1;
+      }
+
+      &__head {
+        display: flex;
+        justify-content: space-between;
+        gap: torem(12);
+        padding: torem(8) 0;
+
+        button {
+          all: unset;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          gap: torem(12);
+          width: torem(130);
+          padding: torem(11);
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.6);
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+          font-size: $fontSizeXs;
+          font-weight: 500;
+          line-height: 1;
+          cursor: pointer;
+        }
+      }
+
+      &__phone {
+        font-size: $fontSizeXl5;
+        font-weight: 500;
+        line-height: normal;
+        color: $blue;
+        text-align: center;
+      }
+
+      &__social {
+        display: flex;
+        justify-content: center;
+        gap: torem(24);
+      }
+
+      &__account {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: torem(4);
+        padding: torem(15) torem(4);
+        border-radius: 14px;
+        background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+        font-size: $fontSizeMd;
+        font-weight: 500;
+        color: $white;
+      }
+
+      > button {
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: torem(12);
+        margin-top: auto;
+        padding: torem(16) torem(6);
+        background: $red;
+        font-size: $fontSizeMd;
+        font-weight: 500;
+        color: $white;
+      }
+
+      &__links {
+        display: flex;
+        gap: torem(6);
+
+        &__item {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: torem(6);
+          padding: torem(12) torem(6);
+          border-radius: 14px;
+          background: $blue;
+          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+          font-size: $fontSizeXs;
+          font-weight: 500;
+          line-height: 1;
+          color: $white;
+          text-align: center;
+
+          img {
+            width: torem(18);
+            height: torem(18);
+          }
+        }
+      }
+
+      &.hidden {
+        display: none;
+      }
+
+      @include sm-breakpoint {
+        display: none;
+      }
+    }
+
+    @include sm-breakpoint {
+      display: none;
+    }
   }
 }
 
@@ -234,7 +427,7 @@
     display: flex;
     align-items: center;
     gap: torem(30);
-    padding: torem(20);
+    padding: torem(18) torem(20);
     background: $white;
     border-radius: 20px;
     font-size: $fontSizeXl;
