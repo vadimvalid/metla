@@ -395,9 +395,9 @@
         height: torem(68);
         padding: torem(12) torem(70) torem(12) torem(12);
         border: none;
-        border-radius: 20px;
+        border-radius: $borderRadiusMd2;
         background-color: $white;
-        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: $shadowXs;
 
         &::placeholder {
           font-size: $fontSizeLg;
@@ -708,7 +708,7 @@
           text-align: center;
           border-radius: 14px;
           background: $darkPurple;
-          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: $shadowXs;
         }
       }
     }
@@ -847,7 +847,7 @@
         align-items: center;
         height: 100%;
         background-color: $blue;
-        border-radius: 20px;
+        border-radius: $borderRadiusMd2;
         aspect-ratio: 1;
         z-index: 1;
         cursor: pointer;
@@ -1462,7 +1462,7 @@
 
     .button {
       width: 100%;
-      border-radius: 20px;
+      border-radius: $borderRadiusMd2;
     }
   }
 
@@ -1827,7 +1827,7 @@
     padding: torem(12);
     border-radius: $borderRadiusMd;
     background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadowXs;
     backdrop-filter: blur(4px);
 
     &-item {
@@ -1932,7 +1932,7 @@
     padding: torem(12) torem(6);
     border-radius: $borderRadiusMd;
     background: $darkPurple;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadowXs;
     backdrop-filter: blur(7px);
     font-weight: 500;
     line-height: 1.2;
@@ -2004,7 +2004,7 @@
     align-items: center;
     gap: torem(20);
     padding: torem(20);
-    border-radius: 20px;
+    border-radius: $borderRadiusMd2;
     background: $white;
     box-shadow: $shadow;
   }
@@ -2055,7 +2055,7 @@
       padding: torem(20);
       border-radius: 14px;
       background: $white;
-      box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: $shadowXs;
       font-size: $fontSizeXl;
       font-weight: 500;
       line-height: 1.2;
@@ -2218,9 +2218,9 @@
     flex-direction: column;
     gap: torem(12);
     padding: torem(12);
-    border-radius: 20px;
+    border-radius: $borderRadiusMd2;
     background: $white;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadowXs;
     font-weight: 500;
 
     &__head {
@@ -2332,7 +2332,7 @@
     padding: torem(3);
     border-radius: 6px;
     background: $white;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadowXs;
     border: 2px solid $white;
     font-size: $fontSizeMd;
     font-weight: 700;
