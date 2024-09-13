@@ -260,7 +260,7 @@
     padding: torem(15) torem(18);
     border-radius: 14px;
     background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadowXs;
     font-size: $fontSizeLg;
     font-weight: 500;
     line-height: 1.2;

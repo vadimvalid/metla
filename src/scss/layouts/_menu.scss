@@ -67,7 +67,7 @@
     padding: torem(44);
     border-radius: $borderRadiusMd $borderRadiusMd 0px 0px;
     background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadowXs;
     transform: translateX(-50%);
     z-index: 110;
     overflow: hidden;
@@ -405,7 +405,7 @@
 
   &__phone {
     padding: torem(10) 0 torem(14);
-    border-radius: 20px;
+    border-radius: $borderRadiusMd2;
     background: rgba(255, 255, 255, 0.5);
     text-align: center;
 
@@ -429,7 +429,7 @@
     gap: torem(30);
     padding: torem(18) torem(20);
     background: $white;
-    border-radius: 20px;
+    border-radius: $borderRadiusMd2;
     font-size: $fontSizeXl;
     font-weight: 500;
     line-height: normal;

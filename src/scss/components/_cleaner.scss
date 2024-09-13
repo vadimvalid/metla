@@ -67,7 +67,7 @@
       gap: torem(6);
       border-radius: 14px;
       background: rgba(255, 255, 255, 0.82);
-      box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: $shadowXs;
       backdrop-filter: blur(7px);
       font-size: $fontSizeMd;
       color: $darkestPurple;

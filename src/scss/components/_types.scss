@@ -157,7 +157,7 @@
       max-width: torem(800);
       border-radius: $borderRadiusLg;
       background: rgba(255, 255, 255, 0.4);
-      box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: $shadowXs;
       backdrop-filter: blur(12.25px);
     }
   }

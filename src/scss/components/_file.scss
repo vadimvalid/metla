@@ -11,7 +11,7 @@
       padding: torem(24) torem(20);
       border-radius: 14px;
       background: rgba(255, 255, 255, 0.1);
-      box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: $shadowXs;
       backdrop-filter: blur(7px);
       font-size: $fontSizeXl2;
       line-height: 1;
@@ -31,7 +31,7 @@
       padding: torem(28) torem(30);
       border-radius: 14px;
       border: 2px dashed $white;
-      box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: $shadowXs;
       font-size: $fontSizeXl;
       font-weight: 500;
       color: $white;
