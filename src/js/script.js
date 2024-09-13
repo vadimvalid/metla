@@ -165,7 +165,7 @@ const goHome = () => {
 };
 goHome();
 
-// Go to user profile page
+// Go to pages
 const goProfile = () => {
   const profile = document.querySelector('.menu__item__profile');
   if (profile) {
@@ -174,7 +174,43 @@ const goProfile = () => {
     });
   }
 };
+const goAccount = () => {
+  const profile = document.querySelector('.menu__item__account');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/user-account.html');
+    });
+  }
+};
+const goOrders = () => {
+  const profile = document.querySelector('.menu__item__orders');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/user-orders.html');
+    });
+  }
+};
+const goCards = () => {
+  const profile = document.querySelector('.menu__item__cards');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/user-cards.html');
+    });
+  }
+};
+const goAddresses = () => {
+  const profile = document.querySelector('.menu__item__addresses');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/user-locations.html');
+    });
+  }
+};
 goProfile();
+goAccount();
+goOrders();
+goCards();
+goAddresses();
 
 // Open menu contact block
 const menuContact = () => {
