@@ -142,3 +142,70 @@ selectTypesItem('.types .wrapper');
 selectOrderTypesItem('.types__pollution');
 selectPaymentItem('.section--result__methods');
 selectCards('.card--premium');
+
+// Back button
+const backBtn = () => {
+  const back = document.querySelector('.menu__item__back');
+  if (back) {
+    back.addEventListener('click', () => {
+      history.back();
+    });
+  }
+};
+backBtn();
+
+// Go to home
+const goHome = () => {
+  const home = document.querySelector('.menu__item__home');
+  if (home) {
+    home.addEventListener('click', () => {
+      window.location.replace('/');
+    });
+  }
+};
+goHome();
+
+// Go to user profile page
+const goProfile = () => {
+  const profile = document.querySelector('.menu__item__profile');
+  if (profile) {
+    profile.addEventListener('click', () => {
+      window.location.replace('/html/pages/login.html');
+    });
+  }
+};
+goProfile();
+
+// Open menu contact block
+const menuContact = () => {
+  const contact = document.querySelector('.menu__item__contact');
+  const closeBtn = document.querySelector('.menu__contact__head button');
+  if (contact) {
+    contact.addEventListener('click', () => {
+      document.querySelector('.menu').classList.toggle('menu--contact');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      document.querySelector('.menu').classList.remove('menu--contact');
+    });
+  }
+};
+menuContact();
+
+// Open menu block
+const menu = () => {
+  const menuBtn = document.querySelector('.menu__item__menu');
+  const closeBtn = document.querySelector('.menu__desktop .wrapper > button');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      document.querySelector('.menu').classList.toggle('hidden');
+      document.querySelector('.menu__desktop').classList.toggle('visible');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      document.querySelector('.menu').classList.toggle('hidden');
+      document.querySelector('.menu__desktop').classList.remove('visible');
+    });
+  }
+};
+menu();
