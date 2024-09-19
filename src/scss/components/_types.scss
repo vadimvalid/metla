@@ -245,6 +245,9 @@
       transition: $transition;
 
       svg {
+        width: torem(40);
+        height: torem(40);
+
         path {
           transition: $transition;
         }
@@ -273,6 +276,21 @@
             stroke: $white;
             fill: $white;
           }
+        }
+      }
+    }
+
+    > p {
+      &:first-of-type {
+        font-size: $fontSizeXl5;
+        font-weight: 500;
+        line-height: 1;
+        color: $darkPurple;
+
+        @include sm-breakpoint {
+          font-size: $fontSizeLg;
+          font-weight: 400;
+          color: $texty;
         }
       }
     }
@@ -359,6 +377,48 @@
     line-height: 1;
     color: $darkPurple;
     text-align: center;
+  }
+
+  &__vacuum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: torem(24);
+    margin: torem(60) 0;
+    padding: torem(24);
+    border-radius: $borderRadiusMd;
+    background: $white;
+    cursor: pointer;
+
+    img {
+      width: torem(27);
+      height: 40px;
+    }
+
+    p {
+      &:last-of-type {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: torem(6);
+        padding: torem(6);
+        border-radius: 6px;
+        background: $yellow;
+        font-size: $fontSizeXl3;
+        font-weight: 800;
+        color: #002839;
+
+        span {
+          font-size: $fontSizeLg;
+          font-weight: 400;
+          line-height: 1;
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      display: none;
+    }
   }
 
   @include sm-breakpoint {

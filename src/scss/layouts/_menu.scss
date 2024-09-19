@@ -261,7 +261,7 @@
       }
 
       &__phone {
-        font-size: $fontSizeXl5;
+        font-size: torem(40);
         font-weight: 500;
         line-height: normal;
         color: $blue;
@@ -272,6 +272,16 @@
         display: flex;
         justify-content: center;
         gap: torem(24);
+
+        a {
+          width: torem(36);
+          height: torem(36);
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
       }
 
       &__account {

@@ -15,6 +15,7 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  spaceBetween: 20,
   slidesPerView: 'auto',
   breakpoints: {
     // when window width is >= 768px
