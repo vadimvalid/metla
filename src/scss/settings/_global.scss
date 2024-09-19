@@ -28,13 +28,17 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .body {
   > .content {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    min-height: 100dvh;
     height: 100%;
 
     &.not-home {
