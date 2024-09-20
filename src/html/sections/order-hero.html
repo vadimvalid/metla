@@ -6,6 +6,7 @@
     <p>{{ description }}</p>
     {% endif %}
     <a href="#" class="button">Подробнее</a>
+    {% if summary %}
     <details>
       <summary>
         <h3>{{ summary }}</h3>
@@ -19,6 +20,7 @@
 
       <p>{{ description }}</p>
     </details>
+    {% endif %}
   </div>
 </section>
 {% endmacro %} q

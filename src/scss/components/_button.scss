@@ -108,4 +108,9 @@
       font-size: $fontSizeXl;
     }
   }
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.75;
+  }
 }

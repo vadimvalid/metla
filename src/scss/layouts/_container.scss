@@ -2,5 +2,8 @@
   width: 100%;
   max-width: 984px;
   margin: 0 auto;
-  padding: 0 torem(12);
+
+  @media (max-width: 992px) {
+    padding: 0 torem(12);
+  }
 }

@@ -1,5 +1,20 @@
 {% import "src/html/sections/order-hero.html" as orderHeroItem %} {{
-orderHeroItem.orderHero("Отзывы", "о компании “метла”", "") }}{% include
-"src/html/sections/reviews-big.html" %}{% include
+orderHeroItem.orderHero("Отзывы", "о компании “метла”", "Мы публикуем только
+реальные отзывы на сервисах, повлиять на которые не можем.") }}
+<section class="section section--socials">
+  <div class="container">
+    <div class="section--socials__item">
+      <h3>Google</h3>
+      <p>4.2</p>
+      <button class="button">Оставить отзыв</button>
+    </div>
+    <div class="section--socials__item">
+      <h3>Yandex</h3>
+      <p>4.3</p>
+      <button class="button">Оставить отзыв</button>
+    </div>
+  </div>
+</section>
+{% include "src/html/sections/reviews-big.html" %}{% include
 "src/html/sections/instagram.html" %}{% include
 "src/html/sections/social-media.html" %}

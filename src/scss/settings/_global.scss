@@ -112,6 +112,13 @@ body {
         .button {
           display: none;
         }
+
+        .container {
+          p {
+            display: block;
+            margin-top: torem(40);
+          }
+        }
       }
 
       .section--reviews {
