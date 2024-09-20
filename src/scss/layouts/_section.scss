@@ -19,17 +19,36 @@
 
 .services {
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: torem(12);
     padding: 0 torem(12);
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: torem(12);
+    }
 
     @include sm-breakpoint {
-      flex-direction: row;
-      justify-content: center;
-      gap: torem(20);
-      width: calc(100vw - torem(24));
-      overflow-x: auto;
+      width: 100vw;
+      overflow-x: scroll;
+
+      &__inner {
+        flex-direction: row;
+        justify-content: center;
+        gap: torem(20);
+        transform: translateX(300px);
+      }
+    }
+
+    @media (min-width: 992px) {
+      &__inner {
+        transform: translateX(278px);
+      }
     }
   }
 }
@@ -168,6 +187,14 @@
   > .button {
     width: fit-content;
     margin: torem(22) auto 0;
+
+    &.hide-mobile {
+      display: none;
+
+      @include sm-breakpoint {
+        display: block;
+      }
+    }
   }
 }
 
@@ -2407,6 +2434,49 @@
 
     &.inactive {
       color: $lightPurple;
+    }
+  }
+}
+
+.section--socials {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: torem(12);
+
+    @include sm-breakpoint {
+      flex-direction: row;
+      justify-content: center;
+      max-width: torem(656);
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: torem(15);
+    padding: torem(34) torem(24) torem(24);
+    border-radius: $borderRadiusMd;
+    background: linear-gradient(292deg, #5c41be 19.65%, #8067dc 95.06%);
+    box-shadow: $shadow;
+    backdrop-filter: blur(7px);
+    font-size: torem(44);
+    font-weight: 600;
+    line-height: 1.2;
+    color: $almostWhitePurple;
+    text-align: center;
+
+    h3 {
+      margin-bottom: torem(10);
+      font-size: torem(60);
+      font-weight: 700;
+      line-height: 1;
+      color: $white;
+    }
+
+    .button {
+      width: 100%;
     }
   }
 }

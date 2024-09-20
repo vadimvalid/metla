@@ -9,10 +9,11 @@
       каждой уборки будет снижена в зависимости от частоты.
     </p>
     <div class="section--subscriptions__items">
-      {{ subscriptionCardItem.subscriptionCard( "Разовая уборка", "60" )}} {{
-      subscriptionCardItem.subscriptionCard( "Раз в неделю", "48", "-20%" )}} {{
-      subscriptionCardItem.subscriptionCard( "2 раза в неделю", "51", "-15%" )}}
-      {{ subscriptionCardItem.subscriptionCard( "Раз в месяц", "54", "-10%" )}}
+      {{ subscriptionCardItem.subscriptionCard( "Разовая уборка", "60", "", true
+      )}} {{ subscriptionCardItem.subscriptionCard( "Раз в неделю", "48", "-20%"
+      )}} {{ subscriptionCardItem.subscriptionCard( "2 раза в неделю", "51",
+      "-15%" )}} {{ subscriptionCardItem.subscriptionCard( "Раз в месяц", "54",
+      "-10%" )}}
     </div>
     <p>
       Следующие уборки по подписке будут созданы автоматически. Вы можете

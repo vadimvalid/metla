@@ -1,7 +1,9 @@
-{% macro subscriptionCard(title, price, buttonText) %}
-<article class="subscription-card">
+{% macro subscriptionCard(title, price, buttonText, image) %}
+<article class="subscription-card {% if image %}image{% endif %}">
   <h4>{{ title }}</h4>
-  {% if buttonText %} <button>{{ buttonText }}</button>{% endif %}
+  {% if buttonText %} <button>{{ buttonText }}</button>{% endif %} {% if image
+  %} <img src="@images/icons/one-time-cleaning.png" alt="Разовая уборка" /> {%
+  endif %}
   <p><span>{{ price }}</span>BYN</p>
 </article>
 {% endmacro %}
