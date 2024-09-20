@@ -1,4 +1,4 @@
-{% macro orderHero(title, subtitle, description) %}
+{% macro orderHero(title, subtitle, description, summary) %}
 <section class="section section--order-hero">
   <div class="container">
     <h1>{{ title }} <span>{{ subtitle }}</span></h1>
@@ -6,6 +6,19 @@
     <p>{{ description }}</p>
     {% endif %}
     <a href="#" class="button">Подробнее</a>
+    <details>
+      <summary>
+        <h3>{{ summary }}</h3>
+        <div class="accordion__icons">
+          <img src="@images/icons/icon-minus-dark.svg" alt="icon minus" /><img
+            src="@images/icons/icon-minus-dark.svg"
+            alt="icon minus"
+          />
+        </div>
+      </summary>
+
+      <p>{{ description }}</p>
+    </details>
   </div>
 </section>
 {% endmacro %} q

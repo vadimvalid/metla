@@ -21,7 +21,7 @@
     gap: torem(6);
     padding: torem(18.5) 0;
     border-radius: $borderRadius;
-    background-color: $almostWhitePurple;
+    background-color: $white;
     font-size: $spaceXs;
     transition: $transition;
 
@@ -409,9 +409,9 @@
         color: #002839;
 
         span {
-          font-size: $fontSizeLg;
+          font-size: $fontSizeSm;
           font-weight: 400;
-          line-height: 1;
+          line-height: 1.2;
         }
       }
     }

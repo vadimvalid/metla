@@ -30,6 +30,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: torem(16);
+    height: torem(16);
 
     > img {
       &:last-child {
@@ -57,6 +59,7 @@ summary {
   cursor: pointer;
 
   h3 {
+    flex: 1;
     font-size: $fontSizeXl;
     font-weight: 600;
     line-height: 1.2;
