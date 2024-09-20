@@ -221,6 +221,7 @@ const mobileMenu = () => {
     menuBtn.addEventListener('click', () => {
       document.querySelector('.menu--mobile').classList.toggle('hidden');
       document.querySelector('.menu--mobile--open').classList.toggle('hidden');
+      document.querySelector('body').classList.toggle('no-scroll');
     });
 
     closeBtn.addEventListener('click', () => {

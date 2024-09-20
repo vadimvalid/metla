@@ -74,7 +74,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: torem(17);
+  gap: torem(12);
   padding: torem(12);
   border-radius: $borderRadiusMd;
   overflow: hidden;
@@ -137,6 +137,32 @@
     .button--icon {
       &:last-of-type {
         display: none;
+      }
+    }
+  }
+
+  &__price {
+    position: relative;
+    align-self: flex-end;
+    margin-bottom: torem(5);
+    z-index: 1;
+
+    .price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: torem(6);
+      padding: torem(6);
+      border-radius: 6px;
+      background: $yellow;
+      font-size: $fontSizeSm;
+      font-weight: 400;
+      line-height: 1;
+
+      span {
+        font-size: $fontSizeXl3;
+        font-weight: 800;
+        color: #002839;
       }
     }
   }

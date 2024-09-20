@@ -2,6 +2,8 @@
   display: grid;
   padding-top: torem(10);
   padding-bottom: torem(110);
+  padding-left: torem(8);
+  padding-right: torem(8);
 
   &-wrapper {
     min-width: 0;
@@ -12,7 +14,7 @@
     width: 100% !important;
 
     @include sm-breakpoint {
-      width: calc(100% / 3 - torem(16)) !important;
+      width: calc(100% / 3 - torem(12)) !important;
     }
   }
 
