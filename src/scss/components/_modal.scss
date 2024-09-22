@@ -1,0 +1,157 @@
+.dialog {
+  top: 50%;
+  width: torem(336);
+  border: none;
+  border-radius: $borderRadiusMd;
+  background: $white;
+  box-shadow: $shadowXs;
+  transform: translateY(-50%);
+  color: $texty;
+
+  &--city {
+    .dialog {
+      &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: torem(10);
+        padding-top: torem(40);
+      }
+    }
+
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: torem(10);
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: torem(6) torem(12);
+        border: none;
+        border-radius: $borderRadiusMd;
+        background: $white;
+        box-shadow: $shadowXs;
+        font-size: $fontSizeLg;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $darkPurple;
+        transition: $transition;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__close {
+    all: unset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  &--calendar {
+    padding: torem(12);
+
+    .dialog {
+      &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: torem(10);
+        padding-top: torem(40);
+      }
+    }
+
+    .section--calendar {
+      &__day {
+        padding: 0;
+      }
+    }
+  }
+
+  &--time {
+    width: torem(160);
+    height: torem(300);
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: torem(12);
+      overflow-x: auto;
+      font-size: $fontSizeXl;
+      font-weight: 500;
+      color: $texty;
+
+      p {
+        cursor: pointer;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  &--nonstandart {
+    text-align: center;
+
+    h3 {
+      font-size: $fontSizeXl5;
+      font-weight: 500;
+      line-height: 1;
+      color: $darkPurple;
+    }
+
+    .dialog__inner {
+      display: flex;
+      flex-direction: column;
+      gap: torem(12);
+      padding-top: torem(25);
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: torem(50);
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: torem(12);
+        font-size: $fontSizeSm;
+        font-weight: 500;
+        color: $texty;
+
+        img {
+          width: torem(30);
+          height: torem(30);
+        }
+      }
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    .form-item {
+      input {
+        padding-top: torem(19);
+        padding-bottom: torem(19);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: torem(12);
+      }
+    }
+
+    .dialog {
+      &__close {
+        top: torem(12);
+        right: torem(12);
+      }
+    }
+  }
+}
