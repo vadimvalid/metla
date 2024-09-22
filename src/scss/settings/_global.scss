@@ -40,6 +40,7 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100dvh;
     height: 100%;
+    overflow-x: hidden;
 
     &.not-home {
       .header {

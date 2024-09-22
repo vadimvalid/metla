@@ -469,6 +469,31 @@
     cursor: pointer;
   }
 
+  &__subitems {
+    display: flex;
+    justify-content: space-between;
+    gap: torem(6);
+
+    .subitem {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: torem(4);
+      padding: torem(12);
+      border-radius: 14px;
+      background: $blue;
+      font-size: $fontSizeXs;
+      font-weight: 500;
+      color: $white;
+
+      img {
+        width: torem(18);
+        height: torem(18);
+      }
+    }
+  }
+
   &.visible {
     display: block;
   }
