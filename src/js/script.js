@@ -231,3 +231,43 @@ const mobileMenu = () => {
   }
 };
 mobileMenu();
+
+const openDialog = (dialog, showButton, closeButton) => {
+  const dialogSection = document.querySelector(dialog);
+  const showBtn = document.querySelector(showButton);
+  const closeBtn = document.querySelectorAll(closeButton);
+
+  if (dialogSection) {
+    // "Show the dialog" button opens the dialog modally
+    showBtn.addEventListener('click', () => {
+      dialogSection.showModal();
+    });
+
+    // "Close" button closes the dialog
+    closeBtn.forEach((element) => {
+      element.addEventListener('click', () => {
+        dialogSection.close();
+      });
+    });
+  }
+};
+openDialog(
+  '.dialog--city',
+  '.section--address__header__item .button--open',
+  '.dialog--city .dialog__inner .button'
+);
+openDialog(
+  '.dialog--calendar',
+  '.section--date-time .form-item__date',
+  '.dialog--calendar .section--calendar__day'
+);
+openDialog(
+  '.dialog--time',
+  '.section--date-time .form-item__time',
+  '.dialog--time .dialog--time__items > p'
+);
+openDialog(
+  '.dialog--nonstandart',
+  '.types .types__item__modal',
+  '.dialog--nonstandart .dialog__close'
+);

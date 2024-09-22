@@ -203,6 +203,10 @@
         width: torem(94);
         height: torem(48);
       }
+
+      &:hover {
+        opacity: 0.85;
+      }
     }
 
     @include sm-breakpoint {

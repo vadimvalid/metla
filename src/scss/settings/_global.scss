@@ -27,6 +27,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   &.no-scroll {
@@ -40,6 +41,7 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100dvh;
     height: 100%;
+    overflow-x: hidden;
 
     &.not-home {
       .header {
@@ -684,4 +686,8 @@ ol {
       padding-bottom: torem(60);
     }
   }
+}
+
+::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }

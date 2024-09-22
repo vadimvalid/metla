@@ -6,16 +6,18 @@ orderHeroItem.orderHero("Все сервисы", "компании “метла
     <h2>Основные услуги</h2>
   </div>
   <div class="wrapper">
-    {{ serviceCardItem.serviceCard("#", "Уборка
-    квартиры","/icons/icon-service-1.svg", "/service/flat.webp") }} {{
-    serviceCardItem.serviceCard("#", "Уборка после ремонта",
-    "/icons/icon-service-2.svg", "/service/renovation.webp") }} {{
-    serviceCardItem.serviceCard("#", "Химчистка мебели",
-    "/icons/icon-service-3.svg","/service/dry.webp") }} {{
-    serviceCardItem.serviceCard("#", "Уборка санузла до
-    блеска","/icons/icon-service-4.svg", "/service/bathroom.webp") }} {{
-    serviceCardItem.serviceCard("#", "Уборка кухни с пристрастием",
-    "/icons/icon-service-5.svg", "/service/kitchen.webp") }}
+    <div class="wrapper__inner">
+      {{ serviceCardItem.serviceCard("#", "Уборка
+      квартиры","/icons/icon-service-1.svg", "/service/flat.webp") }} {{
+      serviceCardItem.serviceCard("#", "Уборка после ремонта",
+      "/icons/icon-service-2.svg", "/service/renovation.webp") }} {{
+      serviceCardItem.serviceCard("#", "Химчистка мебели",
+      "/icons/icon-service-3.svg","/service/dry.webp") }} {{
+      serviceCardItem.serviceCard("#", "Уборка санузла до
+      блеска","/icons/icon-service-4.svg", "/service/bathroom.webp") }} {{
+      serviceCardItem.serviceCard("#", "Уборка кухни с пристрастием",
+      "/icons/icon-service-5.svg", "/service/kitchen.webp") }}
+    </div>
   </div>
 </section>
 {% include "src/html/sections/additional-cards.html" %}{% include
