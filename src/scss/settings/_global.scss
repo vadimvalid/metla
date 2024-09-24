@@ -555,6 +555,12 @@ body {
       @include sm-breakpoint {
         padding-bottom: torem(240);
       }
+
+      .section--cleaner-items {
+        &.hidden {
+          display: none;
+        }
+      }
     }
 
     .cleaner-new-order {

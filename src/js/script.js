@@ -36,6 +36,116 @@ inputCounter('.form-item--sanuzel');
 inputCounter('.form-item--meter');
 inputCounter('.form-item--window');
 
+// square block
+const squareCounter = () => {
+  const parent = document.querySelector('.form-item__square');
+
+  if (parent) {
+    const btnDec = document.querySelector(
+      '.form-item--rooms [data-action="decrement"]'
+    );
+    const btnInc = document.querySelector(
+      '.form-item--rooms [data-action="increment"]'
+    );
+    const val = document.querySelector('[data-counter="value"]');
+    const squareVal = document.querySelector(
+      '.form-item__square .form-item__text span'
+    );
+    const btnDecSquare = document.querySelector(
+      '.form-item__square [data-action="decrement"]'
+    );
+    const btnIncSquare = document.querySelector(
+      '.form-item__square [data-action="increment"]'
+    );
+    const squareButtonValue = document.querySelector(
+      '.form-item__square > button > p span'
+    );
+
+    const isClicable = true;
+
+    let counter = val.attributes.min.value;
+    btnDec.addEventListener('click', () => {
+      if (counter > 1) {
+        counter--;
+        val.value = counter;
+
+        switch (val.value) {
+          case 1:
+            squareVal.textContent = '40';
+            squareButtonValue.textContent = '60';
+            break;
+          case 2:
+            squareVal.textContent = '60';
+            squareButtonValue.textContent = '75';
+            break;
+          case 3:
+            squareVal.textContent = '75';
+            squareButtonValue.textContent = '95';
+            break;
+          case 4:
+            squareVal.textContent = '95';
+            squareButtonValue.textContent = '110';
+            break;
+          case 5:
+            squareVal.textContent = '110';
+            squareButtonValue.textContent = '110';
+            break;
+          default:
+            break;
+        }
+      }
+      if (val.value < val.attributes.max.value) {
+        btnInc.disabled = false;
+      }
+    });
+
+    btnInc.addEventListener('click', () => {
+      if (Number(val.value) < Number(val.attributes.max.value)) {
+        counter++;
+        val.value = counter;
+        switch (Number(val.value)) {
+          case 1:
+            squareVal.textContent = '40';
+            squareButtonValue.textContent = '60';
+            break;
+          case 2:
+            squareVal.textContent = '60';
+            squareButtonValue.textContent = '75';
+            break;
+          case 3:
+            squareVal.textContent = '75';
+            squareButtonValue.textContent = '95';
+            break;
+          case 4:
+            squareVal.textContent = '95';
+            squareButtonValue.textContent = '110';
+            break;
+          case 5:
+            squareVal.textContent = '110';
+            squareButtonValue.textContent = '110';
+            break;
+          default:
+            break;
+        }
+      } else {
+        // btn disabled
+        btnInc.disabled = true;
+      }
+    });
+
+    if (isClicable) {
+      btnDecSquare.disabled = true;
+
+      btnIncSquare.addEventListener('click', () => {
+        squareVal.textContent = squareButtonValue.textContent;
+      });
+    }
+  }
+
+  return false;
+};
+squareCounter();
+
 // form square block
 const selectActiveButton = (block) => {
   const parent = document.querySelector(block);
@@ -137,7 +247,6 @@ const selectCards = (cards) => {
   });
 };
 
-selectActiveButton('.form-item__square');
 selectTypesItem('.types .wrapper');
 selectOrderTypesItem('.types__pollution');
 selectPaymentItem('.section--result__methods');
@@ -271,3 +380,30 @@ openDialog(
   '.types .types__item__modal',
   '.dialog--nonstandart .dialog__close'
 );
+
+const openCleanerOrders = () => {
+  const cleanerOrders = document.querySelector(
+    '.cleaner-order .section--cleaner-items'
+  );
+
+  const calendarDays = document.querySelectorAll('.section--calendar__day');
+
+  const calendarDayOrders = document.querySelectorAll(
+    '.section--calendar__day.orders'
+  );
+
+  if (cleanerOrders) {
+    calendarDays.forEach((element) => {
+      element.addEventListener('click', () => {
+        cleanerOrders.classList.add('hidden');
+      });
+    });
+
+    calendarDayOrders.forEach((element) => {
+      element.addEventListener('click', () => {
+        cleanerOrders.classList.remove('hidden');
+      });
+    });
+  }
+};
+openCleanerOrders();
