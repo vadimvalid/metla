@@ -2418,6 +2418,7 @@
     p {
       &:nth-child(2) {
         font-size: $fontSizeSm;
+        height: torem(100);
         color: $blue;
       }
     }

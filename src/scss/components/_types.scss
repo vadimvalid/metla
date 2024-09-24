@@ -77,7 +77,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: torem(31);
+      height: torem(80);
+      width: torem(80);
+      padding: 0;
+      box-sizing: border-box;
       border-radius: $borderRadiusLg;
       background: $white;
       box-shadow: $shadow;
@@ -95,6 +98,12 @@
       gap: torem(10);
       margin: 0 torem(20);
       font-weight: 500;
+
+      span {
+        font-size: $fontSizeXl2;
+        font-weight: 700;
+        color: $mainPurple;
+      }
     }
 
     input {
@@ -113,16 +122,13 @@
       > button {
         flex-direction: column;
         gap: torem(6);
-        padding: torem(15) torem(24);
-        font-weight: 500;
-        color: $darkPurple;
-        background-image: linear-gradient(1.2);
 
         > p {
-          &:last-child {
-            font-size: $fontSizeXl2;
+          font-size: $fontSizeXs;
+          color: $blue;
+
+          span {
             font-weight: 700;
-            line-height: normal;
           }
         }
 
@@ -134,7 +140,10 @@
 
       .form-item {
         &__text {
+          flex-direction: column;
+          gap: 0;
           margin: 0;
+          line-height: 1.2;
         }
       }
     }
