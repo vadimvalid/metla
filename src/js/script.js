@@ -69,40 +69,6 @@ const squareCounter = () => {
         counter--;
         val.value = counter;
 
-        switch (val.value) {
-          case 1:
-            squareVal.textContent = '40';
-            squareButtonValue.textContent = '60';
-            break;
-          case 2:
-            squareVal.textContent = '60';
-            squareButtonValue.textContent = '75';
-            break;
-          case 3:
-            squareVal.textContent = '75';
-            squareButtonValue.textContent = '95';
-            break;
-          case 4:
-            squareVal.textContent = '95';
-            squareButtonValue.textContent = '110';
-            break;
-          case 5:
-            squareVal.textContent = '110';
-            squareButtonValue.textContent = '110';
-            break;
-          default:
-            break;
-        }
-      }
-      if (val.value < val.attributes.max.value) {
-        btnInc.disabled = false;
-      }
-    });
-
-    btnInc.addEventListener('click', () => {
-      if (Number(val.value) < Number(val.attributes.max.value)) {
-        counter++;
-        val.value = counter;
         switch (Number(val.value)) {
           case 1:
             squareVal.textContent = '40';
@@ -127,6 +93,47 @@ const squareCounter = () => {
           default:
             break;
         }
+
+        document.querySelector(
+          '.types .form-item__square > button > p'
+        ).hidden = false;
+      }
+      if (val.value < val.attributes.max.value) {
+        btnInc.disabled = false;
+      }
+    });
+
+    btnInc.addEventListener('click', () => {
+      if (val.value <= val.attributes.max.value) {
+        counter++;
+        val.value = counter;
+        switch (Number(val.value)) {
+          case 1:
+            squareVal.textContent = '40';
+            squareButtonValue.textContent = '60';
+            break;
+          case 2:
+            squareVal.textContent = '60';
+            squareButtonValue.textContent = '75';
+            break;
+          case 3:
+            squareVal.textContent = '75';
+            squareButtonValue.textContent = '95';
+            break;
+          case 4:
+            squareVal.textContent = '95';
+            squareButtonValue.textContent = '110';
+
+            break;
+          case 5:
+            squareVal.textContent = '110';
+            document.querySelector(
+              '.types .form-item__square > button > p'
+            ).hidden = true;
+            break;
+          default:
+            break;
+        }
       } else {
         // btn disabled
         btnInc.disabled = true;
@@ -138,6 +145,39 @@ const squareCounter = () => {
 
       btnIncSquare.addEventListener('click', () => {
         squareVal.textContent = squareButtonValue.textContent;
+        document.querySelector(
+          '.types .form-item__square > button > p'
+        ).hidden = true;
+        btnDecSquare.disabled = false;
+        btnIncSquare.disabled = true;
+      });
+
+      btnDecSquare.addEventListener('click', () => {
+        switch (Number(val.value)) {
+          case 1:
+            squareVal.textContent = '40';
+            break;
+          case 2:
+            squareVal.textContent = '60';
+            break;
+          case 3:
+            squareVal.textContent = '75';
+            break;
+          case 4:
+            squareVal.textContent = '95';
+
+            break;
+          case 5:
+            squareVal.textContent = '110';
+            break;
+          default:
+            break;
+        }
+
+        document.querySelector(
+          '.types .form-item__square > button > p'
+        ).hidden = false;
+        btnIncSquare.disabled = false;
       });
     }
   }
