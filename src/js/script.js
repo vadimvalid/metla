@@ -271,3 +271,30 @@ openDialog(
   '.types .types__item__modal',
   '.dialog--nonstandart .dialog__close'
 );
+
+const openCleanerOrders = () => {
+  const cleanerOrders = document.querySelector(
+    '.cleaner-order .section--cleaner-items'
+  );
+
+  const calendarDays = document.querySelectorAll('.section--calendar__day');
+
+  const calendarDayOrders = document.querySelectorAll(
+    '.section--calendar__day.orders'
+  );
+
+  if (cleanerOrders) {
+    calendarDays.forEach((element) => {
+      element.addEventListener('click', () => {
+        cleanerOrders.classList.add('hidden');
+      });
+    });
+
+    calendarDayOrders.forEach((element) => {
+      element.addEventListener('click', () => {
+        cleanerOrders.classList.remove('hidden');
+      });
+    });
+  }
+};
+openCleanerOrders();
