@@ -20,12 +20,9 @@
 .services {
   .wrapper {
     padding: 0 torem(12);
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    overflow: hidden;
+    touch-action: none;
+    user-select: none; /* Prevent text highlighting */
 
     &__inner {
       display: flex;
@@ -35,7 +32,7 @@
 
     @include sm-breakpoint {
       width: 100vw;
-      overflow-x: scroll;
+      // overflow-x: scroll;
 
       &__inner {
         flex-direction: row;
