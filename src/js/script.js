@@ -459,3 +459,13 @@ const pointerScroll = (elem) => {
   elem.addEventListener('pointermove', drag);
 };
 document.querySelectorAll('.services .wrapper').forEach(pointerScroll);
+
+const changeBackgroundPositionOnscroll = () => {
+  const body = document.querySelector('body');
+  if (body) {
+    window.onscroll = () => {
+      body.style.backgroundPosition = `0px ${window.scrollY / 2}px`;
+    };
+  }
+};
+changeBackgroundPositionOnscroll();

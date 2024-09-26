@@ -1,3 +1,74 @@
+.cleaner-order {
+  .section--tabs {
+    .tab-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: torem(24);
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: torem(12);
+        overflow-x: auto;
+
+        .tab {
+          flex: 1;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: torem(6);
+          padding: torem(6);
+          border: none;
+          border-radius: $borderRadiusMd;
+          background-color: $blue;
+          font-weight: 500;
+          line-height: 1.2;
+          color: $white;
+          cursor: pointer;
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: torem(44);
+            height: torem(44);
+            background: $darkBlue;
+            border-radius: 14px;
+            font-size: $fontSizeMd;
+            font-weight: 700;
+            color: $white;
+          }
+
+          &.active {
+            background-color: $darkPurple;
+
+            span {
+              background: $darkestPurple;
+            }
+          }
+
+          @include sm-breakpoint {
+            flex: none;
+            width: torem(220);
+          }
+        }
+      }
+
+      .content {
+        .tab {
+          &__content {
+            display: none;
+
+            &.active {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .tab-wrap {
   display: flex;
   flex-direction: column;
@@ -10,44 +81,8 @@
     overflow-x: auto;
 
     .tab {
-      flex: 1;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: torem(6);
-      padding: torem(6);
-      border: none;
-      border-radius: $borderRadiusMd;
-      background-color: $blue;
-      font-weight: 500;
-      line-height: 1.2;
-      color: $white;
-      cursor: pointer;
-
-      span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: torem(44);
-        height: torem(44);
-        background: $darkBlue;
-        border-radius: 14px;
-        font-size: $fontSizeMd;
-        font-weight: 700;
-        color: $white;
-      }
-
       &.active {
         background-color: $darkPurple;
-
-        span {
-          background: $darkestPurple;
-        }
-      }
-
-      @include sm-breakpoint {
-        flex: none;
-        width: torem(220);
       }
     }
   }
