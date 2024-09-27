@@ -448,24 +448,15 @@ const openCleanerOrders = () => {
 };
 openCleanerOrders();
 
-const pointerScroll = (elem) => {
-  const dragStart = (ev) => elem.setPointerCapture(ev.pointerId);
-  const dragEnd = (ev) => elem.releasePointerCapture(ev.pointerId);
-  const drag = (ev) =>
-    elem.hasPointerCapture(ev.pointerId) && (elem.scrollLeft -= ev.movementX);
+const scrollItemsWithMouse = () => {
+  const container = document.querySelector('.services .wrapper');
 
-  elem.addEventListener('pointerdown', dragStart);
-  elem.addEventListener('pointerup', dragEnd);
-  elem.addEventListener('pointermove', drag);
+  container.addEventListener('wheel', function (event) {
+    if (event.deltaY !== 0) {
+      event.preventDefault();
+      container.scrollLeft += event.deltaY * 1;
+    }
+  });
 };
-document.querySelectorAll('.services .wrapper').forEach(pointerScroll);
 
-const changeBackgroundPositionOnscroll = () => {
-  const body = document.querySelector('body');
-  if (body) {
-    window.onscroll = () => {
-      body.style.backgroundPosition = `0px ${window.scrollY / 2}px`;
-    };
-  }
-};
-changeBackgroundPositionOnscroll();
+scrollItemsWithMouse();
