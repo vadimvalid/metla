@@ -451,12 +451,16 @@ openCleanerOrders();
 const scrollItemsWithMouse = () => {
   const container = document.querySelector('.services .wrapper');
 
-  container.addEventListener('wheel', function (event) {
-    if (event.deltaY !== 0) {
-      event.preventDefault();
-      container.scrollLeft += event.deltaY * 1;
-    }
-  });
+  if (container) {
+    container.addEventListener('wheel', function (event) {
+      if (event.deltaY !== 0) {
+        event.preventDefault();
+        container.scrollLeft += event.deltaY * 1;
+      }
+    });
+  }
+
+  return false;
 };
 
 scrollItemsWithMouse();
